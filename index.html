@@ -28,6 +28,7 @@
       font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
       text-rendering: geometricPrecision;
+      overflow-x: hidden;
     }
 
     a {
@@ -163,6 +164,10 @@
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.34em;
+    }
+
+    .archive-scroll {
+      overflow: visible;
     }
 
     .archive-grid {
@@ -661,33 +666,48 @@
       }
 
       .paslastik {
-        padding: 56px 18px 68px;
+        padding: 56px 0 68px;
       }
 
       .paslastik .wrap {
         width: 100%;
-        max-width: 420px;
-        margin: 0 auto;
+        max-width: none;
+        margin: 0;
       }
 
       .section-title {
-        margin-bottom: 26px;
+        margin: 0 18px 26px;
         font-size: 15px;
         letter-spacing: 0.26em;
       }
 
+      .archive-scroll {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x proximity;
+        padding: 0 18px 18px;
+        scrollbar-width: none;
+      }
+
+      .archive-scroll::-webkit-scrollbar {
+        display: none;
+      }
+
       .archive-grid {
+        width: 920px;
+        min-width: 920px;
         display: grid;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-        grid-auto-rows: 40px;
-        grid-template-rows: none;
+        grid-template-columns: repeat(9, 88px);
+        grid-template-rows: repeat(11, 64px);
+        grid-auto-rows: 64px;
         gap: 14px;
-        justify-content: center;
         align-items: stretch;
       }
 
       .archive-grid > * {
         min-height: 0 !important;
+        scroll-snap-align: start;
       }
 
       .card {
@@ -722,47 +742,47 @@
 
       .work-eylul {
         grid-column: 1 / span 3 !important;
-        grid-row: span 4 !important;
+        grid-row: 1 / span 4 !important;
       }
 
       .work-pole {
         grid-column: 4 / span 3 !important;
-        grid-row: span 4 !important;
-      }
-
-      .work-smyrna {
-        grid-column: 1 / span 6 !important;
-        grid-row: span 3 !important;
+        grid-row: 1 / span 5 !important;
       }
 
       .work-community {
-        grid-column: 1 / span 3 !important;
-        grid-row: span 4 !important;
-      }
-
-      .work-kadim {
-        grid-column: 4 / span 3 !important;
-        grid-row: span 4 !important;
-      }
-
-      .work-casarent {
-        grid-column: 1 / span 3 !important;
-        grid-row: span 4 !important;
-      }
-
-      .work-maja {
-        grid-column: 4 / span 3 !important;
-        grid-row: span 4 !important;
+        grid-column: 7 / span 3 !important;
+        grid-row: 1 / span 3 !important;
       }
 
       .work-degisim {
         grid-column: 1 / span 3 !important;
-        grid-row: span 4 !important;
+        grid-row: 5 / span 4 !important;
       }
 
       .work-dodo {
         grid-column: 4 / span 3 !important;
-        grid-row: span 4 !important;
+        grid-row: 6 / span 3 !important;
+      }
+
+      .work-casarent {
+        grid-column: 7 / span 3 !important;
+        grid-row: 4 / span 3 !important;
+      }
+
+      .work-smyrna {
+        grid-column: 1 / span 6 !important;
+        grid-row: 9 / span 3 !important;
+      }
+
+      .work-maja {
+        grid-column: 7 / span 3 !important;
+        grid-row: 7 / span 5 !important;
+      }
+
+      .work-kadim {
+        grid-column: 10 / span 3 !important;
+        grid-row: 2 / span 4 !important;
       }
 
       .services {
@@ -895,116 +915,118 @@
         <div class="wrap">
           <h2 class="section-title">PASLAŞTIK</h2>
 
-          <div class="archive-grid">
-            <article class="work work-eylul">
-              <div class="card">
-                <div class="media-box">
-                  <img src="eylul-arnavutkoy.jpg" alt="Eylül Arnavutköy" />
+          <div class="archive-scroll">
+            <div class="archive-grid">
+              <article class="work work-eylul">
+                <div class="card">
+                  <div class="media-box">
+                    <img src="eylul-arnavutkoy.jpg" alt="Eylül Arnavutköy" />
+                  </div>
+                  <div class="logo-box">
+                    <img src="eylul-logo.png" alt="Eylül logo" />
+                  </div>
                 </div>
-                <div class="logo-box">
-                  <img src="eylul-logo.png" alt="Eylül logo" />
-                </div>
-              </div>
-            </article>
+              </article>
 
-            <article class="work work-pole">
-              <div class="card">
-                <div class="media-box">
-                  <video src="pole-von-berlin.mp4" autoplay muted loop playsinline></video>
+              <article class="work work-pole">
+                <div class="card">
+                  <div class="media-box">
+                    <video src="pole-von-berlin.mp4" autoplay muted loop playsinline></video>
+                  </div>
+                  <div class="logo-box logo-tight">
+                    <img src="pole-logo.png" alt="Pole logo" />
+                  </div>
                 </div>
-                <div class="logo-box logo-tight">
-                  <img src="pole-logo.png" alt="Pole logo" />
-                </div>
-              </div>
-            </article>
+              </article>
 
-            <article class="work work-smyrna">
-              <div class="card">
-                <div class="media-box">
-                  <img src="smyrna-design-berlin.png" alt="Smyrna Design Berlin" />
+              <article class="work work-smyrna">
+                <div class="card">
+                  <div class="media-box">
+                    <img src="smyrna-design-berlin.png" alt="Smyrna Design Berlin" />
+                  </div>
+                  <div class="logo-box logo-tight">
+                    <img src="smyrna.png" alt="Smyrna logo" />
+                  </div>
                 </div>
-                <div class="logo-box logo-tight">
-                  <img src="smyrna.png" alt="Smyrna logo" />
-                </div>
-              </div>
-            </article>
+              </article>
 
-            <article class="work work-maja">
-              <div class="card">
-                <div class="media-box">
-                  <img src="maja-interior.jpg" alt="Maja Interior" />
+              <article class="work work-maja">
+                <div class="card">
+                  <div class="media-box">
+                    <img src="maja-interior.jpg" alt="Maja Interior" />
+                  </div>
+                  <div class="logo-box">
+                    <img src="maja-logo.png" alt="Maja logo" />
+                  </div>
                 </div>
-                <div class="logo-box">
-                  <img src="maja-logo.png" alt="Maja logo" />
-                </div>
-              </div>
-            </article>
+              </article>
 
-            <article class="work work-community">
-              <div class="card">
-                <div class="media-box">
-                  <video src="community-event-services.mp4" autoplay muted loop playsinline></video>
+              <article class="work work-community">
+                <div class="card">
+                  <div class="media-box">
+                    <video src="community-event-services.mp4" autoplay muted loop playsinline></video>
+                  </div>
+                  <div class="logo-box logo-tight">
+                    <img src="ces logo-01.png" alt="Community Event Services logo" />
+                  </div>
                 </div>
-                <div class="logo-box logo-tight">
-                  <img src="ces logo-01.png" alt="Community Event Services logo" />
-                </div>
-              </div>
-            </article>
+              </article>
 
-            <article class="work work-kadim">
-              <div class="card">
-                <div class="media-box">
-                  <img src="kadim-meyane.png" alt="Kadim Meyane" />
+              <article class="work work-kadim">
+                <div class="card">
+                  <div class="media-box">
+                    <img src="kadim-meyane.png" alt="Kadim Meyane" />
+                  </div>
+                  <div class="logo-box">
+                    <img src="kadim-logo.png" alt="Kadim Meyane logo" />
+                  </div>
                 </div>
-                <div class="logo-box">
-                  <img src="kadim-logo.png" alt="Kadim Meyane logo" />
-                </div>
-              </div>
-            </article>
+              </article>
 
-            <article class="work work-dodo">
-              <div class="card">
-                <div class="media-box">
-                  <video src="dodo.mp4" autoplay muted loop playsinline></video>
+              <article class="work work-dodo">
+                <div class="card">
+                  <div class="media-box">
+                    <video src="dodo.mp4" autoplay muted loop playsinline></video>
+                  </div>
+                  <div class="logo-box">
+                    <img src="dodo logo.png" alt="Dodo logo" />
+                  </div>
                 </div>
-                <div class="logo-box">
-                  <img src="dodo logo.png" alt="Dodo logo" />
-                </div>
-              </div>
-            </article>
+              </article>
 
-            <article class="work work-casarent">
-              <div class="card">
-                <div class="media-box">
-                  <img src="casarent-istanbul.jpg" alt="Casarent Istanbul" />
+              <article class="work work-casarent">
+                <div class="card">
+                  <div class="media-box">
+                    <img src="casarent-istanbul.jpg" alt="Casarent Istanbul" />
+                  </div>
+                  <div class="logo-box logo-tight">
+                    <img src="casarent-logo.png" alt="Casarent logo" />
+                  </div>
                 </div>
-                <div class="logo-box logo-tight">
-                  <img src="casarent-logo.png" alt="Casarent logo" />
-                </div>
-              </div>
-            </article>
+              </article>
 
-            <article class="work work-degisim">
-              <div class="card">
-                <div class="media-box">
-                  <img src="degisim-liderleri-dernegi.jpg" alt="Değişim Liderleri Derneği" />
+              <article class="work work-degisim">
+                <div class="card">
+                  <div class="media-box">
+                    <img src="degisim-liderleri-dernegi.jpg" alt="Değişim Liderleri Derneği" />
+                  </div>
+                  <div class="logo-box">
+                    <img src="dld-logo.png" alt="Değişim Liderleri Derneği logo" />
+                  </div>
                 </div>
-                <div class="logo-box">
-                  <img src="dld-logo.png" alt="Değişim Liderleri Derneği logo" />
-                </div>
-              </div>
-            </article>
+              </article>
 
-            <article class="work work-dodolabs">
-              <div class="card">
-                <div class="media-box">
-                  <img src="dodolabs-utrecht.png" alt="Dodolabs Utrecht" />
+              <article class="work work-dodolabs">
+                <div class="card">
+                  <div class="media-box">
+                    <img src="dodolabs-utrecht.png" alt="Dodolabs Utrecht" />
+                  </div>
+                  <div class="logo-box">
+                    <img src="dodolabs-logo.png" alt="Dodolabs logo" />
+                  </div>
                 </div>
-                <div class="logo-box">
-                  <img src="dodolabs-logo.png" alt="Dodolabs logo" />
-                </div>
-              </div>
-            </article>
+              </article>
+            </div>
           </div>
         </div>
       </section>
