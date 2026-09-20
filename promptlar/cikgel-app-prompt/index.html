@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ÇıkGel App Prompt — PAS Creative Studio</title>
+<meta name="description" content="ÇıkGel etkinlik ve topluluk uygulamasının arayüzü, akışları ve tasarım sistemi için yazılan promptun tamamı.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://pascreativestudio.com/promptlar/cikgel-app-prompt/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PAS Creative Studio">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="ÇıkGel App Prompt — PAS Creative Studio">
+<meta property="og:description" content="ÇıkGel etkinlik ve topluluk uygulamasının arayüzü, akışları ve tasarım sistemi için yazılan promptun tamamı.">
+<meta property="og:url" content="https://pascreativestudio.com/promptlar/cikgel-app-prompt/">
+<meta property="og:image" content="https://pascreativestudio.com/assets/studio.jpg">
+<meta property="og:image:width" content="1672">
+<meta property="og:image:height" content="941">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ÇıkGel App Prompt — PAS Creative Studio">
+<meta name="twitter:description" content="ÇıkGel etkinlik ve topluluk uygulamasının arayüzü, akışları ve tasarım sistemi için yazılan promptun tamamı.">
+<meta name="twitter:image" content="https://pascreativestudio.com/assets/studio.jpg">
+<meta name="theme-color" content="#efefef">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#efefef; --ink:#0f1435; --lime:#cce86b; --pink:#f2c4cd;
+  --grey:#dcdcdc; --rule:rgba(15,20,53,.2); --muted:rgba(15,20,53,.6);
+  --m:clamp(16px,3.2vw,44px); --gut:clamp(12px,1.6vw,24px);
+  --ease-out:cubic-bezier(.2,.7,.1,1);
+  --f:"Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:17px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3,p,ul,dl,dd{margin:0;padding:0}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wordmark{font-weight:700;font-stretch:88%;letter-spacing:-.035em;line-height:1}
+.meta{font-size:13px;line-height:1.4;color:var(--muted)}
+.tnum{font-variant-numeric:tabular-nums}
+.wrap{padding-inline:var(--m)}
+.link{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .45s var(--ease-out)}
+.link:hover{background-size:100% 1px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border:1px solid var(--ink);
+  font-size:15px;font-weight:500;transition:background .35s var(--ease-out),color .35s var(--ease-out)}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn--solid{background:var(--ink);color:var(--bg)}
+.btn--solid:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+
+.head{display:flex;align-items:center;justify-content:space-between;gap:20px;height:64px;padding:0 var(--m);
+  border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--bg);z-index:10}
+.head-brand{display:flex;align-items:baseline;gap:10px}
+.head-brand .wordmark{font-size:28px}
+.head-brand .meta{color:var(--ink)}
+.nav{display:flex;gap:clamp(14px,1.8vw,30px);font-size:15px;font-weight:500;flex-wrap:wrap;justify-content:flex-end}
+
+.article{padding-block:clamp(40px,6vw,88px) clamp(64px,8vw,120px);max-width:980px;margin:0 auto}
+.crumbs{margin-bottom:clamp(28px,4vw,52px)}
+.crumbs a:hover{text-decoration:underline}
+h1{font-size:clamp(38px,6vw,84px);font-weight:600;font-stretch:80%;letter-spacing:-.03em;line-height:.94}
+.lead{margin-top:20px;font-size:clamp(18px,1.7vw,23px);line-height:1.4;max-width:34em}
+.specs{margin-top:clamp(32px,4vw,56px);border-top:1px solid var(--ink);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gut)}
+.specs div{padding-top:12px}
+.specs dt{font-size:13px;color:var(--muted)}
+.specs dd{margin-top:4px;font-weight:500}
+.prompt-head{margin-top:clamp(40px,5vw,72px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.prompt{margin-top:16px;background:var(--ink);color:var(--bg);padding:clamp(18px,2.4vw,32px);
+  font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:14px;line-height:1.65;
+  white-space:pre-wrap;word-break:break-word;overflow-x:auto;tab-size:2}
+.prompt-foot{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+
+.pr-list{margin-top:clamp(36px,4vw,64px);border-top:1px solid var(--ink)}
+.pr-row{display:grid;grid-template-columns:56px minmax(0,1fr) 190px auto;gap:var(--gut);align-items:center;
+  padding:22px 0;border-bottom:1px solid var(--rule);position:relative}
+.pr-row::before{content:"";position:absolute;inset:0 calc(var(--m)*-1);background:var(--lime);opacity:0;transition:opacity .25s;z-index:0}
+.pr-row:hover::before{opacity:1}
+.pr-row > *{position:relative;z-index:1}
+.pr-id{color:var(--muted);font-size:14px}
+.pr-main{display:grid;gap:4px}
+.pr-main b{font-size:clamp(21px,2vw,28px);font-weight:600;font-stretch:88%;letter-spacing:-.015em;line-height:1.15}
+.pr-main span{font-size:14px;color:var(--muted)}
+.pr-kind{font-size:14px}
+.pr-go{font-size:15px;font-weight:500;white-space:nowrap}
+
+.foot{background:var(--ink);color:var(--bg);padding:clamp(48px,6vw,88px) var(--m) 28px}
+.foot .wordmark{font-size:clamp(84px,19vw,340px);letter-spacing:-.05em;line-height:.8;margin-left:-.04em}
+.foot-grid{margin-top:clamp(36px,4vw,64px);border-top:1px solid rgba(239,239,239,.25);padding-top:18px;
+  display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--gut);row-gap:28px;font-size:15px}
+.foot-grid > div{display:grid;gap:4px;align-content:start;justify-items:start}
+.foot .meta{color:rgba(239,239,239,.55)}
+.foot :focus-visible{outline-color:var(--lime)}
+.foot-bottom{margin-top:48px;display:flex;justify-content:space-between;gap:20px;color:rgba(239,239,239,.55);font-size:13px}
+
+@media (max-width:820px){
+  body{font-size:16px}
+  .head{height:auto;padding-block:12px;flex-direction:column;align-items:flex-start;gap:8px;position:static}
+  .nav{justify-content:flex-start;gap:14px;font-size:14px}
+  .specs{grid-template-columns:1fr;gap:0}
+  .specs div{padding-block:12px;border-bottom:1px solid var(--rule)}
+  .pr-row{grid-template-columns:1fr;gap:6px;padding:20px 0}
+  .pr-kind,.pr-go{font-size:14px;color:var(--muted)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-bottom{flex-direction:column}
+  .prompt{font-size:13px}
+}
+@media (max-width:480px){.foot-grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.001s!important}}
+
+</style>
+</head>
+<body>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ÇıkGel App Prompt", "description": "ÇıkGel etkinlik ve topluluk uygulamasının arayüzü, akışları ve tasarım sistemi için yazılan promptun tamamı.", "inLanguage": "tr-TR", "mainEntityOfPage": "https://pascreativestudio.com/promptlar/cikgel-app-prompt/", "image": "https://pascreativestudio.com/assets/studio.jpg", "author": {"@type": "Organization", "name": "PAS Creative Studio", "url": "https://pascreativestudio.com/"}, "publisher": {"@type": "Organization", "name": "PAS Creative Studio", "url": "https://pascreativestudio.com/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "PAS Creative", "item": "https://pascreativestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Promptlar", "item": "https://pascreativestudio.com/promptlar/"}, {"@type": "ListItem", "position": 3, "name": "ÇıkGel App Prompt", "item": "https://pascreativestudio.com/promptlar/cikgel-app-prompt/"}]}</script>
+<header class="head">
+  <a class="head-brand" href="../../index.html#creative"><span class="wordmark">PAS.</span><span class="meta">Creative</span></a>
+  <nav class="nav" aria-label="Ana menü">
+    <a href="../../index.html#studio">Studio</a>
+    <a href="../../index.html#creative-space">Creative Space</a>
+    <a href="../../promptlar/">Promptlar</a>
+    <a href="../../index.html#hakkimizda">Hakkımızda</a>
+    <a href="../../index.html#iletisim">İletişim</a>
+  </nav>
+</header>
+<main class="wrap article">
+  <nav class="crumbs meta" aria-label="Breadcrumb"><a href="../../index.html#creative">PAS Creative</a> / <a href="../">Promptlar</a> / <span>ÇıkGel App Prompt</span></nav>
+  <h1>ÇıkGel App Prompt</h1>
+  <p class="lead">ÇıkGel etkinlik ve topluluk uygulamasının arayüzü, akışları ve tasarım sistemi için yazılan promptun tamamı.</p>
+  <dl class="specs">
+    <div><dt>Tür</dt><dd>Mobil uygulama promptu</dd></div>
+    <div><dt>Prompt dili</dt><dd>Türkçe</dd></div>
+    <div><dt>Format</dt><dd>JSON</dd></div>
+  </dl>
+  <div class="prompt-head">
+    <span class="meta">Promptun tamamı</span>
+    <button class="btn btn--solid" data-copy>Promptu Kopyala</button>
+  </div>
+  <pre class="prompt" id="prompt">{
+  &quot;project&quot;: {
+    &quot;name&quot;: &quot;ÇıkGel&quot;,
+    &quot;type&quot;: &quot;İstanbul odaklı sosyal etkinlik ve topluluk mobil uygulaması&quot;,
+    &quot;platform&quot;: [
+      &quot;iOS&quot;,
+      &quot;Android&quot;
+    ],
+    &quot;language&quot;: &quot;Türkçe&quot;,
+    &quot;design_scope&quot;: &quot;Kayıt ekranından başlayarak tüm kullanıcı deneyimi, tüm ana ekranlar, alt akışlar, durumlar, buton işlevleri ve organizatör araçları&quot;,
+    &quot;primary_goal&quot;: &quot;İstanbul&#x27;daki kullanıcıların yakınlarındaki etkinlikleri harita üzerinden keşfetmesini, tek başına veya arkadaşlarıyla katılmasını, güvenli biçimde iletişim kurmasını ve isterse kendi etkinliğini oluşturmasını sağlamak&quot;,
+    &quot;core_value_proposition&quot;: &quot;İstanbul’da ne yapacağını değil, kiminle yapacağını bul.&quot;,
+    &quot;product_positioning&quot;: &quot;Dating uygulaması değil; gerçek hayatta ortak ilgi alanları üzerinden insanları buluşturan, şehir odaklı etkinlik ve topluluk ürünü&quot;,
+    &quot;mvp_focus&quot;: [
+      &quot;İstanbul&quot;,
+      &quot;Harita tabanlı keşif&quot;,
+      &quot;Etkinliklere katılma ve kaydetme&quot;,
+      &quot;Etkinlik sohbetleri&quot;,
+      &quot;Kullanıcı profili ve ilgi alanları&quot;,
+      &quot;Doğrulanmış organizatörler&quot;,
+      &quot;Ücretsiz ve ücretli etkinlikler&quot;,
+      &quot;Bekleme listesi&quot;,
+      &quot;QR check-in&quot;
+    ]
+  },
+  &quot;brand_system&quot;: {
+    &quot;logo&quot;: {
+      &quot;concept&quot;: &quot;Bir kapıdan dışarı çıkan enerjik insan figürü&quot;,
+      &quot;meaning&quot;: &quot;Evden, rutinden veya yalnızlıktan çıkıp şehrin ve insanların içine karışmak&quot;,
+      &quot;usage&quot;: [
+        &quot;Tam logo: ikon + ÇıkGel yazısı&quot;,
+        &quot;Uygulama ikonu: yalnızca kapıdan çıkan karakter&quot;,
+        &quot;Loading animasyonu: karakterin kapıdan dışarı adım atması&quot;,
+        &quot;Harita kullanıcı konumu: küçük karakter başı veya kapı ikonu&quot;
+      ]
+    },
+    &quot;colors&quot;: {
+      &quot;background_light_lilac&quot;: &quot;#FCF0FA&quot;,
+      &quot;primary_purple&quot;: &quot;#8972E6&quot;,
+      &quot;secondary_cyan&quot;: &quot;#53BFCA&quot;,
+      &quot;text_primary&quot;: &quot;#17151C&quot;,
+      &quot;text_secondary&quot;: &quot;#6E6876&quot;,
+      &quot;surface_white&quot;: &quot;#FFFFFF&quot;,
+      &quot;border_soft&quot;: &quot;#E8DFF0&quot;,
+      &quot;success&quot;: &quot;#42B883&quot;,
+      &quot;warning&quot;: &quot;#F6B94A&quot;,
+      &quot;danger&quot;: &quot;#E85D75&quot;,
+      &quot;note&quot;: &quot;Ana marka iletişiminde yalnızca açık lila, mor ve cyan baskın kullanılmalı. Sistem durum renkleri yalnızca uyarı, başarı ve hata gibi işlevsel alanlarda sınırlı kullanılmalı.&quot;
+    },
+    &quot;visual_direction&quot;: {
+      &quot;keywords&quot;: [
+        &quot;pastel&quot;,
+        &quot;güven verici&quot;,
+        &quot;sıcak&quot;,
+        &quot;oyuncu&quot;,
+        &quot;modern&quot;,
+        &quot;yuvarlak&quot;,
+        &quot;enerjik&quot;,
+        &quot;dost canlısı&quot;,
+        &quot;vektörel&quot;,
+        &quot;hafif naif&quot;
+      ],
+      &quot;illustration_style&quot;: {
+        &quot;description&quot;: &quot;Basit geometrik şekillerden oluşan tatlı vektörel karakterler; yüz ifadeleri minimal, siyah çizgilerle veya nokta gözlerle verilir; şekiller organik ve yuvarlaktır.&quot;,
+        &quot;rules&quot;: [
+          &quot;3D render kullanılmamalı&quot;,
+          &quot;Fotogerçekçi maskot kullanılmamalı&quot;,
+          &quot;Keskin ve agresif köşeler minimumda tutulmalı&quot;,
+          &quot;Karakterlerin duyguları kolay anlaşılmalı&quot;,
+          &quot;Harita pinleri, boş durumlar, onboarding ve sistem mesajlarında aynı karakter ailesi kullanılmalı&quot;
+        ]
+      },
+      &quot;photography&quot;: {
+        &quot;description&quot;: &quot;Gerçek etkinlik fotoğrafları doğal, sıcak, samimi ve aşırı profesyonel görünmeyen şekilde kullanılmalı.&quot;,
+        &quot;rules&quot;: [
+          &quot;Stok fotoğraf hissi vermemeli&quot;,
+          &quot;Gerçek grup dinamiği göstermeli&quot;,
+          &quot;Çok karanlık gece fotoğraflarında okunabilirlik için yumuşak overlay kullanılmalı&quot;,
+          &quot;Etkinlik kartlarında insanların yüzleri ve ortam enerjisi anlaşılmalı&quot;
+        ]
+      }
+    },
+    &quot;typography&quot;: {
+      &quot;primary&quot;: &quot;Yuvarlak, modern, yüksek okunabilirliğe sahip sans serif&quot;,
+      &quot;recommended_style&quot;: &quot;Nunito Sans, Manrope, Plus Jakarta Sans veya benzer karakterde bir font&quot;,
+      &quot;weights&quot;: {
+        &quot;display&quot;: 800,
+        &quot;heading&quot;: 700,
+        &quot;subheading&quot;: 600,
+        &quot;body&quot;: 400,
+        &quot;caption&quot;: 400,
+        &quot;button&quot;: 700
+      },
+      &quot;mobile_sizes_px&quot;: {
+        &quot;display&quot;: 32,
+        &quot;h1&quot;: 28,
+        &quot;h2&quot;: 24,
+        &quot;h3&quot;: 20,
+        &quot;body_large&quot;: 17,
+        &quot;body&quot;: 15,
+        &quot;caption&quot;: 13,
+        &quot;button&quot;: 16
+      },
+      &quot;rules&quot;: [
+        &quot;Başlıklarda kısa ve direkt Türkçe kullanılmalı&quot;,
+        &quot;Tamamı büyük harf yalnızca küçük etiketlerde kullanılmalı&quot;,
+        &quot;Metinler fazla sıkışık olmamalı&quot;,
+        &quot;Satır yüksekliği gövde metinlerinde en az 1.45 olmalı&quot;
+      ]
+    },
+    &quot;shape_language&quot;: {
+      &quot;corner_radius&quot;: {
+        &quot;small&quot;: 12,
+        &quot;medium&quot;: 18,
+        &quot;large&quot;: 26,
+        &quot;pill&quot;: 999
+      },
+      &quot;cards&quot;: &quot;Yuvarlatılmış, açık yüzeyli, ince border veya çok yumuşak gölge&quot;,
+      &quot;buttons&quot;: &quot;Kalın, yuvarlak, geniş dokunma alanlı&quot;,
+      &quot;inputs&quot;: &quot;Açık lila veya beyaz zemin, ince mor/lila border, hata durumunda net kırmızı açıklama&quot;,
+      &quot;icons&quot;: &quot;Yuvarlak uçlu çizgisel ikonlar; aktif durumda dolu veya mor/cyan yüzeyli&quot;
+    },
+    &quot;motion&quot;: {
+      &quot;principles&quot;: [
+        &quot;Hızlı ama yumuşak geçişler&quot;,
+        &quot;Harita pinine basınca kartın alttan açılması&quot;,
+        &quot;Bottom sheet&#x27;in sürüklenebilir olması&quot;,
+        &quot;Katıl butonuna basınca küçük onay animasyonu&quot;,
+        &quot;Loading ekranında logo karakterinin kapıdan çıkması&quot;,
+        &quot;Onboarding karakterlerinin hafif zıplaması veya göz kırpması&quot;
+      ],
+      &quot;duration_ms&quot;: {
+        &quot;micro&quot;: 150,
+        &quot;standard&quot;: 250,
+        &quot;sheet&quot;: 320
+      }
+    }
+  },
+  &quot;product_principles&quot;: [
+    &quot;Harita ilk deneyimin merkezinde olmalı&quot;,
+    &quot;Kullanıcı mümkün olan en az adımla etkinlik bulmalı&quot;,
+    &quot;Tek başına katılım güvenli ve normal hissettirilmeli&quot;,
+    &quot;Dating algısından kaçınılmalı&quot;,
+    &quot;Her ekranda birincil aksiyon net olmalı&quot;,
+    &quot;İstanbul&#x27;un semt, yaka ve ulaşım dinamikleri ürüne yansıtılmalı&quot;,
+    &quot;Kullanıcıdan gereksiz bilgi istenmemeli&quot;,
+    &quot;Katılımcı güvenliği ve moderasyon görünür olmalı&quot;,
+    &quot;Bildirimler anlamlı olmalı; spam ve gereksiz kampanya bildirimleri olmamalı&quot;
+  ],
+  &quot;user_roles&quot;: {
+    &quot;member&quot;: {
+      &quot;description&quot;: &quot;Etkinlik keşfeden, kaydeden, katılan ve sohbet eden kullanıcı&quot;,
+      &quot;permissions&quot;: [
+        &quot;Etkinlik keşfetme&quot;,
+        &quot;Etkinlik kaydetme&quot;,
+        &quot;Ücretsiz etkinliğe katılma&quot;,
+        &quot;Ücretli etkinliğe bilet alma&quot;,
+        &quot;Bekleme listesine katılma&quot;,
+        &quot;Etkinlik sohbetine katılma&quot;,
+        &quot;Bağlantı isteği gönderme&quot;,
+        &quot;Etkinlik değerlendirme&quot;,
+        &quot;Şikayet ve engelleme&quot;
+      ]
+    },
+    &quot;organizer&quot;: {
+      &quot;description&quot;: &quot;Topluluk veya bireysel etkinlik oluşturan kullanıcı&quot;,
+      &quot;permissions&quot;: [
+        &quot;Etkinlik oluşturma&quot;,
+        &quot;Etkinlik düzenleme&quot;,
+        &quot;Katılımcı yönetme&quot;,
+        &quot;Duyuru gönderme&quot;,
+        &quot;QR check-in&quot;,
+        &quot;Bekleme listesi yönetme&quot;,
+        &quot;Etkinlik iptal etme&quot;,
+        &quot;Topluluk profili oluşturma&quot;,
+        &quot;Ücretli etkinlik tanımlama&quot;
+      ]
+    }
+  },
+  &quot;global_navigation&quot;: {
+    &quot;bottom_tabs&quot;: [
+      {
+        &quot;id&quot;: &quot;discover&quot;,
+        &quot;label&quot;: &quot;Keşfet&quot;,
+        &quot;icon&quot;: &quot;map-search&quot;,
+        &quot;default&quot;: true,
+        &quot;action&quot;: &quot;İstanbul haritası ve etkinlik keşif ekranını açar&quot;
+      },
+      {
+        &quot;id&quot;: &quot;my_events&quot;,
+        &quot;label&quot;: &quot;Etkinliklerim&quot;,
+        &quot;icon&quot;: &quot;calendar-heart&quot;,
+        &quot;action&quot;: &quot;Katılacaklarım, kaydettiklerim, geçmiş ve düzenlediklerim sekmelerini açar&quot;
+      },
+      {
+        &quot;id&quot;: &quot;messages&quot;,
+        &quot;label&quot;: &quot;Mesajlar&quot;,
+        &quot;icon&quot;: &quot;chat&quot;,
+        &quot;action&quot;: &quot;Etkinlik sohbetlerini, direkt mesajları ve bağlantı isteklerini açar&quot;
+      },
+      {
+        &quot;id&quot;: &quot;profile&quot;,
+        &quot;label&quot;: &quot;Profil&quot;,
+        &quot;icon&quot;: &quot;user&quot;,
+        &quot;action&quot;: &quot;Profil, ilgi alanları, tercihler, güven bilgileri ve ayarları açar&quot;
+      }
+    ],
+    &quot;top_actions&quot;: {
+      &quot;notifications&quot;: {
+        &quot;icon&quot;: &quot;bell&quot;,
+        &quot;placement&quot;: &quot;Keşfet ekranı sağ üst&quot;,
+        &quot;action&quot;: &quot;Bildirim merkezini açar&quot;
+      },
+      &quot;search&quot;: {
+        &quot;placement&quot;: &quot;Keşfet ekranı üst alan&quot;,
+        &quot;placeholder&quot;: &quot;Etkinlik, semt veya topluluk ara&quot;
+      },
+      &quot;filter&quot;: {
+        &quot;icon&quot;: &quot;sliders&quot;,
+        &quot;placement&quot;: &quot;Arama alanı sağında&quot;,
+        &quot;action&quot;: &quot;Filtre bottom sheet&#x27;ini açar&quot;
+      }
+    }
+  },
+  &quot;application_map&quot;: {
+    &quot;authentication&quot;: [
+      &quot;Splash&quot;,
+      &quot;Karşılama&quot;,
+      &quot;Giriş yap&quot;,
+      &quot;Kayıt ol&quot;,
+      &quot;E-posta doğrulama&quot;,
+      &quot;Şifre yenileme&quot;
+    ],
+    &quot;onboarding&quot;: [
+      &quot;Konum izni&quot;,
+      &quot;İstanbul bölge tercihi&quot;,
+      &quot;ÇıkGel&#x27;de ne arıyorsun?&quot;,
+      &quot;İlgi alanları&quot;,
+      &quot;Sosyal tercihleri seç&quot;,
+      &quot;Bildirim izni&quot;,
+      &quot;Onboarding tamamlandı&quot;
+    ],
+    &quot;discover&quot;: [
+      &quot;Harita ana ekranı&quot;,
+      &quot;Harita + liste bottom sheet&quot;,
+      &quot;Arama sonuçları&quot;,
+      &quot;Filtreler&quot;,
+      &quot;Kategori sayfası&quot;,
+      &quot;Etkinlik detay&quot;,
+      &quot;Organizatör profili&quot;,
+      &quot;Topluluk profili&quot;,
+      &quot;Katılım akışı&quot;,
+      &quot;Bilet ödeme&quot;,
+      &quot;Bekleme listesi&quot;,
+      &quot;Paylaş&quot;,
+      &quot;Şikayet et&quot;
+    ],
+    &quot;my_events&quot;: [
+      &quot;Katılacaklarım&quot;,
+      &quot;Kaydettiklerim&quot;,
+      &quot;Geçmiş&quot;,
+      &quot;Düzenlediklerim&quot;,
+      &quot;Bilet ve QR&quot;,
+      &quot;Takvime ekle&quot;,
+      &quot;Katılım iptali&quot;,
+      &quot;Değerlendirme&quot;,
+      &quot;Etkinlik oluşturma&quot;,
+      &quot;Katılımcı yönetimi&quot;,
+      &quot;Check-in&quot;
+    ],
+    &quot;messages&quot;: [
+      &quot;Etkinlik sohbetleri&quot;,
+      &quot;Direkt mesajlar&quot;,
+      &quot;Bağlantı istekleri&quot;,
+      &quot;Sohbet detayı&quot;,
+      &quot;Mesaj şikayet et&quot;,
+      &quot;Kullanıcı engelle&quot;
+    ],
+    &quot;profile&quot;: [
+      &quot;Profil ana ekranı&quot;,
+      &quot;Profili düzenle&quot;,
+      &quot;İlgi alanları&quot;,
+      &quot;Sosyal tercihler&quot;,
+      &quot;Doğrulama merkezi&quot;,
+      &quot;Takip edilen topluluklar&quot;,
+      &quot;Bildirim ayarları&quot;,
+      &quot;Gizlilik ayarları&quot;,
+      &quot;Engellenen kullanıcılar&quot;,
+      &quot;Yardım&quot;,
+      &quot;Hesabı sil&quot;
+    ]
+  },
+  &quot;screen_flows&quot;: [
+    {
+      &quot;id&quot;: &quot;splash&quot;,
+      &quot;route&quot;: &quot;/splash&quot;,
+      &quot;purpose&quot;: &quot;Uygulamanın açılış yükleme ekranı&quot;,
+      &quot;layout&quot;: [
+        &quot;Arka plan #FCF0FA&quot;,
+        &quot;Ortada ÇıkGel ikonunun büyük versiyonu&quot;,
+        &quot;Kapıdan çıkan karakter için kısa ve yumuşak animasyon&quot;,
+        &quot;Alt bölümde küçük ÇıkGel yazısı&quot;
+      ],
+      &quot;logic&quot;: [
+        &quot;Aktif oturum varsa token kontrol edilir&quot;,
+        &quot;Onboarding tamamlandıysa Keşfet ekranına gidilir&quot;,
+        &quot;Onboarding tamamlanmadıysa kaldığı adıma yönlendirilir&quot;,
+        &quot;Oturum yoksa Karşılama ekranına gidilir&quot;
+      ],
+      &quot;states&quot;: [
+        &quot;Yükleniyor&quot;,
+        &quot;Bağlantı yok&quot;,
+        &quot;Sunucu hatası&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;welcome&quot;,
+      &quot;route&quot;: &quot;/welcome&quot;,
+      &quot;purpose&quot;: &quot;Markayı ve ürün değerini ilk kez anlatmak&quot;,
+      &quot;layout&quot;: [
+        &quot;Üstte logo&quot;,
+        &quot;Ortada kapıdan çıkan farklı küçük karakterlerden oluşan tatlı vektörel illüstrasyon&quot;,
+        &quot;Başlık: İstanbul&#x27;da planın hazır.&quot;,
+        &quot;Alt metin: Yakınındaki etkinlikleri keşfet, tek başına ya da birlikte çık gel.&quot;,
+        &quot;Birincil buton: Kayıt ol&quot;,
+        &quot;İkincil buton: Giriş yap&quot;,
+        &quot;Alt metin bağlantısı: Misafir olarak göz at&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Kayıt ol&quot;,
+          &quot;result&quot;: &quot;/signup&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Giriş yap&quot;,
+          &quot;result&quot;: &quot;/login&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Misafir olarak göz at&quot;,
+          &quot;result&quot;: &quot;Sınırlı keşif modu açılır; katılma, kaydetme ve mesajlaşma için hesap istenir&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;signup&quot;,
+      &quot;route&quot;: &quot;/signup&quot;,
+      &quot;purpose&quot;: &quot;Yeni kullanıcı hesabı oluşturmak&quot;,
+      &quot;layout&quot;: [
+        &quot;Başlık: ÇıkGel&#x27;e hoş geldin&quot;,
+        &quot;Alt metin: Birkaç adımda İstanbul&#x27;daki planlara katıl.&quot;,
+        &quot;Apple ile devam et&quot;,
+        &quot;Google ile devam et&quot;,
+        &quot;Ayırıcı: veya&quot;,
+        &quot;Ad soyad&quot;,
+        &quot;E-posta&quot;,
+        &quot;Şifre&quot;,
+        &quot;Şifreyi göster/gizle&quot;,
+        &quot;Kullanım Koşulları ve Gizlilik Politikası onay kutusu&quot;,
+        &quot;Birincil buton: Hesap oluştur&quot;,
+        &quot;Alt bağlantı: Zaten hesabın var mı? Giriş yap&quot;
+      ],
+      &quot;validation&quot;: {
+        &quot;name&quot;: &quot;En az 2 karakter&quot;,
+        &quot;email&quot;: &quot;Geçerli e-posta formatı&quot;,
+        &quot;password&quot;: &quot;En az 8 karakter, bir harf ve bir rakam&quot;,
+        &quot;terms&quot;: &quot;Onay zorunlu&quot;
+      },
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Hesap oluştur&quot;,
+          &quot;result&quot;: &quot;Form geçerliyse doğrulama e-postası gönderilir ve /verify-email açılır&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Apple ile devam et&quot;,
+          &quot;result&quot;: &quot;Apple OAuth; başarılıysa onboarding&#x27;e geç&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Google ile devam et&quot;,
+          &quot;result&quot;: &quot;Google OAuth; başarılıysa onboarding&#x27;e geç&quot;
+        }
+      ],
+      &quot;error_states&quot;: [
+        &quot;Bu e-posta zaten kayıtlı&quot;,
+        &quot;İnternet bağlantısı yok&quot;,
+        &quot;Hesap oluşturulamadı, tekrar dene&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;verify_email&quot;,
+      &quot;route&quot;: &quot;/verify-email&quot;,
+      &quot;purpose&quot;: &quot;E-posta doğrulaması&quot;,
+      &quot;layout&quot;: [
+        &quot;Tatlı zarf karakteri illüstrasyonu&quot;,
+        &quot;Başlık: E-postanı kontrol et&quot;,
+        &quot;Alt metin: Gönderdiğimiz 6 haneli kodu gir.&quot;,
+        &quot;6 haneli OTP alanı&quot;,
+        &quot;Kod gelmedi mi? Tekrar gönder&quot;,
+        &quot;E-posta adresini değiştir&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Kodu doğrula&quot;,
+          &quot;result&quot;: &quot;Başarılıysa /onboarding/location-permission&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Tekrar gönder&quot;,
+          &quot;result&quot;: &quot;60 saniyelik sayaç başlatılır&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;login&quot;,
+      &quot;route&quot;: &quot;/login&quot;,
+      &quot;purpose&quot;: &quot;Mevcut kullanıcı girişi&quot;,
+      &quot;layout&quot;: [
+        &quot;E-posta&quot;,
+        &quot;Şifre&quot;,
+        &quot;Beni hatırla&quot;,
+        &quot;Şifremi unuttum&quot;,
+        &quot;Giriş yap&quot;,
+        &quot;Apple ile giriş yap&quot;,
+        &quot;Google ile giriş yap&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Giriş yap&quot;,
+          &quot;result&quot;: &quot;Başarılıysa onboarding durumuna göre Keşfet veya onboarding&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Şifremi unuttum&quot;,
+          &quot;result&quot;: &quot;/forgot-password&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;location_permission&quot;,
+      &quot;route&quot;: &quot;/onboarding/location-permission&quot;,
+      &quot;purpose&quot;: &quot;Yakındaki etkinlikleri göstermek için konum izni istemek&quot;,
+      &quot;layout&quot;: [
+        &quot;İstanbul haritası ve küçük hareketli pin karakterleri&quot;,
+        &quot;Başlık: Yakınındaki planları gösterelim mi?&quot;,
+        &quot;Alt metin: Konumunu yalnızca sana yakın etkinlikleri önermek için kullanacağız.&quot;,
+        &quot;Birincil buton: Konumuma izin ver&quot;,
+        &quot;İkincil buton: Şimdilik semt seç&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Konumuma izin ver&quot;,
+          &quot;result&quot;: &quot;Sistem konum izni açılır; izin verilirse kullanıcı bölgesi otomatik önerilir&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Şimdilik semt seç&quot;,
+          &quot;result&quot;: &quot;/onboarding/region&quot;
+        }
+      ],
+      &quot;permission_states&quot;: [
+        &quot;İzin verildi&quot;,
+        &quot;Yalnızca uygulama kullanılırken&quot;,
+        &quot;İzin reddedildi&quot;,
+        &quot;Ayarlar üzerinden açılması gerekiyor&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;region_preference&quot;,
+      &quot;route&quot;: &quot;/onboarding/region&quot;,
+      &quot;purpose&quot;: &quot;Kullanıcının İstanbul&#x27;da öncelik verdiği bölgeleri belirlemek&quot;,
+      &quot;layout&quot;: [
+        &quot;Başlık: İstanbul&#x27;da en çok nerelerde vakit geçiriyorsun?&quot;,
+        &quot;Seçenek kartları: Avrupa Yakası, Anadolu Yakası, İki yaka da&quot;,
+        &quot;Semt seç butonu&quot;,
+        &quot;Semt seçiminde çoklu seçim: Kadıköy, Beşiktaş, Şişli, Beyoğlu, Üsküdar, Bakırköy, Sarıyer, Ataşehir ve diğerleri&quot;,
+        &quot;Devam et&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Devam et&quot;,
+          &quot;validation&quot;: &quot;En az bir bölge veya semt seçilmeli&quot;,
+          &quot;result&quot;: &quot;/onboarding/goals&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;goals&quot;,
+      &quot;route&quot;: &quot;/onboarding/goals&quot;,
+      &quot;purpose&quot;: &quot;Kullanıcının uygulamayı kullanma amacını öğrenmek&quot;,
+      &quot;layout&quot;: [
+        &quot;Başlık: ÇıkGel&#x27;de ne arıyorsun?&quot;,
+        &quot;Açıklama: Birden fazla seçebilirsin.&quot;,
+        &quot;Yuvarlak karakterli seçim kartları&quot;
+      ],
+      &quot;options&quot;: [
+        &quot;Yeni insanlarla tanışmak&quot;,
+        &quot;İstanbul&#x27;u keşfetmek&quot;,
+        &quot;Hobi edinmek&quot;,
+        &quot;Etkinlik arkadaşı bulmak&quot;,
+        &quot;Birlikte spor yapmak&quot;,
+        &quot;Profesyonel çevre kurmak&quot;,
+        &quot;Yeni topluluklara katılmak&quot;,
+        &quot;Kültür ve sanat etkinlikleri bulmak&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Devam et&quot;,
+          &quot;validation&quot;: &quot;En az bir amaç&quot;,
+          &quot;result&quot;: &quot;/onboarding/interests&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;interests&quot;,
+      &quot;route&quot;: &quot;/onboarding/interests&quot;,
+      &quot;purpose&quot;: &quot;Kişiselleştirme için ilgi alanları&quot;,
+      &quot;layout&quot;: [
+        &quot;Arama alanı: İlgi alanı ara&quot;,
+        &quot;Renkli yuvarlak kategori chip&#x27;leri&quot;,
+        &quot;Seçilen ilgi sayacı&quot;,
+        &quot;Devam et&quot;
+      ],
+      &quot;minimum_selection&quot;: 5,
+      &quot;categories&quot;: {
+        &quot;Sanat ve kültür&quot;: [
+          &quot;Sinema&quot;,
+          &quot;Tiyatro&quot;,
+          &quot;Sergi&quot;,
+          &quot;Müze&quot;,
+          &quot;Edebiyat&quot;,
+          &quot;Fotoğraf&quot;
+        ],
+        &quot;Sosyal&quot;: [
+          &quot;Yeni arkadaşlar&quot;,
+          &quot;Kahve&quot;,
+          &quot;Akşam yemeği&quot;,
+          &quot;Quiz&quot;,
+          &quot;Masa oyunları&quot;
+        ],
+        &quot;Spor ve hareket&quot;: [
+          &quot;Yürüyüş&quot;,
+          &quot;Koşu&quot;,
+          &quot;Yoga&quot;,
+          &quot;Bisiklet&quot;,
+          &quot;Dans&quot;
+        ],
+        &quot;Yaratıcılık&quot;: [
+          &quot;Tasarım&quot;,
+          &quot;İllüstrasyon&quot;,
+          &quot;Seramik&quot;,
+          &quot;Yazarlık&quot;,
+          &quot;Yapay zekâ&quot;
+        ],
+        &quot;Profesyonel&quot;: [
+          &quot;Networking&quot;,
+          &quot;Girişimcilik&quot;,
+          &quot;Teknoloji&quot;,
+          &quot;Pazarlama&quot;,
+          &quot;Freelance&quot;
+        ],
+        &quot;Dil&quot;: [
+          &quot;İngilizce&quot;,
+          &quot;Almanca&quot;,
+          &quot;Fransızca&quot;,
+          &quot;İspanyolca&quot;,
+          &quot;Türkçe pratiği&quot;
+        ],
+        &quot;Müzik ve gece&quot;: [
+          &quot;Canlı müzik&quot;,
+          &quot;DJ&quot;,
+          &quot;Konser&quot;,
+          &quot;Karaoke&quot;,
+          &quot;Dans gecesi&quot;
+        ]
+      },
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Devam et&quot;,
+          &quot;validation&quot;: &quot;En az 5 ilgi alanı&quot;,
+          &quot;result&quot;: &quot;/onboarding/social-preferences&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;social_preferences&quot;,
+      &quot;route&quot;: &quot;/onboarding/social-preferences&quot;,
+      &quot;purpose&quot;: &quot;Etkinlik önerilerinin sosyal ortam biçimini kişiselleştirmek&quot;,
+      &quot;layout&quot;: [
+        &quot;Başlık: Nasıl planlar sana daha uygun?&quot;,
+        &quot;Açıklama: Bunları daha sonra değiştirebilirsin.&quot;,
+        &quot;Seçim kartları&quot;
+      ],
+      &quot;options&quot;: [
+        &quot;Küçük gruplar&quot;,
+        &quot;Kalabalık etkinlikler&quot;,
+        &quot;Gündüz planları&quot;,
+        &quot;Gece planları&quot;,
+        &quot;Alkolsüz etkinlikler&quot;,
+        &quot;Tek başıma katılmaya uygun&quot;,
+        &quot;Yeni başlayanlara uygun&quot;,
+        &quot;Kadınlara özel etkinlikler&quot;,
+        &quot;Ücretsiz etkinlikler&quot;,
+        &quot;Hafta sonu etkinlikleri&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Devam et&quot;,
+          &quot;result&quot;: &quot;/onboarding/notifications&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;notification_permission&quot;,
+      &quot;route&quot;: &quot;/onboarding/notifications&quot;,
+      &quot;purpose&quot;: &quot;Yalnızca anlamlı bildirimler için izin istemek&quot;,
+      &quot;layout&quot;: [
+        &quot;Zil şeklinde tatlı karakter illüstrasyonu&quot;,
+        &quot;Başlık: Planı kaçırma&quot;,
+        &quot;Alt metin: Etkinlik hatırlatmaları, kontenjan açılması ve organizatör duyuruları için bildirim gönderebiliriz.&quot;,
+        &quot;Birincil buton: Bildirimlere izin ver&quot;,
+        &quot;İkincil buton: Şimdilik değil&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Bildirimlere izin ver&quot;,
+          &quot;result&quot;: &quot;Sistem izni açılır, sonra /onboarding/complete&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Şimdilik değil&quot;,
+          &quot;result&quot;: &quot;/onboarding/complete&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;onboarding_complete&quot;,
+      &quot;route&quot;: &quot;/onboarding/complete&quot;,
+      &quot;purpose&quot;: &quot;Onboarding tamamlandığını göstermek&quot;,
+      &quot;layout&quot;: [
+        &quot;Bir grup tatlı karakterin kapıdan dışarı çıktığı illüstrasyon&quot;,
+        &quot;Başlık: İstanbul seni bekliyor&quot;,
+        &quot;Alt metin: Sana uygun planları hazırladık.&quot;,
+        &quot;Buton: Keşfetmeye başla&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Keşfetmeye başla&quot;,
+          &quot;result&quot;: &quot;/discover&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;discover_map&quot;,
+      &quot;route&quot;: &quot;/discover&quot;,
+      &quot;purpose&quot;: &quot;İstanbul haritası üzerinden etkinlik keşfi&quot;,
+      &quot;default_screen&quot;: true,
+      &quot;layout&quot;: [
+        &quot;Üst sabit alan: solda İstanbul konum seçici, ortada arama, sağda bildirim ve filtre&quot;,
+        &quot;Ekranın üst yüzde 55-60&#x27;ında İstanbul haritası&quot;,
+        &quot;Kullanıcının konum noktası&quot;,
+        &quot;Etkinlik pinleri&quot;,
+        &quot;Yoğun bölgelerde sayı cluster&#x27;ları&quot;,
+        &quot;Haritanın üzerinde yatay hızlı filtre chip&#x27;leri&quot;,
+        &quot;Alt bölümde sürüklenebilir bottom sheet&quot;,
+        &quot;Alt navigasyon&quot;
+      ],
+      &quot;quick_filters&quot;: [
+        &quot;Bugün&quot;,
+        &quot;Yarın&quot;,
+        &quot;Hafta sonu&quot;,
+        &quot;Bu hafta&quot;,
+        &quot;Ücretsiz&quot;,
+        &quot;Yakınımda&quot;
+      ],
+      &quot;map_behavior&quot;: [
+        &quot;Pin rengi etkinlik kategorisine göre marka tonlarının varyasyonlarını kullanır&quot;,
+        &quot;Seçili pin büyür ve küçük yüz ifadesi olan karaktere dönüşür&quot;,
+        &quot;Pin tıklanınca alt kart açılır&quot;,
+        &quot;Harita sürüklenince Bu bölgede ara butonu çıkar&quot;,
+        &quot;Cluster tıklanınca harita yakınlaşır&quot;,
+        &quot;Konum butonu kullanıcıyı mevcut konumuna getirir&quot;,
+        &quot;Yaka değiştir butonu hızlı biçimde Avrupa/Anadolu odağına geçer&quot;
+      ],
+      &quot;bottom_sheet_states&quot;: {
+        &quot;collapsed&quot;: &quot;Tek seçili etkinlik kartı veya Sana yakın etkinlikler başlığı görünür&quot;,
+        &quot;half&quot;: &quot;Harita ile 2-3 etkinlik kartı birlikte görünür&quot;,
+        &quot;expanded&quot;: &quot;Tam liste görünümü, harita küçülür veya kapanır&quot;
+      },
+      &quot;actions&quot;: [
+        {
+          &quot;trigger&quot;: &quot;Harita pinine bas&quot;,
+          &quot;result&quot;: &quot;Etkinlik mini kartı açılır&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Mini karta bas&quot;,
+          &quot;result&quot;: &quot;/event/{eventId}&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Arama alanına bas&quot;,
+          &quot;result&quot;: &quot;/discover/search&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Filtre ikonuna bas&quot;,
+          &quot;result&quot;: &quot;/discover/filters&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Bildirim ikonuna bas&quot;,
+          &quot;result&quot;: &quot;/notifications&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Kalp ikonuna bas&quot;,
+          &quot;result&quot;: &quot;Etkinlik Kaydettiklerim&#x27;e eklenir; kullanıcı misafirse kayıt ekranı açılır&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Bu bölgede ara&quot;,
+          &quot;result&quot;: &quot;Haritanın görünür sınırları içinde sorgu yenilenir&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;event_card&quot;,
+      &quot;component&quot;: true,
+      &quot;purpose&quot;: &quot;Etkinliği hızlı karar verilebilir şekilde göstermek&quot;,
+      &quot;elements&quot;: [
+        &quot;Etkinlik görseli&quot;,
+        &quot;Kaydet butonu&quot;,
+        &quot;Kategori etiketi&quot;,
+        &quot;Son 3 yer veya Dolu etiketi&quot;,
+        &quot;Etkinlik adı&quot;,
+        &quot;Tarih ve saat&quot;,
+        &quot;Semt&quot;,
+        &quot;Tahmini ulaşım süresi&quot;,
+        &quot;Katılımcı avatarları&quot;,
+        &quot;12 kişi geliyor&quot;,
+        &quot;Tek başına gelmeye uygun&quot;,
+        &quot;Doğrulanmış organizatör&quot;
+      ],
+      &quot;interaction&quot;: [
+        &quot;Kartın tamamı tıklanabilir&quot;,
+        &quot;Kalp butonu karta gitmeden kaydeder&quot;,
+        &quot;Kart uzun basıldığında hızlı aksiyon menüsü açılır: Kaydet, Paylaş, İlgilenmiyorum&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;search&quot;,
+      &quot;route&quot;: &quot;/discover/search&quot;,
+      &quot;purpose&quot;: &quot;Etkinlik, semt ve topluluk aramak&quot;,
+      &quot;layout&quot;: [
+        &quot;Otomatik odaklanan arama alanı&quot;,
+        &quot;Son aramalar&quot;,
+        &quot;Popüler aramalar&quot;,
+        &quot;Semtler&quot;,
+        &quot;Kategoriler&quot;,
+        &quot;Canlı sonuçlar&quot;
+      ],
+      &quot;search_groups&quot;: [
+        &quot;Etkinlikler&quot;,
+        &quot;Topluluklar&quot;,
+        &quot;Organizatörler&quot;,
+        &quot;Semtler&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;trigger&quot;: &quot;Sonuca bas&quot;,
+          &quot;result&quot;: &quot;İlgili detay sayfası açılır&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Tümünü gör&quot;,
+          &quot;result&quot;: &quot;Sonuç türüne göre tam liste&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Aramayı temizle&quot;,
+          &quot;result&quot;: &quot;Varsayılan öneriler görünür&quot;
+        }
+      ],
+      &quot;empty_state&quot;: {
+        &quot;title&quot;: &quot;Bu aramada henüz bir plan yok&quot;,
+        &quot;body&quot;: &quot;Farklı bir kelime deneyebilir veya yakındaki etkinliklere bakabilirsin.&quot;,
+        &quot;button&quot;: &quot;Yakınımdakileri göster&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;filters&quot;,
+      &quot;route&quot;: &quot;/discover/filters&quot;,
+      &quot;presentation&quot;: &quot;Bottom sheet veya tam ekran modal&quot;,
+      &quot;purpose&quot;: &quot;Sonuçları ayrıntılı biçimde daraltmak&quot;,
+      &quot;sections&quot;: {
+        &quot;date&quot;: [
+          &quot;Bugün&quot;,
+          &quot;Yarın&quot;,
+          &quot;Hafta sonu&quot;,
+          &quot;Tarih seç&quot;
+        ],
+        &quot;location&quot;: [
+          &quot;Yakınımda&quot;,
+          &quot;Avrupa Yakası&quot;,
+          &quot;Anadolu Yakası&quot;,
+          &quot;Semt seç&quot;
+        ],
+        &quot;distance&quot;: [
+          &quot;2 km&quot;,
+          &quot;5 km&quot;,
+          &quot;10 km&quot;,
+          &quot;25 km&quot;,
+          &quot;Tümü&quot;
+        ],
+        &quot;price&quot;: [
+          &quot;Ücretsiz&quot;,
+          &quot;Ücretli&quot;,
+          &quot;Fiyat aralığı&quot;
+        ],
+        &quot;category&quot;: [
+          &quot;Sosyalleşme&quot;,
+          &quot;Yeme içme&quot;,
+          &quot;Sanat ve kültür&quot;,
+          &quot;Spor ve hareket&quot;,
+          &quot;Müzik ve gece&quot;,
+          &quot;Workshop&quot;,
+          &quot;Networking&quot;,
+          &quot;Dil pratiği&quot;,
+          &quot;Oyun&quot;,
+          &quot;Açık hava&quot;
+        ],
+        &quot;social_environment&quot;: [
+          &quot;Tek başına gelmeye uygun&quot;,
+          &quot;Küçük grup&quot;,
+          &quot;Yeni başlayanlara uygun&quot;,
+          &quot;Alkolsüz&quot;,
+          &quot;Kadınlara özel&quot;,
+          &quot;Erişilebilir mekân&quot;
+        ],
+        &quot;format&quot;: [
+          &quot;Yüz yüze&quot;,
+          &quot;Online&quot;,
+          &quot;Hibrit&quot;
+        ]
+      },
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Sonuçları göster&quot;,
+          &quot;result&quot;: &quot;Filtre uygulanır, Keşfet ekranına dönülür&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Temizle&quot;,
+          &quot;result&quot;: &quot;Tüm filtreler sıfırlanır&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;event_detail&quot;,
+      &quot;route&quot;: &quot;/event/{eventId}&quot;,
+      &quot;purpose&quot;: &quot;Kullanıcıya etkinliğe katılma kararı için tüm bilgileri vermek&quot;,
+      &quot;layout&quot;: [
+        &quot;Üstte büyük görsel veya kısa video&quot;,
+        &quot;Geri, paylaş, kaydet aksiyonları&quot;,
+        &quot;Etkinlik adı&quot;,
+        &quot;Kategori ve sosyal etiketler&quot;,
+        &quot;Tarih ve saat kartı&quot;,
+        &quot;Konum kartı&quot;,
+        &quot;Ulaşım süresi ve Haritada göster&quot;,
+        &quot;Ücret ve kalan kontenjan&quot;,
+        &quot;Kimler geliyor&quot;,
+        &quot;Tek başına gelen kişi sayısı&quot;,
+        &quot;İlk kez katılan kişi sayısı&quot;,
+        &quot;Organizatör kartı&quot;,
+        &quot;Etkinlik açıklaması&quot;,
+        &quot;Program&quot;,
+        &quot;Neler dahil&quot;,
+        &quot;İptal koşulları&quot;,
+        &quot;Benzer etkinlikler&quot;,
+        &quot;Sabit alt katılım butonu&quot;
+      ],
+      &quot;social_trust_labels&quot;: [
+        &quot;Tek başına gelmeye uygun&quot;,
+        &quot;Yeni başlayanlara uygun&quot;,
+        &quot;Alkolsüz&quot;,
+        &quot;İngilizce konuşulabilir&quot;,
+        &quot;Kadınlara özel&quot;,
+        &quot;Erişilebilir mekân&quot;
+      ],
+      &quot;primary_button_states&quot;: {
+        &quot;free_open&quot;: &quot;Katıl&quot;,
+        &quot;paid_open&quot;: &quot;Bilet al · {price} TL&quot;,
+        &quot;full&quot;: &quot;Bekleme listesine katıl&quot;,
+        &quot;joined&quot;: &quot;Katılıyorsun&quot;,
+        &quot;cancelled&quot;: &quot;Etkinlik iptal edildi&quot;,
+        &quot;past&quot;: &quot;Etkinlik sona erdi&quot;
+      },
+      &quot;actions&quot;: [
+        {
+          &quot;trigger&quot;: &quot;Katıl&quot;,
+          &quot;result&quot;: &quot;Katılım onay bottom sheet&#x27;i açılır&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Bilet al&quot;,
+          &quot;result&quot;: &quot;/event/{eventId}/checkout&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Bekleme listesine katıl&quot;,
+          &quot;result&quot;: &quot;Onay sonrası sıraya eklenir ve bildirim izni önerilir&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Kimler geliyor alanına bas&quot;,
+          &quot;result&quot;: &quot;/event/{eventId}/attendees&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Organizatör kartına bas&quot;,
+          &quot;result&quot;: &quot;/organizer/{organizerId}&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Haritada göster&quot;,
+          &quot;result&quot;: &quot;Harita modalı; yol tarifi seçenekleri&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Paylaş&quot;,
+          &quot;result&quot;: &quot;Sistem paylaşım menüsü&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Şikayet et&quot;,
+          &quot;result&quot;: &quot;Neden seçimi ve moderasyon formu&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;free_join_confirmation&quot;,
+      &quot;route&quot;: &quot;/event/{eventId}/join&quot;,
+      &quot;presentation&quot;: &quot;Bottom sheet&quot;,
+      &quot;layout&quot;: [
+        &quot;Etkinlik özeti&quot;,
+        &quot;Katılım kuralları&quot;,
+        &quot;Misafir getirecek misin? seçeneği&quot;,
+        &quot;Organizatörün soruları varsa cevap alanları&quot;,
+        &quot;Katılımı onayla&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Katılımı onayla&quot;,
+          &quot;result&quot;: &quot;Etkinlik Etkinliklerim &gt; Katılacaklarım&#x27;a eklenir; etkinlik sohbeti açılır; başarı ekranı gösterilir&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;checkout&quot;,
+      &quot;route&quot;: &quot;/event/{eventId}/checkout&quot;,
+      &quot;purpose&quot;: &quot;Ücretli etkinlik bilet satın alma&quot;,
+      &quot;layout&quot;: [
+        &quot;Bilet türü seçimi&quot;,
+        &quot;Adet&quot;,
+        &quot;Fiyat özeti&quot;,
+        &quot;Hizmet bedeli&quot;,
+        &quot;Toplam&quot;,
+        &quot;Kart bilgisi veya Apple Pay/Google Pay&quot;,
+        &quot;Fatura bilgisi opsiyonel&quot;,
+        &quot;İptal ve iade koşulları&quot;,
+        &quot;Ödemeyi tamamla&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Ödemeyi tamamla&quot;,
+          &quot;result&quot;: &quot;Ödeme başarılıysa dijital bilet ve QR oluşturulur&quot;
+        }
+      ],
+      &quot;states&quot;: [
+        &quot;Ödeme işleniyor&quot;,
+        &quot;Ödeme başarılı&quot;,
+        &quot;Ödeme reddedildi&quot;,
+        &quot;Kontenjan ödeme sırasında doldu&quot;,
+        &quot;3D Secure doğrulaması&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;join_success&quot;,
+      &quot;route&quot;: &quot;/event/{eventId}/success&quot;,
+      &quot;purpose&quot;: &quot;Katılım sonrası net bir sonraki adımı göstermek&quot;,
+      &quot;layout&quot;: [
+        &quot;Kutlama yapan karakter illüstrasyonu&quot;,
+        &quot;Başlık: Plana dahil oldun!&quot;,
+        &quot;Tarih, saat, semt&quot;,
+        &quot;Takvime ekle&quot;,
+        &quot;Etkinlik sohbetine git&quot;,
+        &quot;Etkinliklerim&#x27;de görüntüle&quot;,
+        &quot;Arkadaşınla paylaş&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;attendees&quot;,
+      &quot;route&quot;: &quot;/event/{eventId}/attendees&quot;,
+      &quot;purpose&quot;: &quot;Katılımcıları güvenli ve kontrollü göstermek&quot;,
+      &quot;privacy_rules&quot;: [
+        &quot;Kullanıcı görünürlüğünü profil ayarından kapatabilir&quot;,
+        &quot;Tam profil yalnızca etkinliğe katılanlar tarafından görülür&quot;,
+        &quot;Telefon ve e-posta görünmez&quot;,
+        &quot;Direkt mesaj yalnızca bağlantı isteği kabul edilirse açılır&quot;
+      ],
+      &quot;layout&quot;: [
+        &quot;Katılımcı sayısı&quot;,
+        &quot;Tek başına gelenler&quot;,
+        &quot;İlk kez katılanlar&quot;,
+        &quot;Katılımcı kartları&quot;,
+        &quot;Bağlantı isteği gönder&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;organizer_profile&quot;,
+      &quot;route&quot;: &quot;/organizer/{organizerId}&quot;,
+      &quot;purpose&quot;: &quot;Organizatör güvenini ve geçmişini göstermek&quot;,
+      &quot;layout&quot;: [
+        &quot;Profil veya topluluk görseli&quot;,
+        &quot;Ad&quot;,
+        &quot;Doğrulanmış rozeti&quot;,
+        &quot;Kısa açıklama&quot;,
+        &quot;Düzenlenen etkinlik sayısı&quot;,
+        &quot;Katılımcı memnuniyeti&quot;,
+        &quot;Takip et&quot;,
+        &quot;Yaklaşan etkinlikler&quot;,
+        &quot;Geçmiş etkinlikler&quot;,
+        &quot;Yorumlar&quot;,
+        &quot;Soru sor&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Takip et&quot;,
+          &quot;result&quot;: &quot;Yeni etkinlik bildirimi tercihi sorulur&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Soru sor&quot;,
+          &quot;result&quot;: &quot;Etkinlik seçimi veya genel mesaj formu&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;my_events&quot;,
+      &quot;route&quot;: &quot;/my-events&quot;,
+      &quot;purpose&quot;: &quot;Kullanıcının etkinlik ilişkilerini yönetmek&quot;,
+      &quot;tabs&quot;: [
+        &quot;Katılacaklarım&quot;,
+        &quot;Kaydettiklerim&quot;,
+        &quot;Geçmiş&quot;,
+        &quot;Düzenlediklerim&quot;
+      ],
+      &quot;default_tab&quot;: &quot;Katılacaklarım&quot;,
+      &quot;actions&quot;: [
+        {
+          &quot;trigger&quot;: &quot;Yaklaşan etkinlik kartına bas&quot;,
+          &quot;result&quot;: &quot;Etkinlik hazırlık detay ekranı&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Kaydedilen karta bas&quot;,
+          &quot;result&quot;: &quot;Etkinlik detay&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Geçmiş karta bas&quot;,
+          &quot;result&quot;: &quot;Değerlendirme veya yeniden benzer etkinlik bul&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Düzenlediklerim &gt; Yeni etkinlik&quot;,
+          &quot;result&quot;: &quot;/organizer/create-event&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;upcoming_event_management&quot;,
+      &quot;route&quot;: &quot;/my-events/{eventId}&quot;,
+      &quot;purpose&quot;: &quot;Katılınacak etkinliğe hazırlık ve bilet yönetimi&quot;,
+      &quot;layout&quot;: [
+        &quot;Etkinliğe kalan süre&quot;,
+        &quot;QR bilet&quot;,
+        &quot;Yol tarifi&quot;,
+        &quot;Takvime ekle&quot;,
+        &quot;Etkinlik sohbeti&quot;,
+        &quot;Organizatör duyuruları&quot;,
+        &quot;Katılımı iptal et&quot;,
+        &quot;Arkadaşına gönder&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;QR bileti aç&quot;,
+          &quot;result&quot;: &quot;Ekran parlaklığı artar, tam ekran QR görünür&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Katılımı iptal et&quot;,
+          &quot;result&quot;: &quot;İptal nedeni ve koşul onayı modalı&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;event_review&quot;,
+      &quot;route&quot;: &quot;/event/{eventId}/review&quot;,
+      &quot;purpose&quot;: &quot;Geçmiş etkinliği değerlendirmek&quot;,
+      &quot;layout&quot;: [
+        &quot;Genel deneyim 1-5&quot;,
+        &quot;Organizatör iletişimi&quot;,
+        &quot;Mekân doğruluğu&quot;,
+        &quot;Etkinlik açıklamasına uygunluk&quot;,
+        &quot;Tekrar katılır mısın?&quot;,
+        &quot;Kısa yorum&quot;,
+        &quot;Fotoğraf ekle opsiyonel&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Değerlendirmeyi gönder&quot;,
+          &quot;result&quot;: &quot;Teşekkür ekranı ve benzer etkinlik önerileri&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;messages_home&quot;,
+      &quot;route&quot;: &quot;/messages&quot;,
+      &quot;purpose&quot;: &quot;Tüm iletişimleri düzenlemek&quot;,
+      &quot;tabs&quot;: [
+        &quot;Etkinlik sohbetleri&quot;,
+        &quot;Direkt mesajlar&quot;,
+        &quot;İstekler&quot;
+      ],
+      &quot;chat_list_item&quot;: [
+        &quot;Avatar veya etkinlik görseli&quot;,
+        &quot;Sohbet adı&quot;,
+        &quot;Son mesaj&quot;,
+        &quot;Saat&quot;,
+        &quot;Okunmamış sayısı&quot;,
+        &quot;Etkinliğe kalan süre etiketi&quot;
+      ],
+      &quot;empty_states&quot;: {
+        &quot;event_chats&quot;: &quot;Katıldığın etkinliklerin sohbetleri burada görünecek.&quot;,
+        &quot;direct_messages&quot;: &quot;Aynı etkinlikte tanıştığın kişilerle karşılıklı onay sonrası konuşabilirsin.&quot;,
+        &quot;requests&quot;: &quot;Yeni bağlantı isteğin yok.&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;event_chat&quot;,
+      &quot;route&quot;: &quot;/messages/event/{eventId}&quot;,
+      &quot;purpose&quot;: &quot;Etkinlik öncesi ve sırasında grup iletişimi&quot;,
+      &quot;layout&quot;: [
+        &quot;Üstte etkinlik adı ve tarih&quot;,
+        &quot;Sabit organizatör duyurusu&quot;,
+        &quot;Mesaj listesi&quot;,
+        &quot;Fotoğraf gönder&quot;,
+        &quot;Konum paylaş&quot;,
+        &quot;Mesaj yaz&quot;,
+        &quot;Sohbet kuralları bağlantısı&quot;
+      ],
+      &quot;moderation&quot;: [
+        &quot;Mesaja uzun basınca şikayet et&quot;,
+        &quot;Kullanıcıyı engelle&quot;,
+        &quot;Organizatör mesaj sabitleyebilir&quot;,
+        &quot;Etkinlik bittikten 30 gün sonra sohbet arşivlenir&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;direct_message&quot;,
+      &quot;route&quot;: &quot;/messages/user/{userId}&quot;,
+      &quot;purpose&quot;: &quot;Karşılıklı bağlantı sonrası birebir sohbet&quot;,
+      &quot;entry_rule&quot;: &quot;Aynı etkinliğe katılmış olma ve bağlantı isteğinin kabul edilmesi&quot;,
+      &quot;layout&quot;: [
+        &quot;Kullanıcı adı&quot;,
+        &quot;Ortak etkinlik bilgisi&quot;,
+        &quot;Mesaj listesi&quot;,
+        &quot;Mesaj yaz&quot;,
+        &quot;Engelle&quot;,
+        &quot;Şikayet et&quot;,
+        &quot;Bağlantıyı kaldır&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;profile&quot;,
+      &quot;route&quot;: &quot;/profile&quot;,
+      &quot;purpose&quot;: &quot;Kullanıcı kimliği, tercihler ve güven bilgileri&quot;,
+      &quot;layout&quot;: [
+        &quot;Profil fotoğrafı&quot;,
+        &quot;Ad&quot;,
+        &quot;Semt&quot;,
+        &quot;Kısa biyografi&quot;,
+        &quot;Profili düzenle&quot;,
+        &quot;Katıldığı etkinlik sayısı&quot;,
+        &quot;Takip ettiği topluluk sayısı&quot;,
+        &quot;Düzenlediği etkinlik sayısı&quot;,
+        &quot;ÇıkGel&#x27;de ne arıyorsun?&quot;,
+        &quot;İlgi alanları&quot;,
+        &quot;Sosyal tercihler&quot;,
+        &quot;Doğrulama ve güven&quot;,
+        &quot;Takip edilen topluluklar&quot;,
+        &quot;Ayarlar&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Profili düzenle&quot;,
+          &quot;result&quot;: &quot;/profile/edit&quot;
+        },
+        {
+          &quot;label&quot;: &quot;İlgi alanlarını düzenle&quot;,
+          &quot;result&quot;: &quot;/profile/interests&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Doğrulama ve güven&quot;,
+          &quot;result&quot;: &quot;/profile/verification&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Ayarlar&quot;,
+          &quot;result&quot;: &quot;/settings&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;profile_edit&quot;,
+      &quot;route&quot;: &quot;/profile/edit&quot;,
+      &quot;purpose&quot;: &quot;Kullanıcı profilini güncellemek&quot;,
+      &quot;fields&quot;: [
+        &quot;Profil fotoğrafı&quot;,
+        &quot;Ad soyad&quot;,
+        &quot;Kullanıcı adı&quot;,
+        &quot;Kısa biyografi&quot;,
+        &quot;Semt&quot;,
+        &quot;Konuştuğu diller&quot;,
+        &quot;Profil görünürlüğü&quot;,
+        &quot;Etkinlik katılım görünürlüğü&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Kaydet&quot;,
+          &quot;result&quot;: &quot;Değişiklikler doğrulanır ve profil ekranına dönülür&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;verification_center&quot;,
+      &quot;route&quot;: &quot;/profile/verification&quot;,
+      &quot;purpose&quot;: &quot;Güvenli profil sistemi&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;name&quot;: &quot;E-posta doğrulama&quot;,
+          &quot;required&quot;: true
+        },
+        {
+          &quot;name&quot;: &quot;Telefon doğrulama&quot;,
+          &quot;required&quot;: false
+        },
+        {
+          &quot;name&quot;: &quot;Kimlik doğrulama&quot;,
+          &quot;required&quot;: &quot;Organizatörler için önerilir&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Sosyal hesap doğrulama&quot;,
+          &quot;required&quot;: false
+        }
+      ],
+      &quot;display_metrics&quot;: [
+        &quot;Katılım oranı&quot;,
+        &quot;İptal oranı&quot;,
+        &quot;Topluluk kurallarına uyum&quot;,
+        &quot;Organizatör değerlendirmeleri&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;notifications_center&quot;,
+      &quot;route&quot;: &quot;/notifications&quot;,
+      &quot;purpose&quot;: &quot;Anlamlı uygulama bildirimlerini toplamak&quot;,
+      &quot;groups&quot;: [
+        &quot;Bugün&quot;,
+        &quot;Bu hafta&quot;,
+        &quot;Daha önce&quot;
+      ],
+      &quot;notification_types&quot;: [
+        &quot;Etkinlik hatırlatması&quot;,
+        &quot;Kontenjan açıldı&quot;,
+        &quot;Etkinlik saati değişti&quot;,
+        &quot;Etkinlik iptal edildi&quot;,
+        &quot;Organizatör duyurusu&quot;,
+        &quot;Yeni mesaj&quot;,
+        &quot;Bağlantı isteği&quot;,
+        &quot;Kaydettiğin etkinlik dolmak üzere&quot;,
+        &quot;Takip ettiğin topluluk yeni etkinlik açtı&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;trigger&quot;: &quot;Bildirim satırına bas&quot;,
+          &quot;result&quot;: &quot;İlgili ekran açılır&quot;
+        },
+        {
+          &quot;trigger&quot;: &quot;Üç nokta&quot;,
+          &quot;result&quot;: &quot;Okundu işaretle, bu tür bildirimleri kapat&quot;
+        }
+      ],
+      &quot;rule&quot;: &quot;Bildirim akışında reklam gösterilmemeli&quot;
+    },
+    {
+      &quot;id&quot;: &quot;settings&quot;,
+      &quot;route&quot;: &quot;/settings&quot;,
+      &quot;purpose&quot;: &quot;Uygulama ve hesap tercihlerini yönetmek&quot;,
+      &quot;sections&quot;: {
+        &quot;Hesap&quot;: [
+          &quot;E-posta&quot;,
+          &quot;Telefon&quot;,
+          &quot;Şifre değiştir&quot;,
+          &quot;Bağlı hesaplar&quot;
+        ],
+        &quot;Bildirimler&quot;: [
+          &quot;Etkinlik hatırlatmaları&quot;,
+          &quot;Mesajlar&quot;,
+          &quot;Kontenjan bildirimleri&quot;,
+          &quot;Yakınımdaki yeni etkinlikler&quot;,
+          &quot;Topluluk güncellemeleri&quot;
+        ],
+        &quot;Gizlilik&quot;: [
+          &quot;Profil görünürlüğü&quot;,
+          &quot;Katıldığım etkinlikleri kim görebilir?&quot;,
+          &quot;Konum hassasiyeti&quot;,
+          &quot;Arama motorlarında görünürlük&quot;
+        ],
+        &quot;Güvenlik&quot;: [
+          &quot;Engellenen kullanıcılar&quot;,
+          &quot;Oturumlar&quot;,
+          &quot;İki aşamalı doğrulama&quot;
+        ],
+        &quot;Destek&quot;: [
+          &quot;Yardım merkezi&quot;,
+          &quot;Sorun bildir&quot;,
+          &quot;Topluluk kuralları&quot;,
+          &quot;Gizlilik politikası&quot;,
+          &quot;Kullanım koşulları&quot;
+        ],
+        &quot;Hesap işlemleri&quot;: [
+          &quot;Çıkış yap&quot;,
+          &quot;Hesabı dondur&quot;,
+          &quot;Hesabı sil&quot;
+        ]
+      }
+    },
+    {
+      &quot;id&quot;: &quot;create_event_entry&quot;,
+      &quot;route&quot;: &quot;/organizer/create-event&quot;,
+      &quot;purpose&quot;: &quot;Yeni etkinlik oluşturma akışını başlatmak&quot;,
+      &quot;layout&quot;: [
+        &quot;Tatlı organizatör karakter illüstrasyonu&quot;,
+        &quot;Başlık: Planını İstanbul&#x27;la paylaş&quot;,
+        &quot;Kısa açıklama&quot;,
+        &quot;Etkinlik oluştur&quot;,
+        &quot;Topluluk oluştur&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;create_event_wizard&quot;,
+      &quot;route&quot;: &quot;/organizer/create-event/steps&quot;,
+      &quot;purpose&quot;: &quot;Adım adım etkinlik oluşturmak&quot;,
+      &quot;steps&quot;: [
+        {
+          &quot;step&quot;: 1,
+          &quot;title&quot;: &quot;Etkinliğin temel bilgileri&quot;,
+          &quot;fields&quot;: [
+            &quot;Etkinlik adı&quot;,
+            &quot;Kategori&quot;,
+            &quot;Kısa açıklama&quot;,
+            &quot;Kapak görseli&quot;,
+            &quot;Yüz yüze / online / hibrit&quot;
+          ]
+        },
+        {
+          &quot;step&quot;: 2,
+          &quot;title&quot;: &quot;Tarih ve yer&quot;,
+          &quot;fields&quot;: [
+            &quot;Başlangıç tarihi&quot;,
+            &quot;Başlangıç saati&quot;,
+            &quot;Bitiş saati&quot;,
+            &quot;Tekrarlanan etkinlik&quot;,
+            &quot;Mekân adı&quot;,
+            &quot;Açık adres&quot;,
+            &quot;Harita pini&quot;,
+            &quot;Adres katılımcılara ne zaman gösterilsin?&quot;
+          ]
+        },
+        {
+          &quot;step&quot;: 3,
+          &quot;title&quot;: &quot;Katılımcılar&quot;,
+          &quot;fields&quot;: [
+            &quot;Kapasite&quot;,
+            &quot;Bekleme listesi açık mı?&quot;,
+            &quot;Misafir getirilebilir mi?&quot;,
+            &quot;Onaylı katılım mı?&quot;,
+            &quot;Katılımcıya sorulacak sorular&quot;
+          ]
+        },
+        {
+          &quot;step&quot;: 4,
+          &quot;title&quot;: &quot;Sosyal ortam&quot;,
+          &quot;fields&quot;: [
+            &quot;Tek başına gelmeye uygun&quot;,
+            &quot;Yeni başlayanlara uygun&quot;,
+            &quot;Alkolsüz&quot;,
+            &quot;Kadınlara özel&quot;,
+            &quot;Dil&quot;,
+            &quot;Erişilebilirlik bilgisi&quot;
+          ]
+        },
+        {
+          &quot;step&quot;: 5,
+          &quot;title&quot;: &quot;Ücret&quot;,
+          &quot;fields&quot;: [
+            &quot;Ücretsiz&quot;,
+            &quot;Ücretli&quot;,
+            &quot;Bilet türleri&quot;,
+            &quot;Fiyat&quot;,
+            &quot;İade koşulları&quot;
+          ]
+        },
+        {
+          &quot;step&quot;: 6,
+          &quot;title&quot;: &quot;Detaylar&quot;,
+          &quot;fields&quot;: [
+            &quot;Uzun açıklama&quot;,
+            &quot;Program&quot;,
+            &quot;Neler dahil?&quot;,
+            &quot;Katılımcı ne getirmeli?&quot;,
+            &quot;Kurallar&quot;
+          ]
+        },
+        {
+          &quot;step&quot;: 7,
+          &quot;title&quot;: &quot;Önizleme ve yayınla&quot;,
+          &quot;fields&quot;: [
+            &quot;Etkinlik önizlemesi&quot;,
+            &quot;Taslak kaydet&quot;,
+            &quot;Şimdi yayınla&quot;,
+            &quot;İleri tarihli yayınla&quot;
+          ]
+        }
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Devam et&quot;,
+          &quot;result&quot;: &quot;Form doğrulanır ve sonraki adıma geçilir&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Taslak kaydet&quot;,
+          &quot;result&quot;: &quot;Düzenlediklerim &gt; Taslaklar&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Yayınla&quot;,
+          &quot;result&quot;: &quot;Moderasyon kontrolü veya doğrudan yayın; başarı ekranı&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;organizer_dashboard&quot;,
+      &quot;route&quot;: &quot;/organizer/event/{eventId}&quot;,
+      &quot;purpose&quot;: &quot;Yayınlanan etkinliği yönetmek&quot;,
+      &quot;sections&quot;: [
+        &quot;Özet&quot;,
+        &quot;Katılımcılar&quot;,
+        &quot;Bekleme listesi&quot;,
+        &quot;Mesajlar&quot;,
+        &quot;Check-in&quot;,
+        &quot;İstatistikler&quot;,
+        &quot;Etkinliği düzenle&quot;
+      ],
+      &quot;metrics&quot;: [
+        &quot;Görüntülenme&quot;,
+        &quot;Kaydetme&quot;,
+        &quot;Katılım&quot;,
+        &quot;Bilet geliri&quot;,
+        &quot;İptal sayısı&quot;,
+        &quot;Check-in oranı&quot;
+      ],
+      &quot;actions&quot;: [
+        {
+          &quot;label&quot;: &quot;Duyuru gönder&quot;,
+          &quot;result&quot;: &quot;Katılımcılara push ve etkinlik sohbeti mesajı&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Katılımcıları yönet&quot;,
+          &quot;result&quot;: &quot;Onayla, çıkar, mesaj gönder&quot;
+        },
+        {
+          &quot;label&quot;: &quot;QR check-in&quot;,
+          &quot;result&quot;: &quot;Kamera açılır&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Etkinliği iptal et&quot;,
+          &quot;result&quot;: &quot;Neden, iade ve bildirim adımları&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;qr_checkin&quot;,
+      &quot;route&quot;: &quot;/organizer/event/{eventId}/checkin&quot;,
+      &quot;purpose&quot;: &quot;Etkinlik girişinde hızlı check-in&quot;,
+      &quot;layout&quot;: [
+        &quot;Kamera alanı&quot;,
+        &quot;QR hizalama çerçevesi&quot;,
+        &quot;Manuel isim ara&quot;,
+        &quot;Check-in sayacı&quot;,
+        &quot;Sorunlu bilet uyarısı&quot;
+      ],
+      &quot;states&quot;: [
+        &quot;Başarılı check-in&quot;,
+        &quot;Daha önce check-in yapılmış&quot;,
+        &quot;Geçersiz bilet&quot;,
+        &quot;Yanlış etkinlik bileti&quot;,
+        &quot;İnternet yok, çevrimdışı kaydet&quot;
+      ]
+    }
+  ],
+  &quot;component_library&quot;: {
+    &quot;buttons&quot;: {
+      &quot;primary&quot;: {
+        &quot;background&quot;: &quot;#8972E6&quot;,
+        &quot;text&quot;: &quot;#FFFFFF&quot;,
+        &quot;height&quot;: 52,
+        &quot;radius&quot;: 18,
+        &quot;states&quot;: [
+          &quot;default&quot;,
+          &quot;pressed&quot;,
+          &quot;loading&quot;,
+          &quot;disabled&quot;
+        ]
+      },
+      &quot;secondary&quot;: {
+        &quot;background&quot;: &quot;#53BFCA&quot;,
+        &quot;text&quot;: &quot;#17151C&quot;,
+        &quot;height&quot;: 52,
+        &quot;radius&quot;: 18
+      },
+      &quot;tertiary&quot;: {
+        &quot;background&quot;: &quot;transparent&quot;,
+        &quot;text&quot;: &quot;#8972E6&quot;
+      },
+      &quot;danger&quot;: {
+        &quot;background&quot;: &quot;#E85D75&quot;,
+        &quot;text&quot;: &quot;#FFFFFF&quot;
+      }
+    },
+    &quot;chips&quot;: {
+      &quot;default&quot;: &quot;Beyaz zemin, yumuşak border&quot;,
+      &quot;selected&quot;: &quot;Mor zemin, beyaz yazı&quot;,
+      &quot;category&quot;: &quot;Açık lila zemin, mor veya cyan ikon&quot;,
+      &quot;height&quot;: 38,
+      &quot;radius&quot;: 999
+    },
+    &quot;cards&quot;: {
+      &quot;event&quot;: &quot;Büyük görsel + kısa metin + sosyal güven etiketleri&quot;,
+      &quot;compact_event&quot;: &quot;Harita pini sonrası açılan yatay küçük kart&quot;,
+      &quot;organizer&quot;: &quot;Avatar, doğrulama, kısa istatistik ve takip butonu&quot;,
+      &quot;empty_state&quot;: &quot;Tatlı vektörel karakter + kısa açıklama + tek CTA&quot;,
+      &quot;notice&quot;: &quot;Açık lila yüzey, küçük karakter, kısa açıklama&quot;
+    },
+    &quot;bottom_sheet&quot;: {
+      &quot;background&quot;: &quot;#FFFFFF&quot;,
+      &quot;radius_top&quot;: 28,
+      &quot;drag_handle&quot;: true,
+      &quot;snap_points&quot;: [
+        &quot;collapsed&quot;,
+        &quot;half&quot;,
+        &quot;expanded&quot;
+      ]
+    },
+    &quot;navigation&quot;: {
+      &quot;background&quot;: &quot;Yarı opak beyaz veya açık lila&quot;,
+      &quot;active_color&quot;: &quot;#8972E6&quot;,
+      &quot;inactive_color&quot;: &quot;#6E6876&quot;,
+      &quot;style&quot;: &quot;Yuvarlatılmış, hafif yüzen alt bar&quot;
+    },
+    &quot;map_pins&quot;: {
+      &quot;default&quot;: &quot;Cyan kapı ikonu&quot;,
+      &quot;selected&quot;: &quot;Mor karakterli büyük pin&quot;,
+      &quot;cluster&quot;: &quot;Mor daire içinde beyaz sayı&quot;,
+      &quot;saved&quot;: &quot;Kalp işaretli varyasyon&quot;,
+      &quot;sold_out&quot;: &quot;Düşük opaklık ve Dolu etiketi&quot;
+    }
+  },
+  &quot;microcopy_style&quot;: {
+    &quot;tone&quot;: [
+      &quot;samimi&quot;,
+      &quot;net&quot;,
+      &quot;genç&quot;,
+      &quot;güven verici&quot;,
+      &quot;fazla şakacı olmayan&quot;,
+      &quot;şiirsel olmayan&quot;
+    ],
+    &quot;examples&quot;: {
+      &quot;empty_saved&quot;: &quot;Henüz bir plan kaydetmedin. Hoşuna giden etkinliklerde kalbe dokun.&quot;,
+      &quot;no_results&quot;: &quot;Bu bölgede şu an eşleşen bir etkinlik yok. Haritayı biraz uzaklaştırmayı dene.&quot;,
+      &quot;join_success&quot;: &quot;Plana dahil oldun!&quot;,
+      &quot;waitlist_success&quot;: &quot;Sıraya girdin. Yer açılırsa sana hemen haber vereceğiz.&quot;,
+      &quot;cancel_warning&quot;: &quot;Katılımını iptal etmek istediğine emin misin? Yerini bekleyen biri olabilir.&quot;,
+      &quot;offline&quot;: &quot;Bağlantı yok. Yeniden bağlandığında sonuçları güncelleyeceğiz.&quot;,
+      &quot;profile_incomplete&quot;: &quot;Sana daha iyi etkinlikler önerebilmemiz için profilini tamamla.&quot;
+    }
+  },
+  &quot;system_states&quot;: {
+    &quot;loading&quot;: {
+      &quot;style&quot;: &quot;Skeleton kartlar ve küçük hareketli karakter&quot;,
+      &quot;rule&quot;: &quot;Tam ekran spinner mümkün olduğunca kullanılmamalı&quot;
+    },
+    &quot;empty&quot;: {
+      &quot;style&quot;: &quot;Her boş durumda farklı ama aynı aileden vektörel karakter&quot;,
+      &quot;must_include&quot;: [
+        &quot;Kısa başlık&quot;,
+        &quot;Açıklama&quot;,
+        &quot;Tek bir sonraki adım&quot;
+      ]
+    },
+    &quot;error&quot;: {
+      &quot;style&quot;: &quot;Sakin, suçlayıcı olmayan dil&quot;,
+      &quot;actions&quot;: [
+        &quot;Tekrar dene&quot;,
+        &quot;Geri dön&quot;,
+        &quot;Destek al&quot;
+      ]
+    },
+    &quot;offline&quot;: {
+      &quot;behavior&quot;: [
+        &quot;Son indirilen etkinlikler gösterilir&quot;,
+        &quot;Kaydetme ve mesaj gönderme sıraya alınır&quot;,
+        &quot;Harita üzerinde çevrimdışı uyarı görünür&quot;
+      ]
+    }
+  },
+  &quot;safety_and_moderation&quot;: {
+    &quot;principles&quot;: [
+      &quot;Telefon ve e-posta herkese açık gösterilmez&quot;,
+      &quot;Direkt mesaj karşılıklı bağlantı sonrası açılır&quot;,
+      &quot;Etkinlik sohbetinde şikayet ve engelleme kolay erişilir&quot;,
+      &quot;Organizatörler doğrulanabilir&quot;,
+      &quot;Şüpheli etkinlikler moderasyona gider&quot;,
+      &quot;Kullanıcılar etkinlik ve organizatör şikayet edebilir&quot;,
+      &quot;Konum hassasiyeti kullanıcı kontrolündedir&quot;
+    ],
+    &quot;report_reasons&quot;: [
+      &quot;Yanıltıcı etkinlik&quot;,
+      &quot;Taciz veya uygunsuz davranış&quot;,
+      &quot;Spam&quot;,
+      &quot;Güvenlik riski&quot;,
+      &quot;Nefret söylemi&quot;,
+      &quot;Sahte profil&quot;,
+      &quot;Diğer&quot;
+    ]
+  },
+  &quot;accessibility&quot;: {
+    &quot;requirements&quot;: [
+      &quot;Minimum dokunma alanı 44x44 px&quot;,
+      &quot;Metin ve arka plan kontrastı WCAG AA&quot;,
+      &quot;Dinamik font boyutlarını destekle&quot;,
+      &quot;Ekran okuyucu etiketleri&quot;,
+      &quot;Renk tek başına durum anlatmamalı&quot;,
+      &quot;Harita pinlerinde ikon ve etiket birlikte kullanılmalı&quot;,
+      &quot;Animasyon azaltma ayarına uyum&quot;
+    ]
+  },
+  &quot;analytics_events&quot;: [
+    &quot;signup_started&quot;,
+    &quot;signup_completed&quot;,
+    &quot;onboarding_completed&quot;,
+    &quot;location_permission_granted&quot;,
+    &quot;discover_map_opened&quot;,
+    &quot;event_pin_tapped&quot;,
+    &quot;event_detail_opened&quot;,
+    &quot;event_saved&quot;,
+    &quot;event_join_started&quot;,
+    &quot;event_join_completed&quot;,
+    &quot;ticket_purchase_completed&quot;,
+    &quot;waitlist_joined&quot;,
+    &quot;message_sent&quot;,
+    &quot;connection_request_sent&quot;,
+    &quot;event_created&quot;,
+    &quot;event_published&quot;,
+    &quot;checkin_completed&quot;,
+    &quot;report_submitted&quot;
+  ],
+  &quot;sample_istanbul_content&quot;: {
+    &quot;events&quot;: [
+      {
+        &quot;title&quot;: &quot;Kadıköy&#x27;de Yeni İnsanlarla Kahve&quot;,
+        &quot;category&quot;: &quot;Sosyalleşme&quot;,
+        &quot;district&quot;: &quot;Kadıköy&quot;,
+        &quot;time&quot;: &quot;Cumartesi 15.00&quot;,
+        &quot;price&quot;: &quot;Ücretsiz&quot;,
+        &quot;labels&quot;: [
+          &quot;Tek başına gelmeye uygun&quot;,
+          &quot;Küçük grup&quot;
+        ]
+      },
+      {
+        &quot;title&quot;: &quot;Bebek–Kuruçeşme Gün Batımı Yürüyüşü&quot;,
+        &quot;category&quot;: &quot;Açık hava&quot;,
+        &quot;district&quot;: &quot;Beşiktaş&quot;,
+        &quot;time&quot;: &quot;Pazar 18.30&quot;,
+        &quot;price&quot;: &quot;Ücretsiz&quot;,
+        &quot;labels&quot;: [
+          &quot;Yeni başlayanlara uygun&quot;
+        ]
+      },
+      {
+        &quot;title&quot;: &quot;Yaratıcı Kadınlar Kahvesi&quot;,
+        &quot;category&quot;: &quot;Networking&quot;,
+        &quot;district&quot;: &quot;Şişli&quot;,
+        &quot;time&quot;: &quot;Çarşamba 19.00&quot;,
+        &quot;price&quot;: &quot;250 TL&quot;,
+        &quot;labels&quot;: [
+          &quot;Kadınlara özel&quot;,
+          &quot;Tek başına gelmeye uygun&quot;
+        ]
+      },
+      {
+        &quot;title&quot;: &quot;İlk Kez Seramik Deneyenler&quot;,
+        &quot;category&quot;: &quot;Workshop&quot;,
+        &quot;district&quot;: &quot;Beyoğlu&quot;,
+        &quot;time&quot;: &quot;Cumartesi 13.00&quot;,
+        &quot;price&quot;: &quot;650 TL&quot;,
+        &quot;labels&quot;: [
+          &quot;Yeni başlayanlara uygun&quot;,
+          &quot;Malzemeler dahil&quot;
+        ]
+      },
+      {
+        &quot;title&quot;: &quot;İngilizce Konuşma Kulübü&quot;,
+        &quot;category&quot;: &quot;Dil pratiği&quot;,
+        &quot;district&quot;: &quot;Üsküdar&quot;,
+        &quot;time&quot;: &quot;Perşembe 20.00&quot;,
+        &quot;price&quot;: &quot;Ücretsiz&quot;,
+        &quot;labels&quot;: [
+          &quot;Tek başına gelmeye uygun&quot;
+        ]
+      }
+    ]
+  },
+  &quot;design_output_requirements&quot;: {
+    &quot;deliverables&quot;: [
+      &quot;Tüm ekranların yüksek çözünürlüklü mobil UI tasarımı&quot;,
+      &quot;Her ekranın boş, dolu, loading ve hata durumları&quot;,
+      &quot;Tıklanabilir prototip akışı&quot;,
+      &quot;Component library&quot;,
+      &quot;Color styles&quot;,
+      &quot;Text styles&quot;,
+      &quot;Auto layout&quot;,
+      &quot;Map pin seti&quot;,
+      &quot;İllüstrasyon karakter seti&quot;,
+      &quot;App icon&quot;,
+      &quot;Splash screen&quot;,
+      &quot;Onboarding ekranları&quot;,
+      &quot;Organizer flow&quot;,
+      &quot;QR check-in ekranları&quot;
+    ],
+    &quot;rules_for_ai_designer&quot;: [
+      &quot;Meetup ekranlarını kopyalama; yalnızca kullanıcı deneyimi mantığını referans al&quot;,
+      &quot;Görsel dil tamamen ÇıkGel markasına ait olmalı&quot;,
+      &quot;Tüm metinler Türkçe olmalı&quot;,
+      &quot;Lorem ipsum kullanılmamalı&quot;,
+      &quot;İstanbul semtleri ve gerçekçi örnek etkinlikler kullanılmalı&quot;,
+      &quot;Alt navigasyon sırası kesinlikle Keşfet, Etkinliklerim, Mesajlar, Profil olmalı&quot;,
+      &quot;İlk ana ekran kesinlikle İstanbul haritası olmalı&quot;,
+      &quot;Harita ve liste aynı ekran içinde bottom sheet ile birlikte çalışmalı&quot;,
+      &quot;Tasarım pastel, güven verici, sıcak ve vektörel karakter destekli olmalı&quot;,
+      &quot;Ana renkler #FCF0FA, #8972E6 ve #53BFCA olmalı&quot;,
+      &quot;Her ekranda birincil CTA net biçimde görünmeli&quot;,
+      &quot;Mobil öncelikli tasarla&quot;,
+      &quot;iPhone 15 Pro ölçüsünü ana referans al, Android varyasyonunu da düşün&quot;,
+      &quot;Bileşenleri tekrar kullanılabilir oluştur&quot;,
+      &quot;Kayıt, katılım ve ödeme akışlarında kullanıcıya ilerleme durumu göster&quot;,
+      &quot;Dating uygulaması hissi verecek kart kaydırma veya insan eşleştirme dili kullanma&quot;
+    ]
+  },
+  &quot;final_instruction_to_model&quot;: &quot;Bu JSON&#x27;daki ürün mimarisini, görsel sistemi ve etkileşim kurallarını eksiksiz uygula. Önce bilgi mimarisini ve ekran listesini çıkar, sonra design system oluştur, ardından ekranları akış sırasına göre tasarla. Her butonun tıklama sonucunu prototipte bağla. Kullanıcı deneyimini İstanbul haritası merkezli kur. Görsel olarak referanslardaki pastel, yuvarlak, sevimli ve güven verici karakter yaklaşımını özgün biçimde yorumla; referansları kopyalama.&quot;
+}</pre>
+  <div class="prompt-foot">
+    <button class="btn btn--solid" data-copy>Promptu Kopyala</button>
+    <a class="btn" href="../">Tüm promptlar</a>
+  </div>
+</main>
+<footer class="foot">
+  <p class="wordmark">PAS.</p>
+  <div class="foot-grid">
+    <div><span class="meta">Alanlar</span><a class="link" href="../../index.html#creative">PAS Creative</a><a class="link" href="../../index.html#music">PAS Music</a></div>
+    <div><span class="meta">Arşiv</span><a class="link" href="../../promptlar/">Promptlar</a></div>
+    <div><span class="meta">Konum</span><span>Beyoğlu · İstanbul</span></div>
+    <div><span class="meta">İletişim</span><a class="link" href="mailto:merhaba@pascreativestudio.com">merhaba@pascreativestudio.com</a><a class="link" href="tel:+905061106067">0506 110 60 67</a></div>
+    <div><span class="meta">Stüdyo</span><span>Independent Creative Studio</span></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 PAS</span><span>pascreativestudio.com</span></div>
+</footer>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+  const t=document.getElementById('prompt').textContent, o=b.textContent;
+  let ok=false;
+  try{await navigator.clipboard.writeText(t);ok=true}catch(e){
+    const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.select();try{ok=document.execCommand('copy')}catch(_){}ta.remove()}
+  b.textContent=ok?'Kopyalandı':'Kopyalanamadı';setTimeout(()=>b.textContent=o,1600);
+}));
+</script>
+</body>
+</html>

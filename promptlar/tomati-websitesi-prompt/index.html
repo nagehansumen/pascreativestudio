@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tomati Websitesi Prompt — PAS Creative Studio</title>
+<meta name="description" content="TO-MA-TI pizza markası için mobile-first, scroll-driven bir restoran web sitesi üretmek üzere yazılan promptun tamamı.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://pascreativestudio.com/promptlar/tomati-websitesi-prompt/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PAS Creative Studio">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Tomati Websitesi Prompt — PAS Creative Studio">
+<meta property="og:description" content="TO-MA-TI pizza markası için mobile-first, scroll-driven bir restoran web sitesi üretmek üzere yazılan promptun tamamı.">
+<meta property="og:url" content="https://pascreativestudio.com/promptlar/tomati-websitesi-prompt/">
+<meta property="og:image" content="https://pascreativestudio.com/assets/studio.jpg">
+<meta property="og:image:width" content="1672">
+<meta property="og:image:height" content="941">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tomati Websitesi Prompt — PAS Creative Studio">
+<meta name="twitter:description" content="TO-MA-TI pizza markası için mobile-first, scroll-driven bir restoran web sitesi üretmek üzere yazılan promptun tamamı.">
+<meta name="twitter:image" content="https://pascreativestudio.com/assets/studio.jpg">
+<meta name="theme-color" content="#efefef">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#efefef; --ink:#0f1435; --lime:#cce86b; --pink:#f2c4cd;
+  --grey:#dcdcdc; --rule:rgba(15,20,53,.2); --muted:rgba(15,20,53,.6);
+  --m:clamp(16px,3.2vw,44px); --gut:clamp(12px,1.6vw,24px);
+  --ease-out:cubic-bezier(.2,.7,.1,1);
+  --f:"Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:17px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3,p,ul,dl,dd{margin:0;padding:0}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wordmark{font-weight:700;font-stretch:88%;letter-spacing:-.035em;line-height:1}
+.meta{font-size:13px;line-height:1.4;color:var(--muted)}
+.tnum{font-variant-numeric:tabular-nums}
+.wrap{padding-inline:var(--m)}
+.link{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .45s var(--ease-out)}
+.link:hover{background-size:100% 1px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border:1px solid var(--ink);
+  font-size:15px;font-weight:500;transition:background .35s var(--ease-out),color .35s var(--ease-out)}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn--solid{background:var(--ink);color:var(--bg)}
+.btn--solid:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+
+.head{display:flex;align-items:center;justify-content:space-between;gap:20px;height:64px;padding:0 var(--m);
+  border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--bg);z-index:10}
+.head-brand{display:flex;align-items:baseline;gap:10px}
+.head-brand .wordmark{font-size:28px}
+.head-brand .meta{color:var(--ink)}
+.nav{display:flex;gap:clamp(14px,1.8vw,30px);font-size:15px;font-weight:500;flex-wrap:wrap;justify-content:flex-end}
+
+.article{padding-block:clamp(40px,6vw,88px) clamp(64px,8vw,120px);max-width:980px;margin:0 auto}
+.crumbs{margin-bottom:clamp(28px,4vw,52px)}
+.crumbs a:hover{text-decoration:underline}
+h1{font-size:clamp(38px,6vw,84px);font-weight:600;font-stretch:80%;letter-spacing:-.03em;line-height:.94}
+.lead{margin-top:20px;font-size:clamp(18px,1.7vw,23px);line-height:1.4;max-width:34em}
+.specs{margin-top:clamp(32px,4vw,56px);border-top:1px solid var(--ink);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gut)}
+.specs div{padding-top:12px}
+.specs dt{font-size:13px;color:var(--muted)}
+.specs dd{margin-top:4px;font-weight:500}
+.prompt-head{margin-top:clamp(40px,5vw,72px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.prompt{margin-top:16px;background:var(--ink);color:var(--bg);padding:clamp(18px,2.4vw,32px);
+  font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:14px;line-height:1.65;
+  white-space:pre-wrap;word-break:break-word;overflow-x:auto;tab-size:2}
+.prompt-foot{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+
+.pr-list{margin-top:clamp(36px,4vw,64px);border-top:1px solid var(--ink)}
+.pr-row{display:grid;grid-template-columns:56px minmax(0,1fr) 190px auto;gap:var(--gut);align-items:center;
+  padding:22px 0;border-bottom:1px solid var(--rule);position:relative}
+.pr-row::before{content:"";position:absolute;inset:0 calc(var(--m)*-1);background:var(--lime);opacity:0;transition:opacity .25s;z-index:0}
+.pr-row:hover::before{opacity:1}
+.pr-row > *{position:relative;z-index:1}
+.pr-id{color:var(--muted);font-size:14px}
+.pr-main{display:grid;gap:4px}
+.pr-main b{font-size:clamp(21px,2vw,28px);font-weight:600;font-stretch:88%;letter-spacing:-.015em;line-height:1.15}
+.pr-main span{font-size:14px;color:var(--muted)}
+.pr-kind{font-size:14px}
+.pr-go{font-size:15px;font-weight:500;white-space:nowrap}
+
+.foot{background:var(--ink);color:var(--bg);padding:clamp(48px,6vw,88px) var(--m) 28px}
+.foot .wordmark{font-size:clamp(84px,19vw,340px);letter-spacing:-.05em;line-height:.8;margin-left:-.04em}
+.foot-grid{margin-top:clamp(36px,4vw,64px);border-top:1px solid rgba(239,239,239,.25);padding-top:18px;
+  display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--gut);row-gap:28px;font-size:15px}
+.foot-grid > div{display:grid;gap:4px;align-content:start;justify-items:start}
+.foot .meta{color:rgba(239,239,239,.55)}
+.foot :focus-visible{outline-color:var(--lime)}
+.foot-bottom{margin-top:48px;display:flex;justify-content:space-between;gap:20px;color:rgba(239,239,239,.55);font-size:13px}
+
+@media (max-width:820px){
+  body{font-size:16px}
+  .head{height:auto;padding-block:12px;flex-direction:column;align-items:flex-start;gap:8px;position:static}
+  .nav{justify-content:flex-start;gap:14px;font-size:14px}
+  .specs{grid-template-columns:1fr;gap:0}
+  .specs div{padding-block:12px;border-bottom:1px solid var(--rule)}
+  .pr-row{grid-template-columns:1fr;gap:6px;padding:20px 0}
+  .pr-kind,.pr-go{font-size:14px;color:var(--muted)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-bottom{flex-direction:column}
+  .prompt{font-size:13px}
+}
+@media (max-width:480px){.foot-grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.001s!important}}
+
+</style>
+</head>
+<body>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Tomati Websitesi Prompt", "description": "TO-MA-TI pizza markası için mobile-first, scroll-driven bir restoran web sitesi üretmek üzere yazılan promptun tamamı.", "inLanguage": "tr-TR", "mainEntityOfPage": "https://pascreativestudio.com/promptlar/tomati-websitesi-prompt/", "image": "https://pascreativestudio.com/assets/studio.jpg", "author": {"@type": "Organization", "name": "PAS Creative Studio", "url": "https://pascreativestudio.com/"}, "publisher": {"@type": "Organization", "name": "PAS Creative Studio", "url": "https://pascreativestudio.com/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "PAS Creative", "item": "https://pascreativestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Promptlar", "item": "https://pascreativestudio.com/promptlar/"}, {"@type": "ListItem", "position": 3, "name": "Tomati Websitesi Prompt", "item": "https://pascreativestudio.com/promptlar/tomati-websitesi-prompt/"}]}</script>
+<header class="head">
+  <a class="head-brand" href="../../index.html#creative"><span class="wordmark">PAS.</span><span class="meta">Creative</span></a>
+  <nav class="nav" aria-label="Ana menü">
+    <a href="../../index.html#studio">Studio</a>
+    <a href="../../index.html#creative-space">Creative Space</a>
+    <a href="../../promptlar/">Promptlar</a>
+    <a href="../../index.html#hakkimizda">Hakkımızda</a>
+    <a href="../../index.html#iletisim">İletişim</a>
+  </nav>
+</header>
+<main class="wrap article">
+  <nav class="crumbs meta" aria-label="Breadcrumb"><a href="../../index.html#creative">PAS Creative</a> / <a href="../">Promptlar</a> / <span>Tomati Websitesi Prompt</span></nav>
+  <h1>Tomati Websitesi Prompt</h1>
+  <p class="lead">TO-MA-TI pizza markası için mobile-first, scroll-driven bir restoran web sitesi üretmek üzere yazılan promptun tamamı.</p>
+  <dl class="specs">
+    <div><dt>Tür</dt><dd>Web sitesi promptu</dd></div>
+    <div><dt>Prompt dili</dt><dd>Türkçe</dd></div>
+    <div><dt>Format</dt><dd>Düz metin</dd></div>
+  </dl>
+  <div class="prompt-head">
+    <span class="meta">Promptun tamamı</span>
+    <button class="btn btn--solid" data-copy>Promptu Kopyala</button>
+  </div>
+  <pre class="prompt" id="prompt">TO-MA-TI isimli pizza markası için yüksek görsel etkiye sahip, mobile-first,
+scroll-driven, illüstrasyon odaklı, interaktif ve çalışan bir restoran websitesi
+tasarla ve geliştir.
+Bu çalışma sıradan bir restoran şablonu, klasik menü sitesi veya yalnızca birkaç
+animasyon eklenmiş statik bir landing page olmamalı.
+Website; TO-MA-TI’nin marka dünyasını dijital ortamda yaşayan, hareket eden ve
+kullanıcı scroll ettikçe gelişen bir deneyime dönüştürmeli.
+Ana hedef:
+Kullanıcı siteye girdiğinde yalnızca bir restoranı değil, karakteri olan eğlenceli
+bir marka evrenini deneyimlemeli.
+Website özellikle mobil cihazlardan ziyaret edileceği için:
+- tasarım ve geliştirme süreci mobile-first başlamalı,
+- tüm scroll animasyonları önce mobil ekran için düşünülmeli,
+- desktop tasarım mobil versiyonun genişletilmiş hali olmalı,
+- mobil performans, dokunmatik kullanım, okunabilirlik ve rezervasyon dönüşümü
+öncelikli olmalı.
+==================================================
+01. MARKA HAKKINDA
+==================================================
+MARKA ADI:
+TO-MA-TI
+MARKA KATEGORİSİ:
+Domates soslu pizzalar üzerine uzmanlaşan, karakterli, eğlenceli, çağdaş pizza
+restoranı.
+MARKA KARAKTERİ:
+- eğlenceli
+- muzip
+- sıcak
+- hareketli
+- samimi
+- özgün
+- hafif nostaljik
+- el çizimi
+- karakter odaklı
+- çağdaş
+- sosyal
+- fotojenik
+- iştah açıcı
+MARKA ÖZÜ:
+TO-MA-TI, domatesi yalnızca bir malzeme olarak değil, tüm marka dünyasının başrolü
+olarak kullanır.
+Markanın maskotu:
+- gözlüklü,
+- topuzlu,
+- sevimli ama çocukça olmayan,
+- enerjik bir nine,
+- scooter kullanıyor,
+- scooter’ın arkasında büyük kırmızı bir domates taşıyor.
+Bu nine; markanın teslimat, hareket, sıcaklık, mutfak geleneği ve karakter
+duygusunu temsil ediyor.
+MARKA SLOGANLARI:
+Ana slogan:
+“One tomato. Big flavor. Straight to you.”
+Türkçe destek sloganları:
+- Bir domates. Büyük lezzet.
+- Pizza with personality.
+- Bir dilim yetmez.
+- Hot pizza, happy you.
+- Sosu iyi olanın hikâyesi de iyi olur.
+- Domates burada başrolde.
+- Biraz dağınık. Fazlasıyla lezzetli.
+- Ninen yola çıktı.
+- İlk dilim tesadüf, ikincisi karar.
+- Kutu domates, içi mutluluk.
+COPYWRITING TONU:
+Metinler:
+- kısa,
+- net,
+- ritmik,
+- hafif muzip,
+- sıcak,
+- iddialı ama kibirsiz,
+- şiirsel değil,
+- fazla kurumsal değil,
+- zorlama gençlik dili kullanmayan,
+- küçük kelime oyunlarına açık olmalı.
+Marka asla:
+- lüks fine dining gibi,
+- fazla rustik İtalyan restoranı gibi,
+- fast-food zinciri gibi,
+- çocuk markası gibi,
+- hipster klişesi gibi görünmemeli.
+==================================================
+02. ONAYLI GÖRSEL KİMLİK
+==================================================
+LOGO:
+Ana logoda:
+- üstte el çizimi karakterinde “To-MA-Ti” yazısı,
+- altta scooter kullanan topuzlu ve gözlüklü nine,
+- scooter arkasında büyük kırmızı domates bulunur.
+Logo stili:
+- hand-drawn,
+- organik,
+- hafif düzensiz,
+- sıcak,
+- grafik,
+- düz vektörel,
+- line-art odaklı.
+Karakterin ve logonun biçimini yeniden tasarlama.
+Mevcut görsel kimliği koru.
+Nineyi başka bir karaktere dönüştürme.
+Scooter’ı bisiklet, motosiklet veya gerçekçi Vespa görünümüne dönüştürme.
+KUTU:
+TO-MA-TI’nin pizza kutusu:
+- domates formunda özel kesim,
+- pastel kırmızı-koral renkte,
+- hafif eskitilmiş serigrafi dokusunda,
+- üzerinde yalnızca marka logosu bulunan,
+- ikonik bir packaging objesidir.
+Website içerisinde kutu önemli bir marka varlığı olarak kullanılmalı.
+İLLÜSTRASYON DİLİ:
+- line-art vektör
+- el çizimi hissi
+- hafif screen-print / grain dokusu
+- temiz ama fazla kusursuz olmayan çizgiler
+- organik kıvrımlar
+- sade ve sıcak form dili
+- düz renk alanları
+- gerçekçi olmayan ama tanınabilir yemek çizimleri
+- hareket çizgileri
+- küçük toz bulutları
+- kıvrımlı çizgiler
+- domates ikonları
+- pizza dilimleri
+- peynir akışları
+- fesleğen yaprakları
+- scooter parçaları
+- sticker ve badge formları
+İllüstrasyonlar sitede sadece dekor olarak kullanılmamalı.
+Her illüstrasyon:
+- hikâye anlatmalı,
+- scroll davranışına katılmalı,
+- kullanıcı etkileşimine tepki vermeli,
+- bir section’ın işlevini desteklemeli.
+==================================================
+03. RENK PALETİ
+==================================================
+ANA RENKLER:
+Tomato Red
+HEX: #FF3131
+Kullanım:
+- domates,
+- güçlü CTA,
+- fiyat veya önemli vurgu,
+- aktif durumlar,
+- kritik marka anları.
+Hot Pink
+HEX: #EC5B91
+Kullanım:
+- logo,
+- line-art çizimler,
+- hover durumları,
+- ikincil CTA,
+- hareketli grafik öğeler.
+Dusty Pink
+HEX: #EBCFD6
+Kullanım:
+- yumuşak arka plan,
+- kart yüzeyleri,
+- geçiş alanları,
+- mobil section arka planları.
+Soft Coral
+HEX: #E98A82
+Kullanım:
+- ambalaj,
+- alternatif section arka planları,
+- vurgu panelleri,
+- büyük renk blokları.
+Warm Beige
+HEX: #F4E9DD
+Kullanım:
+- ana zemin,
+- negatif alan,
+- okunabilir içerik alanları,
+- doğal ve sıcak denge.
+Ek koyu renk:
+Dark Tomato / Deep Burgundy
+Yaklaşık HEX: #6F1724 veya #7A1E2D
+Kullanım:
+- body text,
+- footer,
+- kontrast alanları,
+- koyu navigasyon öğeleri.
+RENK KULLANIM KURALI:
+- Zeminlerin çoğu Warm Beige veya Dusty Pink olmalı.
+- Tomato Red dikkat çekici ama kontrollü kullanılmalı.
+- Hot Pink çizgi ve hareket dili için kullanılmalı.
+- Çok fazla beyaz yerine sıcak krem tonu tercih edilmeli.
+- Saf siyah mümkün olduğunca kullanılmamalı.
+- Fazla gradient kullanımından kaçınılmalı.
+- Renk geçişleri gerekiyorsa çok yumuşak ve analog hissinde olmalı.
+==================================================
+04. TİPOGRAFİ
+==================================================
+DISPLAY TYPEFACE:
+Bricolage Grotesque Bold / ExtraBold
+Kullanım:
+- ana başlıklar,
+- büyük sloganlar,
+- menü kategori başlıkları,
+- fiyatlar,
+- section geçişleri,
+- CTA metinleri.
+SUPPORT TYPEFACE:
+General Sans Medium / Regular
+Alternatif:
+- Manrope
+- Inter
+- Geist Sans
+Kullanım:
+- açıklamalar,
+- menü içerikleri,
+- rezervasyon formu,
+- navigasyon,
+- bilgi metinleri.
+LOGOTYPE:
+TO-MA-TI wordmark özel el yazısı karakterini korumalı.
+Standart fontla yeniden yazılmamalı.
+TİPOGRAFİ KURALLARI:
+- Mobilde başlıklar ekranın önemli kısmını kaplayabilir.
+- Ancak satır sonları kontrollü olmalı.
+- Başlıklar 2–4 kelimelik ritmik bloklar halinde kullanılmalı.
+- Uzun paragraflardan kaçınılmalı.
+- Body metin genişliği desktopta 55–65 karakteri geçmemeli.
+- Mobilde body minimum 16 px olmalı.
+- Form metinleri minimum 16 px olmalı.
+- Tıklanabilir alanlarda küçük yazı kullanılmamalı.
+==================================================
+05. WEBSITE’İN TEMEL DENEYİM PRENSİBİ
+==================================================
+Bu sitenin ana özelliği:
+SCROLL-TRIGGERED BRAND STORYTELLING.
+Scroll yalnızca sayfayı aşağı kaydırmak için değil, hikâyeyi ilerletmek için
+kullanılmalı.
+Kullanıcı her section’da:
+- bir objenin oluştuğunu,
+- bir karakterin ilerlediğini,
+- pizzanın tamamlandığını,
+- peynirin uzadığını,
+- kutunun açıldığını,
+- bir dilimin kaybolduğunu,
+- ninenin yeni bir noktaya ulaştığını görmeli.
+Ancak önemli kural:
+Kullanıcı animasyon bitmeden içerikten mahrum bırakılmamalı.
+Animasyonlar:
+- scroll’a bağlı olmalı,
+- geri scroll edildiğinde mümkünse ters çalışmalı,
+- section’ın ilerlemesiyle senkronize olmalı,
+- gereksiz otomatik oynatım içermemeli,
+- mobilde takılmamalı,
+- sayfayı kullanılamaz hale getirmemeli.
+Ana teknoloji önerisi:
+- GSAP
+- ScrollTrigger
+- SVG
+- CSS transforms
+- gerektiğinde Lottie
+- gerektiğinde Framer Motion
+WebGL yalnızca gerçekten gerekliyse kullanılmalı.
+Sitenin ana animasyon sistemi ağır 3D renderer’a bağlı olmamalı.
+==================================================
+06. MOBILE-FIRST TASARIM KURALLARI
+==================================================
+Bu website’in ana trafiği mobil cihazlardan gelecektir.
+Bu nedenle aşağıdaki kurallar zorunludur:
+1. Tasarım önce 390 × 844 px ekran için oluşturulmalı.
+2. 360 px genişlikte sorunsuz çalışmalı.
+3. 430 px genişliğe kadar akıcı ölçeklenmeli.
+4. Tüm önemli CTA’lar tek elle ulaşılabilecek alanlarda olmalı.
+5. Dokunma alanları minimum 44 × 44 px olmalı.
+6. Metinler zoom gerektirmeden okunmalı.
+7. Rezervasyon butonu mobilde gerektiğinde sticky bottom CTA olarak kullanılmalı.
+8. Navigasyon kısa ve sade olmalı.
+9. Mobilde uzun yatay menüler kullanılmamalı.
+10. Animasyonlar cihazın ekran yüksekliğine göre ölçeklenmeli.
+11. 100vh yerine mobil tarayıcı problemleri için 100svh / 100dvh kullanılmalı.
+12. Görseller AVIF / WebP formatında optimize edilmeli.
+13. SVG’ler mümkün olduğunca inline veya optimize edilmiş kullanılmalı.
+14. Scroll sırasında layout shift oluşmamalı.
+15. Animasyonlu öğeler transform ve opacity ile hareket etmeli.
+16. Scroll hijacking yapılmamalı.
+17. Kullanıcı doğal parmak hareketiyle sayfayı kullanabilmeli.
+18. Parallax etkileri mobilde çok hafif uygulanmalı.
+19. Sabitlenmiş section’lar mobilde gereğinden uzun tutulmamalı.
+20. Sticky section süreleri kısa, kontrollü ve anlaşılır olmalı.
+MOBİL PERFORMANS HEDEFİ:
+- İlk ekran hızlı açılmalı.
+- Ana logo ve hero içeriği gecikmeden görünmeli.
+- İlk yüklemede tüm animasyon assetleri indirilmemeli.
+- Aşağıdaki section’lar lazy-load edilmeli.
+- Animasyonlar intersection observer ile gerektiğinde aktive edilmeli.
+- Mobilde düşük güç modu için sadeleştirilmiş animasyon alternatifi düşünülmeli.
+- “prefers-reduced-motion” desteği zorunlu olmalı.
+==================================================
+07. GENEL SAYFA YAPISI
+==================================================
+Ana sayfa long-scroll yapıda olmalı.
+Temel section sırası:
+1. Mobile navigation
+2. Hero
+3. Marka hikâyesi / Ninenin yola çıkışı
+4. Domates manifestosu
+5. Scroll ile pizzayı oluştur
+6. Menü teaser
+7. Cheese melt section
+8. Tam menü
+9. Slice taken section
+10. Domates kutusu / takeaway
+11. Rezervasyon
+12. Mekân / atmosfer
+13. Social proof veya Instagram alanı
+14. Footer
+Her section’ın ayrı bir görsel fikri ve scroll davranışı olmalı.
+==================================================
+08. NAVİGASYON
+==================================================
+Desktop:
+- Logo solda
+- Menü linkleri ortada veya sağda
+- Rezervasyon CTA sağda
+Mobil:
+- Sol üstte küçük wordmark
+- Sağ üstte menü butonu
+- Ekranın altında gerektiğinde sticky “Rezervasyon” CTA
+Menü linkleri:
+- Hikâyemiz
+- Menü
+- Rezervasyon
+- İletişim
+Mobil menü açıldığında:
+- tam ekran ya da büyük bir rounded panel olabilir,
+- Dusty Pink veya Tomato Red zemin kullanılabilir,
+- scooterlı nine menü altından geçebilir,
+- linkler büyük ve kolay tıklanabilir olmalı.
+Navigasyon davranışı:
+- İlk ekranda transparan olabilir.
+- Scroll sonrası Warm Beige yüzeye dönüşebilir.
+- Scroll aşağı giderken küçülebilir.
+- Yukarı scroll edildiğinde tekrar görünür olabilir.
+- Mobilde içerik alanını gereksiz kapatmamalı.
+==================================================
+09. HERO SECTION
+==================================================
+Hero mobilde ilk açılışta güçlü ama sade olmalı.
+İçerik sırası:
+1. Küçük üst metin:
+“Domates burada başrolde.”
+2. Büyük logo veya “TO-MA-TI”
+3. Ana slogan:
+“One tomato. Big flavor.”
+4. Kısa açıklama
+5. CTA’lar
+6. Scooterlı nine illüstrasyonu
+Türkçe ana metin önerisi:
+Başlık:
+“Bir domates. Büyük lezzet.”
+Açıklama:
+“Domates soslu pizzalar, karakterli çizimler ve ninenin hiç bitmeyen teslimat
+enerjisi.”
+CTA:
+- Menüyü Gör
+- Masanı Ayır
+HERO ANİMASYON SENARYOSU:
+- Ekran ilk açıldığında Warm Beige zemin boş görünür.
+- İnce bir hareket çizgisi soldan belirir.
+- Scooterlı nine ekranın solundan içeri girer.
+- Arkasında büyük kırmızı domates vardır.
+- Nine ekranın alt-orta bölgesindeki yerine gelir.
+- “TO” el çizimi stroke reveal ile ortaya çıkar.
+- Ardından “MA”.
+- Ardından “TI”.
+- Logo tamamen oluşur.
+- Küçük motion lines hafif hareket eder.
+- CTA’lar aşağıdan yumuşak şekilde belirir.
+Önemli:
+Hero animasyonu kullanıcının içeriğe ulaşmasını geciktirmemeli.
+Toplam giriş animasyonu 1.5–2.5 saniyeyi geçmemeli.
+Scroll başladığında:
+- Nine hafifçe öne doğru hareket etmeli.
+- Hero başlığı yukarı doğru parçalanmamalı.
+- Logo okunabilirliğini kaybetmemeli.
+- Domates hafif rotate olabilir.
+- Nine bir sonraki section’a gidiyormuş hissi vermeli.
+==================================================
+10. NİNE ON THE MOVE — ANA SCROLL KARAKTERİ
+==================================================
+Scooter süren nine, sayfa boyunca tekrar eden ana scroll karakteridir.
+Ama her section’da sürekli sabit ekranda durmamalı.
+Bunun yerine belirli hikâye noktalarında görünmeli.
+Önerilen davranış:
+Aşama 1:
+Hero’da soldan gelir ve logonun altına yerleşir.
+Aşama 2:
+Hero’dan marka hikâyesine geçerken scooter yol çizgisi üzerinde ilerler.
+Aşama 3:
+Domates manifestosu bölümünde ekranın bir kenarına park eder.
+Aşama 4:
+Pizza build section’a geçerken scooter’ın arkasındaki domates havaya doğru
+zıplayarak pizza sosuna dönüşür.
+Aşama 5:
+Menü bölümünde nine küçük bir ikon veya sticker olarak kartların arasında
+görünebilir.
+Aşama 6:
+Rezervasyon bölümüne giderken yeniden scooter’a biner ve kullanıcının “masasına”
+ulaşır.
+Aşama 7:
+Footer’da ekranın sağından çıkar.
+SCROLL TEKNİĞİ:
+- GSAP MotionPath kullanılabilir.
+- Nine bir SVG motion path üzerinde ilerleyebilir.
+- Path mobil ve desktop için ayrı tanımlanmalı.
+- Mobilde hareket dikey akışa uygun olmalı.
+- Desktopta daha geniş kıvrımlı rota kullanılabilir.
+- Nine her section’da aynı ölçeği korumak zorunda değil.
+- Ancak karakter biçimi ve çizim stili değişmemeli.
+MOBİL KURAL:
+Nine ekranın metinlerini kapatmamalı.
+Mobilde maksimum ekran genişliğinin yaklaşık %35–45’i kadar olabilir.
+Section geçişlerinde küçülüp büyüyebilir.
+Ana CTA alanlarına denk gelmemeli.
+==================================================
+11. MARKA HİKÂYESİ SECTION
+==================================================
+Başlık:
+“Bir domatesle başladı.”
+Metin:
+“TO-MA-TI, iyi domates sosunun etrafında kurulan sıcak, hareketli ve biraz da
+muzip bir pizza dünyası. Burada domates yalnızca sos değil; hikâyenin, kutunun ve
+karakterin başrolü.”
+Görseller:
+- büyük line-art domates
+- domatesin kesit çizimi
+- scooterlı nine
+- küçük fesleğen
+- motion line
+- el çizimi oklar
+- tomato-shaped sticker
+Animasyon:
+- Domates ilk başta yalnızca dış kontur olarak görünür.
+- Scroll ile içi Tomato Red olur.
+- Çekirdek detayları yavaşça belirir.
+- Yanındaki metin satır satır değil, blok halinde görünür.
+- Fazla WordArt veya kinetic typography kullanılmamalı.
+Mobil:
+- Önce başlık ve kısa metin
+- Ardından 1:1 illüstrasyon alanı
+- Scroll ile domates dolum animasyonu
+- Section yaklaşık 120–160vh olabilir
+- Aşırı uzun pin kullanılmamalı
+==================================================
+12. DOMATES MANİFESTOSU
+==================================================
+Bölüm görsel olarak güçlü ve tipografik olmalı.
+Büyük metin:
+“İyi pizza, iyi sosla başlar.”
+Alt metin:
+“Her pizzamız domates sosuyla başlar. Sonrası biraz mozzarella, biraz ateş ve
+bolca karakter.”
+Arka planda:
+- dev domates line-art
+- küçük domates çekirdekleri
+- kırmızı sos lekesi gibi organik şekiller
+- hareket çizgileri
+Scroll ile:
+- başlıktaki kelimeler sırayla aktif renge dönebilir,
+- “iyi sos” ifadesinin altında çizgi oluşabilir,
+- domates ortadan ikiye ayrılıyormuş gibi hafif açılabilir.
+Bu bölüm kısa, güçlü ve kolay okunabilir olmalı.
+==================================================
+13. BUILD YOUR PIZZA — SCROLL İLE PİZZA OLUŞUMU
+==================================================
+Bu site için en önemli interaktif bölümlerden biridir.
+Bölüm başlığı:
+“Kat kat karakter.”
+Alt metin:
+“Scroll et. Gerisini biz ekleyelim.”
+Bu bölümde kullanıcı aşağı doğru scroll ettikçe pizza sıfırdan oluşmalı.
+MOBİL YERLEŞİM:
+- Ekranın üst veya orta kısmında sticky pizza alanı
+- Alt kısımda değişen içerik veya adım göstergeleri
+- Pizza 1:1 oranlı bir alan içinde görünmeli
+- Animasyon alanı ekran genişliğini aşmamalı
+SCROLL ADIMLARI:
+Adım 1 — Hamur
+- Sade pizza hamuru görünür.
+- Hamur hafif nefes alır gibi scale olabilir.
+- Metin:
+“Önce iyi bir taban.”
+Adım 2 — Domates sosu
+- Kırmızı sos merkeze düşer.
+- Scroll ilerledikçe spiral veya dairesel şekilde yayılır.
+- Metin:
+“Sonra bol domates.”
+Adım 3 — Mozzarella
+- Mozzarella parçaları yukarıdan veya çevreden gelir.
+- Pizza yüzeyine doğal şekilde dağılır.
+- Metin:
+“Biraz da mozzarella.”
+Adım 4 — Malzemeler
+- Fesleğen,
+- cherry domates,
+- parmesan,
+- seçilen diğer malzemeler sırayla eklenir.
+- Metin:
+“Üstüne biraz karakter.”
+Adım 5 — Fırın
+- Pizza rengi hafifçe sıcaklaşır.
+- Kenarlar pişmiş görünür.
+- Çok gerçekçi ateş efekti kullanılmamalı.
+- Basit kırmızı/coral glow yeterli.
+- Metin:
+“Ateşle tanışınca tamam.”
+Adım 6 — Final
+- Tamamlanmış pizza görünür.
+- Hafif rotate veya bounce yapabilir.
+- CTA:
+“Menüyü İncele”
+TEKNİK:
+- ScrollTrigger timeline kullanılmalı.
+- Pizza katmanları ayrı SVG veya transparan WebP/PNG katmanları olabilir.
+- Layer’lar absolute position ile aynı container’da olmalı.
+- Pin yalnızca bu section aktifken çalışmalı.
+- Mobilde scroll mesafesi yaklaşık 300–450vh aralığında, içeriğe göre ayarlanmalı.
+- Kullanıcı ters scroll ettiğinde malzemeler geri çıkabilmeli.
+- Animasyon atlanırsa final pizza yine doğru görünmeli.
+PERFORMANS:
+- 20’den fazla ağır raster layer kullanılmamalı.
+- SVG mümkünse tercih edilmeli.
+- Malzeme hareketleri transform ile yapılmalı.
+- Blur ve ağır filter efektleri minimumda tutulmalı.
+==================================================
+14. MENU TEASER
+==================================================
+Başlık:
+“Altı pizza. Hepsinin kalbi domates.”
+Bu alanda 3 öne çıkan pizza gösterilebilir:
+- TO-MA-TI Classic
+- Nonna Rossa
+- Piccante Mary
+Kart davranışı:
+- Mobilde yatay swipe yapılabilir.
+- Ancak scroll yönünü bozmamalı.
+- Kartlar scroll snap ile ilerleyebilir.
+- Her kartta:
+- ürün görseli,
+- ürün adı,
+- kısa içerik,
+- fiyat alanı,
+- küçük line-art ikon bulunmalı.
+Hover yerine mobil dokunma davranışı:
+- Kart dokunulduğunda içerik genişleyebilir.
+- “Detayı Gör” küçük bottom sheet açabilir.
+- Fakat rezervasyon veya sipariş akışıyla karışmamalı.
+==================================================
+15. CHEESE MELT — PEYNİR AKIŞI SECTION
+==================================================
+Bu bölüm sitenin en görsel ve iştah açıcı anlarından biri olmalı.
+Başlık:
+“Peynir akmaya başladığında…”
+Alt metin:
+“Geri dönüş yok.”
+Görsel:
+- Pizza veya pizza dilimi yakın plan
+- Peynir katmanı
+- Domates sosu
+- Line-art ve gerçekçi food visual karışımı olabilir
+SCROLL ANİMASYONU:
+- Başlangıçta pizza ve kaldırılmaya hazır bir dilim görünür.
+- Scroll ile dilim yukarı doğru hareket eder.
+- Peynir pizza ile dilim arasında uzar.
+- Peynir ipleri farklı hızlarda esner.
+- Scroll ilerledikçe bazı ipler kopar.
+- Bir ana peynir hattı en uzun süre bağlı kalır.
+- Finalde peynir hafif aşağı akar.
+Animasyon:
+- viskoz,
+- yavaş,
+- iştah açıcı,
+- abartılı ama estetik olmalı.
+Kesinlikle:
+- plastik gibi görünmemeli,
+- slime efekti vermemeli,
+- aşırı 3D olmamalı,
+- grotesk görünmemeli.
+MOBİL:
+- Dilim ekranın üst kısmına çıkmamalı.
+- Peynir çizgileri CTA’ları kapatmamalı.
+- Section yaklaşık 220–300vh olabilir.
+- Sticky alan tek ekran içinde kalmalı.
+- Düşük performanslı cihazlarda daha az peynir ipi kullanılmalı.
+REDUCED MOTION:
+- Scroll animasyonu yerine sabit final görseli göster.
+- Başlık ve içerik doğrudan erişilebilir olmalı.
+==================================================
+16. TAM MENÜ
+==================================================
+Kategori yapısı:
+- Pizzalar
+- İçecekler
+- Tatlı
+Mobilde:
+- kategori sekmeleri sticky olabilir,
+- yatay scroll yapılabilir,
+- aktif kategori belirgin görünmeli,
+- kartlar tek kolon olmalı,
+- ürün görseli ve içerik hızlı taranabilir olmalı.
+PİZZALAR:
+1. TO-MA-TI CLASSIC
+Domates sos, mozzarella, cherry domates, fesleğen ve zeytinyağı.
+Kısa tanım:
+“Sade görünüyor. Hiç de öyle değil.”
+2. NONNA ROSSA
+Domates sos, mozzarella, közlenmiş domates, parmesan ve fesleğen yağı.
+Kısa tanım:
+“Ninenin kırmızı favorisi.”
+3. BURRATA AL POMODORO
+Domates sos, burrata, confit cherry domates, roka ve karabiber.
+Kısa tanım:
+“Yumuşak, taze, biraz da gösterişli.”
+4. PICCANTE MARY
+Domates sos, mozzarella, pepperoni, chilli flakes, acı bal ve fesleğen.
+Kısa tanım:
+“Tatlı başlar. Acı bitirir.”
+5. ORTO ROSSO
+Domates sos, mozzarella, fırınlanmış kabak, patlıcan, kırmızı biber ve mantar.
+Kısa tanım:
+“Sebzeli ama uslu değil.”
+6. STRACCIATELLA SUNSET
+Domates sos, stracciatella, yarı kurutulmuş domates, parmesan ve fesleğen.
+Kısa tanım:
+“Günün en yumuşak finali.”
+İÇECEKLER:
+1. BLOODY MARY
+Domates suyu, votka, limon, baharatlar ve kereviz dokunuşu.
+Kısa tanım:
+“Pizza masasının kırmızı başrolü.”
+2. VIRGIN MARY
+Domates suyu, limon, baharatlar ve kereviz dokunuşu.
+Alkolsüz.
+Kısa tanım:
+“Aynı karakter. Sıfır alkol.”
+TATLI:
+TOMATO JAM MASCARPONE TART
+Domates reçeli, mascarpone kreması, çıtır taban ve hafif narenciye dokunuşu.
+Kısa tanım:
+“Domatesin tatlı tarafıyla tanış.”
+MENÜ KARTLARI:
+Her kartta:
+- ürün adı,
+- açıklama,
+- kısa muzip tanım,
+- fiyat için placeholder,
+- alerjen veya vejetaryen ikonu,
+- ürün fotoğrafı veya illüstrasyonu,
+- küçük sticker detayı bulunmalı.
+Menü filtreleri:
+- Vejetaryen
+- Acılı
+- İmza
+- Alkolsüz
+Menüde çalışmayan “Sepete Ekle” butonu gösterme.
+Eğer online sipariş fonksiyonu yoksa kullanıcıyı yanıltma.
+==================================================
+17. SLICE TAKEN — BİR DİLİM EKSİLME ANİMASYONU
+==================================================
+Başlık:
+“Bir dilim asla tek kalmaz.”
+Alt metin:
+“İlkini aldıysan ikincisi çoktan seni bekliyor.”
+Animasyon:
+- Başlangıçta bütün pizza görünür.
+- Scroll ile bir dilim hafif yükselir.
+- Peynir kısa süre uzar.
+- Dilim ekranın bir kenarına doğru hareket eder.
+- Pizzada üçgen boşluk kalır.
+- Scroll devam ettiğinde ikinci küçük bir el veya nine karakteri dilimi alabilir.
+- Finalde pizza bir dilim eksik kalır.
+Alternatif muzip microcopy:
+- “Oops.”
+- “Kim aldı?”
+- “Belli ki aç gelmişsin.”
+- “Bu dilim senin.”
+MOBİL:
+- Animasyon üst üste yığılmamalı.
+- Dilim ekran dışına tamamen çıkabilir.
+- Pizza merkezde ve okunabilir kalmalı.
+- Section’ın sonunda CTA göster:
+“Masanı Ayır”
+==================================================
+18. DOMATES ŞEKLİNDE KUTU / PACKAGING SECTION
+==================================================
+Başlık:
+“Kutu da domates.”
+Alt metin:
+“İçinde pizza var. Dışında karakter.”
+Görsel:
+- onaylı domates biçimli pizza kutusu,
+- pastel kırmızı-koral kutu,
+- açık krem logo,
+- hafif screen-print doku.
+SCROLL ANİMASYONU:
+1. Kapalı kutu yukarıdan veya hafif açılı görünür.
+2. Scroll ile kutu rotate ederek düz pozisyona gelir.
+3. Kapak yavaşça açılır.
+4. İçinden pizza görünür.
+5. Kutu içindeki line-art pattern fark edilir hale gelir.
+6. Pizza hafif öne çıkar.
+7. Kutu kapanırken marka logosu görünür.
+Alternatif:
+Mobil performans için gerçek 3D yerine:
+- 2D layered transform,
+- SVG mask,
+- perspektif verilmiş PNG/WebP katmanları kullanılabilir.
+Kutu şekli kesinlikle standart kare veya sekizgen pizza kutusuna dönüştürülmemeli.
+Domatesin üst yaprak formu korunmalı.
+==================================================
+19. REZERVASYON SECTION
+==================================================
+Bu site içerisinde gerçek anlamda çalışan bir rezervasyon sistemi bulunmalı.
+Başlık:
+“Masan hazır.”
+Alt metin:
+“Nine yola çıkmadan sen yerini ayır.”
+Ana CTA:
+“Rezervasyon Yap”
+REZERVASYON AKIŞI:
+Mobilde tek uzun form yerine adımlı form tercih et.
+Adım 1:
+- Tarih
+- Saat
+Adım 2:
+- Kişi sayısı
+- İç mekân / dış mekân tercihi
+Adım 3:
+- Ad Soyad
+- Telefon
+- E-posta
+Adım 4:
+- Özel not
+- Onay
+FORM ALANLARI:
+- Ad Soyad
+- Telefon
+- E-posta
+- Tarih
+- Saat
+- Kişi sayısı
+- Oturma tercihi
+- Özel not
+- İletişim izni checkbox
+- KVKK / gizlilik onayı
+FONKSİYONEL GEREKSİNİMLER:
+- required field validation
+- telefon format kontrolü
+- e-posta format kontrolü
+- geçmiş tarih seçilememesi
+- kapalı saatlerin seçilememesi
+- kişi sayısı üst sınırı
+- müsait olmayan saatlerin disabled olması
+- loading state
+- error state
+- success state
+- form tekrar gönderim engeli
+- erişilebilir hata mesajları
+- klavye kullanımı desteği
+- rezervasyon verisinin backend’e kaydedilmesi
+BACKEND ÖNERİSİ:
+- Supabase
+veya
+- Firebase
+veya
+- serverless API endpoint
+VERİ TABANI ALANLARI:
+- id
+- full_name
+- email
+- phone
+- reservation_date
+- reservation_time
+- guest_count
+- seating_preference
+- special_note
+- status
+- created_at
+STATUS:
+- pending
+- confirmed
+- cancelled
+BAŞARILI REZERVASYON:
+Mesaj:
+“Harika. Masan için talebini aldık.”
+Alt mesaj:
+“Onay detaylarını birazdan e-posta ve telefon üzerinden paylaşacağız.”
+Success animasyonu:
+- Küçük domates zıplar.
+- Nine scooter ile kısa şekilde ekrandan geçer.
+- Confetti yerine küçük line-art fesleğen ve domates çekirdeği kullanılabilir.
+Önemli:
+Rezervasyon doğrudan onaylanmıyorsa “Rezervasyonun kesinleşti” denmemeli.
+Doğru ifade:
+“Rezervasyon talebin alındı.”
+MOBİL:
+- Sticky ilerleme göstergesi
+- Büyük form alanları
+- Date picker dokunmatik uyumlu
+- Sayısal alanlarda doğru mobil klavye
+- Form gönder butonu ekranın altına yakın
+- Klavye açıldığında form bozulmamalı
+==================================================
+20. MEKÂN VE ATMOSFER
+==================================================
+Başlık:
+“Biraz pizza. Biraz gürültü. Bolca iyi akşam.”
+Bu bölümde:
+- mekân fotoğrafları,
+- mutfak,
+- pizza hazırlığı,
+- servis,
+- masa detayları kullanılabilir.
+Ancak fotoğraflar:
+- stok hissi vermemeli,
+- fazla karanlık olmamalı,
+- düşük kontrastlı,
+- sıcak,
+- ferah,
+- doğal,
+- gerçek marka fotoğrafçılığı hissinde olmalı.
+Fotoğrafların üzerine küçük line-art illüstrasyonlar bindirilebilir:
+- domates oku,
+- peynir çizgisi,
+- scooter,
+- “hot” sticker,
+- küçük el çizimi notlar.
+Mobilde:
+- dikey carousel,
+- swipe,
+- scroll snap,
+- tek elle kullanılabilir galeri tercih edilebilir.
+==================================================
+21. SOCIAL / INSTAGRAM SECTION
+==================================================
+Başlık:
+“Biz yeriz. Sen bakma.”
+Instagram kullanıcı adı placeholder:
+@tomati.pizza
+Bu bölüm:
+- gerçek Instagram API’sine bağlanabilir,
+- ya da CMS üzerinden güncellenebilir grid olabilir.
+Mobilde:
+- 2 kolon grid
+veya
+- yatay carousel.
+Kart hover yerine:
+- dokununca içerik önizleme,
+- Instagram’a git CTA.
+Bu alan yüklenmezse boş kırık grid gösterilmemeli.
+Fallback içerik kullanılmalı.
+==================================================
+22. FOOTER
+==================================================
+Footer koyu Tomato Burgundy zemin üzerinde olabilir.
+İçerik:
+- TO-MA-TI logosu
+- kısa slogan
+- adres
+- telefon
+- e-posta
+- çalışma saatleri
+- Instagram
+- Menü linki
+- Rezervasyon linki
+- Gizlilik politikası
+- KVKK
+- Çerez politikası
+Footer sloganı:
+“Hot pizza, happy you.”
+Footer animasyonu:
+- Nine scooter ile footer’ın solundan sağına geçebilir.
+- Bu animasyon bir kez çalışmalı.
+- Sonsuz loop olmamalı.
+- Kullanıcıyı rahatsız etmemeli.
+==================================================
+23. MICROINTERACTIONS
+==================================================
+Butonlar:
+- Hover’da 2–4 px yukarı çıkabilir.
+- Tomato icon hafif zıplayabilir.
+- Aktif durumda hafif basılma hissi vermeli.
+- Mobilde hover davranışına bağımlı olmamalı.
+Menü kartları:
+- Hafif rotate veya wiggle olabilir.
+- Fakat okunabilirlik bozulmamalı.
+Link alt çizgileri:
+- El çizimi stroke şeklinde açılabilir.
+Form:
+- Aktif input etrafında küçük line-art hareket olabilir.
+- Hata mesajları kırmızı ama korkutucu olmayan dilde gösterilmeli.
+Scroll indicator:
+- Küçük scooter ikonu olabilir.
+- İlk scroll sonrası kaybolmalı.
+Loading:
+- Dönen klasik spinner yerine:
+- dönen domates,
+- scooter tekeri,
+- küçük pizza slice kullanılabilir.
+- Ancak loading state kısa ve erişilebilir olmalı.
+Cursor:
+- Desktopta custom cursor düşünülebilir.
+- Mobilde uygulanmamalı.
+- Custom cursor erişilebilirliği bozmamalı.
+==================================================
+24. ANİMASYON TEKNİK MİMARİSİ
+==================================================
+Animasyonları component bazlı ve yeniden kullanılabilir tasarla.
+Önerilen yapı:
+- HeroLogoReveal
+- GrannyMotionPath
+- TomatoFillAnimation
+- PizzaBuilder
+- CheeseStretch
+- SliceRemoval
+- BoxOpening
+- ReservationSuccessAnimation
+- FooterRideOut
+GSAP Context kullan.
+Component unmount olduğunda animasyonları temizle.
+ScrollTrigger refresh yönetimini doğru kur.
+Resize sonrası path ve pin ölçümlerini güncelle.
+Mobil ve desktop timeline’ları gerektiğinde ayır:
+gsap.matchMedia kullanılabilir.
+Breakpoints:
+- mobile: 0–767 px
+- tablet: 768–1023 px
+- desktop: 1024 px ve üzeri
+Önemli:
+- Aynı animasyonu yalnızca CSS ölçekleyerek her ekranda kullanma.
+- Mobil için farklı motion path üret.
+- Mobil pin sürelerini azalt.
+- Desktopta daha yatay kompozisyonlar kullan.
+- Tablet için ara davranış oluştur.
+PERFORMANCE:
+- will-change yalnızca animasyon sırasında kullan.
+- Çok sayıda kalıcı will-change tanımlama.
+- GPU acceleration için transform kullan.
+- top / left animasyonundan kaçın.
+- Scroll event içinde doğrudan ağır hesaplama yapma.
+- requestAnimationFrame ve ScrollTrigger mekanizmasını kullan.
+- Resize observer ile gereksiz tekrar tetikleme yapma.
+- SVG path sayısını kontrol altında tut.
+- Görünmeyen section animasyonlarını durdur.
+==================================================
+25. ACCESSIBILITY
+==================================================
+Zorunlu erişilebilirlik kriterleri:
+- WCAG AA kontrastına dikkat et.
+- Tüm buton ve linkler klavyeyle kullanılabilir olsun.
+- Focus state görünür olsun.
+- Form label’ları placeholder yerine gerçek label olsun.
+- Animasyonlu illüstrasyonların anlamlı alt metni olsun.
+- Dekoratif SVG’lerde aria-hidden kullan.
+- “prefers-reduced-motion” destekle.
+- Screen reader kullanıcıları için section içeriği animasyondan bağımsız
+okunabilsin.
+- Renk tek başına bilgi taşımamalı.
+- Hata mesajları aria-live ile duyurulmalı.
+- Menü ve modal focus trap içermeli.
+- Escape ile modal kapanabilmeli.
+==================================================
+26. SEO VE İÇERİK YAPISI
+==================================================
+Sayfa başlığı:
+TO-MA-TI | Domates Soslu Karakterli Pizzalar
+Meta description:
+TO-MA-TI’nin domates soslu imza pizzalarını keşfet, menüyü incele ve masanı ayırt.
+Eğlenceli, sıcak ve karakterli bir pizza deneyimi.
+Heading yapısı:
+- Sayfada tek H1
+- Section başlıkları H2
+- Kart isimleri H3
+Structured data:
+- Restaurant
+- LocalBusiness
+- Menu
+- OpeningHours
+- Address
+- Reservation URL
+Open Graph:
+- logo
+- domates kutusu
+- scooterlı nine
+- pizza görseli
+URL yapısı:
+- /
+- /menu
+- /reservation
+- /privacy
+- /kvkk
+Tek sayfa ana deneyim korunabilir ancak menü ve rezervasyon ayrı URL’den de
+erişilebilir olmalı.
+==================================================
+27. CMS VE YÖNETİLEBİLİR İÇERİK
+==================================================
+Aşağıdaki alanları hard-code etme; CMS veya yapılandırılmış data üzerinden
+yönetilebilir hale getir:
+- pizza isimleri
+- pizza açıklamaları
+- fiyatlar
+- görseller
+- içecekler
+- tatlı
+- çalışma saatleri
+- adres
+- sosyal medya linkleri
+- rezervasyon saatleri
+- müsaitlik
+- özel duyurular
+- hero metni
+Basit çözüm:
+- JSON data file
+- Supabase
+- Sanity
+- Contentful
+- Strapi
+Admin olmayan küçük işletme kullanıcısı tarafından kolayca güncellenebilir olmalı.
+==================================================
+28. RESPONSIVE DAVRANIŞ DETAYLARI
+==================================================
+MOBİL:
+- Tek kolon
+- Başlıklar büyük fakat kontrollü
+- Sticky bottom reservation CTA
+- Swipe destekli menü kartları
+- Kısa pin section’lar
+- Düşük parallax
+- Daha az dekoratif öğe
+- Basitleştirilmiş cheese strands
+- Dikey scooter motion path
+- Büyük dokunma alanları
+TABLET:
+- 2 kolonlu bazı section’lar
+- Orta uzunlukta scroll timelines
+- Menü 2 kolon olabilir
+- Rezervasyon formu merkezde geniş panel
+DESKTOP:
+- Daha geniş motion path
+- Daha güçlü parallax
+- Metin ve illüstrasyon split layout
+- Menü 3 kolon
+- Kutu ve pizza section’larında daha dramatik kompozisyon
+- Cursor ve hover detayları kullanılabilir
+LANDSCAPE MOBİL:
+- Sabitlenmiş section’ları azalt
+- Viewport yüksekliği az olduğunda içerik normal akışa dönsün
+- Rezervasyon formu tam ekran modal yerine sayfa içinde açılabilir
+==================================================
+29. PERFORMANS HEDEFLERİ
+==================================================
+Hedef:
+- Lighthouse Mobile Performance: mümkünse 85+
+- Accessibility: 95+
+- Best Practices: 90+
+- SEO: 95+
+Core Web Vitals:
+- LCP mümkünse 2.5 saniyenin altında
+- CLS mümkünse 0.1’in altında
+- INP mümkünse 200 ms altında
+Önlemler:
+- Hero görselini preload et
+- Kritik fontları self-host et
+- Font subset kullan
+- font-display: swap
+- Below-the-fold görseller lazy load
+- Animasyon assetlerini section yaklaşınca yükle
+- Büyük videolardan kaçın
+- Autoplay background video kullanma
+- Görseller için width ve height tanımla
+- Third-party scriptleri minimumda tut
+- Rezervasyon backend çağrılarını async yap
+- Skeleton veya basit loading state kullan
+==================================================
+30. TASARIMDA KAÇINILMASI GEREKENLER
+==================================================
+Şunları yapma:
+- Generic restoran template
+- Siyah arka planlı lüks restoran estetiği
+- Klişe İtalyan bayrağı renkleri
+- Kareli masa örtüsü grafikleri
+- Fazla retro diner estetiği
+- Fazla çocukça maskot tasarımı
+- Cartoon network tarzı karakter
+- Gerçekçi 3D nine
+- Stock pizza ikonları
+- Random emoji
+- Çok fazla gradient
+- Glassmorphism
+- Neon glow
+- Cyberpunk
+- Aşırı brutalist düzen
+- Çok küçük tipografi
+- Sadece hover ile çalışan arayüz
+- Uzun intro animasyonu
+- Scroll hijacking
+- Kullanıcıyı birkaç saniye boyunca içerikten alıkoyan preload
+- Animasyon uğruna okunabilirliği bozmak
+- Mobilde ağır 3D sahne
+- Her section’ı pinlemek
+- Her objeyi aynı anda hareket ettirmek
+- Logo veya karakteri yeniden yorumlamak
+- Domates kutusunu standart kutuya dönüştürmek
+- Menüde olmayan ürünleri eklemek
+- Çalışmayan rezervasyon butonu göstermek
+==================================================
+31. TESLİM EDİLMESİ GEREKENLER
+==================================================
+Sadece görsel mockup üretme.
+Aşağıdakileri hazırla:
+1. Tam responsive homepage
+2. Mobile-first UI
+3. Desktop uyarlaması
+4. Çalışan navigasyon
+5. Çalışan menü filtreleri
+6. Çalışan rezervasyon formu
+7. Rezervasyon backend entegrasyonu için yapı
+8. ScrollTrigger animasyonları
+9. Reduced motion alternatifi
+10. SEO metadata
+11. Structured data
+12. Accessible form yapısı
+13. Reusable components
+14. Menü data modeli
+15. Responsive test
+16. Loading, empty, success ve error state’leri
+17. Tasarım tokenları
+18. Renk ve tipografi değişkenleri
+19. Optimize edilmiş SVG kullanımı
+20. Kurulum ve çalıştırma dokümantasyonu
+==================================================
+32. ÖNERİLEN TEKNİK STACK
+==================================================
+Tercih edilen:
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS veya CSS Modules
+- GSAP + ScrollTrigger
+- Framer Motion yalnızca UI microinteraction için
+- Supabase rezervasyon altyapısı
+- React Hook Form
+- Zod validation
+- date-fns
+- next/image
+- SVG assets
+Alternatif:
+- Nuxt
+- Astro + React islands
+- Framer
+- Webflow + GSAP custom code
+Teknoloji seçimi ne olursa olsun:
+- sürdürülebilir,
+- component bazlı,
+- performanslı,
+- mobil uyumlu,
+- kolay güncellenebilir olmalı.
+==================================================
+33. ÖNERİLEN COMPONENT YAPISI
+==================================================
+App
+├── Header
+├── MobileMenu
+├── StickyReservationCTA
+├── Hero
+│ ├── LogoReveal
+│ ├── GrannyScooter
+│ └── HeroActions
+├── BrandStory
+├── TomatoManifesto
+├── PizzaBuilder
+│ ├── DoughLayer
+│ ├── SauceLayer
+│ ├── CheeseLayer
+│ ├── ToppingLayer
+│ └── BuildProgress
+├── MenuTeaser
+├── CheeseMelt
+├── FullMenu
+│ ├── CategoryTabs
+│ ├── MenuFilters
+│ └── MenuCard
+├── SliceTaken
+├── PackagingShowcase
+├── Reservation
+│ ├── ReservationStepper
+│ ├── DateStep
+│ ├── GuestStep
+│ ├── ContactStep
+│ └── ConfirmationStep
+├── VenueGallery
+├── InstagramFeed
+└── Footer
+==================================================
+34. SON TASARIM HEDEFİ
+==================================================
+Sonuç olarak ortaya çıkan website şu hissi vermeli:
+- Marka için özel tasarlanmış
+- Hareket odaklı
+- Mobilde kusursuz
+- Sıcak ve eğlenceli
+- İllüstrasyon açısından zengin
+- Domates etrafında güçlü bir hikâye kuran
+- Rezervasyon dönüşümünü destekleyen
+- Teknik olarak çalışan
+- Hızlı
+- Erişilebilir
+- Akılda kalıcı
+- Sosyal medyada paylaşılmak istenecek kadar karakterli
+Website’in ana cümlesi:
+“TO-MA-TI sadece pizza sunmuyor; kullanıcı scroll ettikçe yaşayan, hareket eden ve
+her bölümde biraz daha lezzetlenen bir marka dünyası sunuyor.”
+Avoid making the website look like a generic restaurant template.
+Treat scroll animation as a core part of the information architecture, not as
+decorative effects added after the design is finished.
+Design every animation first for mobile touch scrolling, then expand it for
+desktop.
+Do not sacrifice performance, usability, readability or reservation conversion for
+visual spectacle.</pre>
+  <div class="prompt-foot">
+    <button class="btn btn--solid" data-copy>Promptu Kopyala</button>
+    <a class="btn" href="../">Tüm promptlar</a>
+  </div>
+</main>
+<footer class="foot">
+  <p class="wordmark">PAS.</p>
+  <div class="foot-grid">
+    <div><span class="meta">Alanlar</span><a class="link" href="../../index.html#creative">PAS Creative</a><a class="link" href="../../index.html#music">PAS Music</a></div>
+    <div><span class="meta">Arşiv</span><a class="link" href="../../promptlar/">Promptlar</a></div>
+    <div><span class="meta">Konum</span><span>Beyoğlu · İstanbul</span></div>
+    <div><span class="meta">İletişim</span><a class="link" href="mailto:merhaba@pascreativestudio.com">merhaba@pascreativestudio.com</a><a class="link" href="tel:+905061106067">0506 110 60 67</a></div>
+    <div><span class="meta">Stüdyo</span><span>Independent Creative Studio</span></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 PAS</span><span>pascreativestudio.com</span></div>
+</footer>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+  const t=document.getElementById('prompt').textContent, o=b.textContent;
+  let ok=false;
+  try{await navigator.clipboard.writeText(t);ok=true}catch(e){
+    const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.select();try{ok=document.execCommand('copy')}catch(_){}ta.remove()}
+  b.textContent=ok?'Kopyalandı':'Kopyalanamadı';setTimeout(()=>b.textContent=o,1600);
+}));
+</script>
+</body>
+</html>
