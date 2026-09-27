@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-752SVCWQJD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-752SVCWQJD');
-</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PAS Creative Studio — Markalar için görsel sistemler</title>
@@ -30,14 +21,16 @@
 <meta name="twitter:description" content="PAS, Beyoğlu'nda fiziksel üretim alanı olan bağımsız bir yaratıcı stüdyo.">
 <meta name="twitter:image" content="https://pascreativestudio.com/assets/link-preview.jpg">
 <meta name="theme-color" content="#efefef">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"PAS Creative Studio","alternateName":"PAS","url":"https://pascreativestudio.com/","email":"merhaba@pascreativestudio.com","telephone":"+905061106067","image":"https://pascreativestudio.com/assets/link-preview.jpg","address":{"@type":"PostalAddress","addressLocality":"Beyoğlu","addressRegion":"İstanbul","addressCountry":"TR"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://pascreativestudio.com/#org", "name": "PAS Creative Studio", "alternateName": "PAS", "url": "https://pascreativestudio.com/", "email": "merhaba@pascreativestudio.com", "telephone": "+905061106067", "image": "https://pascreativestudio.com/assets/link-preview.jpg", "address": {"@type": "PostalAddress", "addressLocality": "Beyoğlu", "addressRegion": "İstanbul", "addressCountry": "TR"}, "subOrganization": {"@type": "LocalBusiness", "@id": "https://pascreativestudio.com/music/#business", "name": "PAS Music", "url": "https://pascreativestudio.com/music/"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script>if(!location.hash||location.hash==="#"||location.hash==="#entry")document.documentElement.className+=" at-entry";</script>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#efefef; --ink:#0f1435; --lime:#cce86b; --pink:#f2c4cd;
   --grey:#dcdcdc; --rule:rgba(15,20,53,.2); --muted:rgba(15,20,53,.6);
+  --wine:#33000d; --gold:#c6b14b; --ivory:#f3ede3;
   --m:clamp(16px,3.2vw,44px); --gut:clamp(12px,1.6vw,24px);
   --ease:cubic-bezier(.7,0,.2,1); --ease-out:cubic-bezier(.2,.7,.1,1);
   --f:"Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -54,7 +47,8 @@ h1,h2,h3,p,ul,ol,figure{margin:0;padding:0}
 ul,ol{list-style:none}
 [hidden]{display:none!important}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.on-ink :focus-visible,.music :focus-visible,.foot :focus-visible{outline-color:var(--lime)}
+.on-ink :focus-visible,.foot :focus-visible{outline-color:var(--lime)}
+.music :focus-visible{outline-color:var(--gold)}
 .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .tnum{font-variant-numeric:tabular-nums}
 
@@ -79,6 +73,7 @@ ul,ol{list-style:none}
 #cursor{position:fixed;left:0;top:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;color:var(--ink);background:currentColor;border:1.5px solid currentColor;
   pointer-events:none;z-index:300;transition:width .3s var(--ease-out),height .3s var(--ease-out),margin .3s var(--ease-out),opacity .3s,background-color .3s,color .3s;opacity:0}
 #cursor.is-light{color:var(--lime)}
+#cursor.is-gold{color:var(--gold)}
 html.has-cursor, html.has-cursor a, html.has-cursor button{cursor:none}
 html.has-cursor #cursor{opacity:1}
 #cursor.is-big{width:52px;height:52px;margin:-26px 0 0 -26px;background:transparent}
@@ -88,7 +83,10 @@ html.has-cursor #cursor{opacity:1}
 #wipe span{font-size:clamp(48px,9vw,140px)}
 
 /* ============ ENTRY ============ */
-.entry{height:100vh;height:100svh;display:flex;flex-direction:column;overflow:hidden;position:relative}
+#v-entry{display:none}
+html.at-entry #v-entry{display:flex}
+html.at-entry body{overflow:hidden}
+.entry{position:fixed;inset:0;z-index:100;height:100vh;height:100svh;flex-direction:column;overflow:hidden;background:var(--bg)}
 .entry-top{display:grid;grid-template-columns:1fr auto;align-items:end;padding:22px var(--m) 20px;border-bottom:1px solid var(--rule)}
 .entry-top .wordmark{font-size:clamp(40px,5.4vw,84px)}
 .entry-q{font-size:15px;font-weight:500;padding-bottom:.35em}
@@ -101,7 +99,7 @@ html.has-cursor #cursor{opacity:1}
 .half--creative .half-bg{background:
   repeating-linear-gradient(90deg,rgba(15,20,53,.12) 0 1px,transparent 1px calc(100%/6)),
   repeating-linear-gradient(0deg,rgba(15,20,53,.12) 0 1px,transparent 1px 96px),var(--lime)}
-.half--music .half-bg{background:var(--ink)}
+.half--music .half-bg{background:var(--wine)}
 .half-inner{position:relative;padding:0 var(--m) clamp(24px,4vh,48px);display:grid;gap:14px;width:100%}
 .half-label{font-size:clamp(46px,8.6vw,156px);font-weight:600;font-stretch:75%;letter-spacing:-.03em;line-height:.86;
   transition:font-stretch .8s var(--ease),letter-spacing .8s var(--ease),transform .8s var(--ease);transform-origin:0 100%;white-space:nowrap}
@@ -109,12 +107,10 @@ html.has-cursor #cursor{opacity:1}
 .half-desc{font-size:15px}
 .half-act{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:500;margin-top:6px}
 .half-act i{display:inline-block;width:28px;height:1px;background:currentColor;transition:width .6s var(--ease)}
-.half-soon{position:absolute;top:22px;right:var(--m);font-size:13px}
-.half--creative .half-soon{display:none}
 .split[data-hover="creative"] .half--creative,.split[data-hover="music"] .half--music{flex-grow:1.45}
 .split[data-hover] .half .half-bg{opacity:0}
 .split[data-hover="creative"] .half--creative .half-bg,.split[data-hover="music"] .half--music .half-bg{opacity:1}
-.split[data-hover="music"] .half--music{color:var(--bg)}
+.split[data-hover="music"] .half--music{color:var(--ivory)}
 .split[data-hover="creative"] .half--creative .half-label,.split[data-hover="music"] .half--music .half-label{font-stretch:100%;letter-spacing:-.04em}
 .split[data-hover="creative"] .half--music,.split[data-hover="music"] .half--creative{color:rgba(15,20,53,.4)}
 .split[data-hover="creative"] .half--music .half-label,.split[data-hover="music"] .half--creative .half-label{transform:scale(.78)}
@@ -127,32 +123,103 @@ html.has-cursor #cursor{opacity:1}
 .lines{position:absolute;left:0;right:0;bottom:0;height:72%;display:flex;justify-content:space-between;align-items:flex-end;padding:0 var(--m);pointer-events:none}
 .lines b{flex:0 0 2px;height:100%;display:flex;align-items:flex-end;transition:height .9s var(--ease-out)}
 .lines b i{display:block;width:100%;height:100%;transform-origin:50% 100%;
-  background:linear-gradient(to top,rgba(239,239,239,.0),rgba(239,239,239,.55) 30%,rgba(239,239,239,.12));
+  background:linear-gradient(to top,rgba(243,237,227,0),rgba(243,237,227,.42) 30%,rgba(243,237,227,.1));
   animation:eq var(--d,2.4s) ease-in-out var(--dl,0s) infinite alternate;transform:scaleY(var(--a,.2))}
-.lines b.l i{background:linear-gradient(to top,rgba(204,232,107,0),rgba(204,232,107,.9) 30%,rgba(204,232,107,.15))}
+.lines b.l i{background:linear-gradient(to top,rgba(198,177,75,0),rgba(198,177,75,.95) 30%,rgba(198,177,75,.18))}
 @keyframes eq{from{transform:scaleY(var(--a,.2))}to{transform:scaleY(var(--b,.6))}}
 
 /* ============ MUSIC ============ */
-.music{min-height:100vh;min-height:100svh;background:var(--ink);color:var(--bg);position:relative;overflow:hidden;display:flex;flex-direction:column}
-.music-top{display:flex;justify-content:space-between;align-items:center;padding:22px var(--m);position:relative;z-index:2}
-.music-top .wordmark{font-size:clamp(28px,2.6vw,40px)}
-.music-nav{display:flex;gap:22px;font-size:15px;font-weight:500}
-.music-body{position:relative;z-index:2;flex:1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);padding:0 var(--m) clamp(32px,6vh,64px);align-content:end;row-gap:28px}
-.music-left{grid-column:1/9;grid-row:1;display:grid;gap:26px;align-self:end}
-.music-title{font-size:clamp(56px,11vw,200px);font-weight:600;font-stretch:75%;letter-spacing:-.035em;line-height:.84}
-.music-title small{display:block;font-size:.36em;font-weight:700;font-stretch:88%}
-.music-text{display:grid;gap:10px}
-.music-text strong{font-size:clamp(24px,2.4vw,34px);font-weight:600;font-stretch:88%;letter-spacing:-.02em;line-height:1.1}
-.music-text p{color:rgba(239,239,239,.72);max-width:28em}
-.music-fig{grid-column:10/13;grid-row:1;align-self:end}
-.music-fig img{aspect-ratio:4/5;width:100%;object-fit:cover;object-position:80% 50%;filter:saturate(.85)}
-.music-fig figcaption{margin-top:10px;color:rgba(239,239,239,.6)}
-.music-actions{display:flex;flex-wrap:wrap;gap:12px}
-.music .btn{border-color:rgba(239,239,239,.5)}
-.music .btn:hover{background:var(--bg);color:var(--ink);border-color:var(--bg)}
-.music .btn--solid{background:var(--lime);color:var(--ink);border-color:var(--lime)}
-.music .btn--solid:hover{background:var(--bg);border-color:var(--bg)}
-.music .lines{height:62%;opacity:.9}
+.music{--m-rule:rgba(243,237,227,.16);--m-mute:rgba(243,237,227,.64);
+  background:var(--wine);color:var(--ivory);position:relative;display:block}
+.music .meta{color:var(--m-mute)}
+.music .btn{border-color:rgba(243,237,227,.45)}
+.music .btn:hover{background:var(--ivory);color:var(--wine);border-color:var(--ivory)}
+.music .btn--solid{background:var(--gold);color:var(--wine);border-color:var(--gold)}
+.music .btn--solid:hover{background:var(--ivory);border-color:var(--ivory)}
+.m-sec{padding-inline:var(--m);padding-block:clamp(72px,9vw,140px)}
+.m-sec + .m-sec{padding-top:0}
+.m-lab{font-size:13px;font-weight:500;color:var(--gold);letter-spacing:.02em}
+.m-h2{font-size:clamp(32px,4.4vw,64px);font-weight:600;font-stretch:84%;letter-spacing:-.025em;line-height:.98}
+
+/* music header */
+.m-head{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:16px var(--m);background:var(--wine);border-bottom:1px solid var(--m-rule)}
+.m-brand{display:flex;align-items:baseline;gap:10px}
+.m-brand .wordmark{font-size:28px}
+.m-brand span{font-size:13px;color:var(--gold)}
+.m-nav{display:flex;align-items:center;gap:clamp(14px,1.8vw,28px);font-size:15px;font-weight:500;flex-wrap:wrap;justify-content:flex-end}
+.m-nav .sep{width:1px;height:16px;background:var(--m-rule)}
+
+/* hero */
+.m-hero{position:relative;min-height:calc(100svh - 61px);display:flex;flex-direction:column;justify-content:flex-end;
+  overflow:hidden;padding:clamp(48px,9vw,120px) var(--m) clamp(36px,5vh,60px)}
+.m-hero > *:not(.lines){position:relative;z-index:2}
+.m-hero .lines{height:70%;z-index:1;opacity:.85;
+  -webkit-mask-image:linear-gradient(to top,#000 0 34%,rgba(0,0,0,.45) 62%,transparent 92%);
+  mask-image:linear-gradient(to top,#000 0 34%,rgba(0,0,0,.45) 62%,transparent 92%)}
+.m-hero-top{display:flex;justify-content:space-between;gap:20px;margin-bottom:auto}
+.m-hero h1{font-size:clamp(50px,9.4vw,168px);font-weight:600;font-stretch:76%;letter-spacing:-.035em;line-height:.86;
+  margin-block:clamp(28px,6vh,72px) 22px}
+.m-hero h1 em{font-style:normal;display:block}
+.m-hero .lead{max-width:24em}
+.m-hero-act{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(24px,3vw,36px)}
+
+/* intro */
+.m-intro{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:20px;align-items:start}
+.m-intro .m-h2{grid-column:1/5}
+.m-intro p{grid-column:5/12;font-size:clamp(19px,1.8vw,26px);line-height:1.36;letter-spacing:-.012em}
+
+/* services */
+.m-svc-head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;
+  border-bottom:1px solid var(--gold);padding-bottom:14px}
+.m-svc{margin-top:4px}
+.m-svc li{border-bottom:1px solid var(--m-rule);position:relative;overflow:hidden}
+.m-svc li span{display:block;padding:clamp(12px,1.4vw,20px) 0;font-size:clamp(24px,3.1vw,46px);font-weight:500;
+  font-stretch:84%;letter-spacing:-.02em;line-height:1.08;transition:transform .55s var(--ease),color .3s}
+.m-svc li::before{content:"";position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:0 50%;
+  transition:transform .55s var(--ease)}
+.m-svc li:hover::before{transform:scaleX(1)}
+.m-svc li:hover span{transform:translateX(clamp(12px,2vw,30px));color:var(--wine)}
+.m-svc-note{margin-top:26px;max-width:40em;color:var(--m-mute)}
+
+/* studio image */
+.m-fig{margin:0;padding-inline:var(--m)}
+.m-fig img{width:100%;aspect-ratio:16/7;object-fit:cover;object-position:50% 52%}
+.m-fig figcaption{display:flex;justify-content:space-between;gap:20px;margin-top:12px}
+
+/* equipment */
+.m-eq-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:14px;
+  align-items:end;margin-bottom:clamp(32px,4vw,56px)}
+.m-eq-head .m-h2{grid-column:1/7}
+.m-eq-head p{grid-column:8/13;color:var(--m-mute)}
+.m-eq{column-count:3;column-gap:clamp(26px,3vw,48px)}
+.m-eq > div{display:inline-block;width:100%;break-inside:avoid;-webkit-column-break-inside:avoid;
+  border-top:1px solid var(--gold);padding-top:12px;margin-bottom:clamp(28px,3.2vw,48px)}
+.m-eq h3{font-size:13px;font-weight:600;color:var(--gold);letter-spacing:.08em;margin-bottom:6px}
+.m-eq li{padding:8px 0;border-bottom:1px solid var(--m-rule);font-size:16px;line-height:1.3}
+.m-eq li:last-child{border-bottom:0}
+.m-eq li.sub{padding-left:16px;font-size:15px;color:var(--m-mute)}
+
+/* contact */
+.m-ct{border-top:1px solid var(--m-rule)}
+.m-ct h2{font-size:clamp(38px,6.6vw,110px);font-weight:600;font-stretch:76%;letter-spacing:-.04em;line-height:.9;max-width:14em}
+.m-ct-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:28px;
+  margin-top:clamp(36px,4.5vw,64px);align-items:start}
+.m-ct-lines{grid-column:1/7;display:grid;gap:8px;justify-items:start}
+.m-ct-lines a{font-size:clamp(20px,2.2vw,32px);font-weight:500;font-stretch:88%;letter-spacing:-.02em}
+.m-ct-side{grid-column:8/13;display:grid;gap:10px;justify-items:start}
+.m-ct-side address{font-style:normal;line-height:1.5}
+.m-ct-side .m-ct-act{margin-top:16px}
+.m-ct-act{display:flex;flex-wrap:wrap;gap:12px}
+
+/* music footer */
+.m-foot{padding:clamp(40px,5vw,72px) var(--m) 26px;border-top:1px solid var(--m-rule)}
+.m-foot .wordmark{font-size:clamp(80px,18vw,320px);letter-spacing:-.05em;line-height:.8;margin-left:-.04em}
+.m-foot .wordmark b{font-weight:inherit;color:var(--gold)}
+.m-foot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gut);row-gap:26px;
+  margin-top:clamp(32px,4vw,56px);border-top:1px solid var(--m-rule);padding-top:18px;font-size:15px}
+.m-foot-grid > div{display:grid;gap:4px;justify-items:start;align-content:start}
+.m-foot-bottom{margin-top:44px;display:flex;justify-content:space-between;gap:20px;font-size:13px;color:var(--m-mute)}
 
 /* ============ CREATIVE ============ */
 .head{position:fixed;top:0;left:0;right:0;z-index:50;height:var(--head);display:flex;align-items:center;justify-content:space-between;
@@ -374,19 +441,27 @@ section{scroll-margin-top:var(--head)}
   .half-label{font-size:clamp(46px,15vw,88px);font-stretch:82%}
   .half--music .half-bg,.half--creative .half-bg{opacity:1}
   .half--creative .half-bg{background:repeating-linear-gradient(90deg,rgba(15,20,53,.08) 0 1px,transparent 1px calc(100%/6)),var(--bg)}
-  .half--music{color:var(--bg)}
-  .half-soon{top:16px}
+  .half--music{color:var(--ivory)}
   .split[data-hover] .half{color:inherit}
   .split[data-hover="creative"] .half--creative,.split[data-hover="music"] .half--music{flex-grow:1}
   .split[data-hover="music"] .half--creative .half-bg,.split[data-hover="creative"] .half--music .half-bg{opacity:1}
-  .split[data-hover="creative"] .half--music{color:var(--bg)}
+  .split[data-hover="creative"] .half--music{color:var(--ivory)}
   .split[data-chosen="creative"] .half--creative,.split[data-chosen="music"] .half--music{flex-grow:40}
 
-  .music-body{grid-template-columns:1fr;align-content:end}
-  .music-left{grid-column:1;grid-row:2}
-  .music-fig{grid-column:1;grid-row:1;width:52%;justify-self:end;order:-1}
-  .music .lines{height:48%}
-  .music-nav{gap:16px;font-size:14px}
+  .m-head{flex-direction:column;align-items:flex-start;gap:10px;position:static}
+  .m-nav{justify-content:flex-start;gap:14px;font-size:14px}
+  .m-nav .sep{display:none}
+  .m-hero{min-height:82svh}
+  .m-hero .lines{height:52%}
+  .m-hero-top{flex-direction:column;gap:6px}
+  .m-intro .m-h2,.m-intro p{grid-column:1/-1}
+  .m-eq-head .m-h2,.m-eq-head p{grid-column:1/-1}
+  .m-eq{column-count:1}
+  .m-fig img{aspect-ratio:4/3}
+  .m-fig figcaption{flex-direction:column;gap:4px}
+  .m-ct-lines,.m-ct-side{grid-column:1/-1}
+  .m-foot-grid{grid-template-columns:1fr 1fr}
+  .m-foot-bottom{flex-direction:column}
 
   .g{grid-template-columns:repeat(6,minmax(0,1fr))}
   .hero-top .eyebrow{grid-column:1/-1}
@@ -461,7 +536,7 @@ section{scroll-margin-top:var(--head)}
     <p class="entry-meta meta"><span>Beyoğlu, İstanbul</span><br><time class="clock tnum"></time></p>
   </header>
   <div class="split" id="split">
-    <a class="half half--creative" href="#creative" data-go="creative" data-cursor>
+    <a class="half half--creative" href="#creative" data-go="creative" data-key="creative" data-cursor>
       <span class="half-bg"></span>
       <span class="half-inner">
         <span class="half-label"><small>PAS.</small>CREATIVE</span>
@@ -469,49 +544,19 @@ section{scroll-margin-top:var(--head)}
         <span class="half-act"><i></i>PAS Creative'e gir</span>
       </span>
     </a>
-    <a class="half half--music" href="#music" data-go="music" data-cursor>
+    <a class="half half--music" href="music/" data-music data-key="music" data-cursor>
       <span class="half-bg"><span class="lines" data-lines="28"></span></span>
-      <span class="half-soon meta" style="color:inherit;opacity:.7">Çok yakında</span>
       <span class="half-inner">
         <span class="half-label"><small>PAS.</small>MUSIC</span>
-        <span class="half-desc">Recording · Rehearsal · Sound</span>
-        <span class="half-act"><i></i>PAS Music'e göz at</span>
+        <span class="half-desc">Recording · Rehearsal · Production</span>
+        <span class="half-act"><i></i>PAS Music'e gir</span>
       </span>
     </a>
   </div>
 </main>
 
-<!-- ================= MUSIC ================= -->
-<main class="music view" id="v-music" aria-label="PAS Music" hidden>
-  <span class="lines" data-lines="56" aria-hidden="true"></span>
-  <header class="music-top">
-    <a href="#" class="wordmark" data-go="entry" aria-label="PAS ana giriş">PAS.</a>
-    <nav class="music-nav" aria-label="PAS Music">
-      <a href="#creative" class="link" data-go="creative">PAS Creative</a>
-      <a href="#" class="link" data-go="entry">PAS'a dön</a>
-    </nav>
-  </header>
-  <div class="music-body">
-    <figure class="music-fig">
-      <img data-studio alt="PAS'ın Beyoğlu'ndaki alanı: siyah çıtalı duvarlar, zil dekorları ve dikey ışık şeritleri">
-      <figcaption class="meta">Beyoğlu · İstanbul</figcaption>
-    </figure>
-    <div class="music-left">
-      <h1 class="music-title"><small>PAS.</small>MUSIC</h1>
-      <div class="music-text">
-        <strong>Çok yakında.</strong>
-        <p>Beyoğlu'nda kayıt, prova ve müzik prodüksiyonu için yeni bir alan.</p>
-      </div>
-      <div class="music-actions">
-        <a href="#creative" class="btn btn--solid" data-go="creative">PAS Creative'e geç</a>
-        <a href="#" class="btn" data-go="entry">PAS'a dön</a>
-      </div>
-    </div>
-  </div>
-</main>
-
 <!-- ================= CREATIVE ================= -->
-<div class="creative view" id="v-creative" hidden>
+<div class="creative view" id="v-creative">
   <header class="head" id="head">
     <a href="#" class="head-brand" data-go="entry" aria-label="PAS ana giriş"><span class="wordmark">PAS.</span><span class="meta">Creative</span></a>
     <nav class="nav" aria-label="Ana menü">
@@ -522,7 +567,7 @@ section{scroll-margin-top:var(--head)}
       <a href="#iletisim" data-scroll>İletişim</a>
     </nav>
     <div class="head-side">
-      <a href="#music" class="link to-music" data-go="music">PAS Music</a>
+      <a href="music/" class="link to-music">PAS Music</a>
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mnav">Menü</button>
     </div>
   </header>
@@ -536,7 +581,7 @@ section{scroll-margin-top:var(--head)}
       <li><a href="#hakkimizda" data-scroll>Hakkımızda</a></li>
       <li><a href="#iletisim" data-scroll>İletişim</a></li>
     </ul>
-    <p class="meta"><a href="#music" data-go="music" class="link" style="color:var(--bg)">PAS Music</a> &nbsp; Beyoğlu · İstanbul</p>
+    <p class="meta"><a href="music/" class="link" style="color:var(--bg)">PAS Music</a> &nbsp; Beyoğlu · İstanbul</p>
   </div>
 
   <main>
@@ -638,7 +683,7 @@ section{scroll-margin-top:var(--head)}
   <footer class="foot on-ink">
     <p class="wordmark">PAS.</p>
     <div class="g foot-grid">
-      <div><span class="meta">Alanlar</span><a href="#top" data-scroll class="link" style="justify-self:start">PAS Creative</a><a href="#music" data-go="music" class="link" style="justify-self:start">PAS Music</a></div>
+      <div><span class="meta">Alanlar</span><a href="#top" data-scroll class="link" style="justify-self:start">PAS Creative</a><a href="music/" class="link" style="justify-self:start">PAS Music</a></div>
       <div><span class="meta">Arşiv</span><a href="promptlar/" class="link" style="justify-self:start">Promptlar</a></div>
       <div><span class="meta">Konum</span><span>Beyoğlu · İstanbul</span></div>
       <div><span class="meta">İletişim</span><a class="link js-mail" href="#" style="justify-self:start"></a><a class="link js-tel tnum" href="#" style="justify-self:start"></a></div>
@@ -689,14 +734,14 @@ $$('[data-lines]').forEach(el=>{
     b.appendChild(it);el.appendChild(b);
   }
 });
-/* pointer lifts nearby lines on the music page */
-const musicView=$('#v-music');
-musicView.addEventListener('pointermove',e=>{
+/* pointer lifts nearby lines on the music door */
+const mHalf=$('.half--music');
+mHalf.addEventListener('pointermove',e=>{
   if(reduce) return;
-  $$('.lines b',musicView).forEach(b=>{const r=b.getBoundingClientRect();const d=Math.abs(r.left-e.clientX);
+  $$('.lines b',mHalf).forEach(b=>{const r=b.getBoundingClientRect();const d=Math.abs(r.left-e.clientX);
     b.style.height=(100+Math.max(0,1-d/220)*38)+'%'});
 });
-musicView.addEventListener('pointerleave',()=>$$('.lines b',musicView).forEach(b=>b.style.height=''));
+mHalf.addEventListener('pointerleave',()=>$$('.lines b',mHalf).forEach(b=>b.style.height=''));
 
 /* services + ticker */
 $('#svcList').innerHTML=SERVICES.map(s=>`<li><span>${s}</span></li>`).join('');
@@ -742,6 +787,10 @@ const mnav=$('#mnav'),menuBtn=$('#menuBtn');
 function menu(open){mnav.hidden=!open;menuBtn.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';if(open)$('#menuClose').focus()}
 menuBtn.onclick=()=>menu(true);$('#menuClose').onclick=()=>{menu(false);menuBtn.focus()};
 
+/* music in-page scroll */
+document.addEventListener('click',e=>{const a=e.target.closest('[data-mscroll]');if(!a)return;e.preventDefault();
+  const el=$(a.getAttribute('href'));if(el)window.scrollTo({top:el.getBoundingClientRect().top+scrollY-8,behavior:reduce?'auto':'smooth'})});
+
 /* in-page scroll */
 document.addEventListener('click',e=>{const a=e.target.closest('[data-scroll]');if(!a)return;e.preventDefault();
   const t=$(a.getAttribute('href'));if(!mnav.hidden)menu(false);
@@ -760,20 +809,20 @@ csIo.observe($('#csFig'));
 addEventListener('keydown',e=>{if(e.key==='Escape'&&!mnav.hidden){menu(false);menuBtn.focus()}});
 
 /* ---------- router ---------- */
-const views={entry:$('#v-entry'),creative:$('#v-creative'),music:$('#v-music')};
-const TITLES={entry:'PAS.',creative:'PAS Creative — Markalar için görsel sistemler',music:'PAS Music — Çok yakında'};
+const views={entry:$('#v-entry'),creative:$('#v-creative')};
+const T0='PAS Creative Studio — Markalar için görsel sistemler';
+const TITLES={entry:T0,creative:T0};
 let current=null;const wipe=$('#wipe');const split=$('#split');
 const SECTIONS=['top','studio','creative-space','hakkimizda','iletisim','paslastik'];
-function routeOf(){const h=location.hash.slice(1);if(h==='music')return 'music';if(h==='creative'||SECTIONS.includes(h))return 'creative';return 'entry'}
+function routeOf(){const h=location.hash.slice(1);return (h==='creative'||SECTIONS.includes(h))?'creative':'entry'}
 function setView(name){
-  Object.entries(views).forEach(([k,v])=>v.hidden=k!==name);current=name;document.title=TITLES[name];
-  $('meta[name=theme-color]').content=name==='music'?'#0f1435':'#efefef';
+  document.documentElement.classList.toggle('at-entry',name==='entry');current=name;document.title=TITLES[name];
   window.scrollTo(0,0);split.removeAttribute('data-chosen');split.removeAttribute('data-hover');
   if(name==='creative'){buildMarquee();const sh=location.hash.slice(1);if(SECTIONS.includes(sh)&&sh!=='top'){const el=document.getElementById(sh);if(el)setTimeout(()=>el.scrollIntoView({behavior:'auto'}),60)}const h=$('.hero');h.classList.remove('is-in');void h.offsetWidth;setTimeout(()=>h.classList.add('is-in'),reduce?0:260)}
 }
 function doWipe(color,mid,covered){
   if(reduce){mid();return}
-  wipe.style.background=color;wipe.style.color=color==='#0f1435'?'#efefef':'#0f1435';
+  wipe.style.background=color;wipe.style.color='#0f1435';
   const inP=covered?Promise.resolve():wipe.animate([{clipPath:'inset(100% 0 0 0)'},{clipPath:'inset(0% 0 0 0)'}],{duration:560,easing:EASE,fill:'forwards'}).finished;
   inP.then(()=>{wipe.getAnimations().forEach(a=>a.cancel());wipe.style.clipPath='inset(0)';mid();
     return wipe.animate([{clipPath:'inset(0 0 0% 0)'},{clipPath:'inset(0 0 100% 0)'}],{duration:700,delay:140,easing:EASE,fill:'forwards'}).finished})
@@ -782,7 +831,7 @@ function doWipe(color,mid,covered){
 let pendingCovered=false;
 function transitionTo(name){
   if(name===current)return;
-  const color=name==='music'?'#0f1435':(name==='creative'&&current==='entry'?'#cce86b':(name==='entry'?'#efefef':'#cce86b'));
+  const color=(name==='creative'&&current==='entry')?'#cce86b':'#efefef';
   const covered=pendingCovered;pendingCovered=false;
   if(!mnav.hidden)menu(false);
   doWipe(color,()=>setView(name),covered);
@@ -792,14 +841,18 @@ function go(name){const h=name==='entry'?'':'#'+name;if(routeOf()===name){transi
 addEventListener('hashchange',()=>transitionTo(routeOf()));
 addEventListener('popstate',()=>{if(routeOf()!==current)transitionTo(routeOf())});
 
-document.addEventListener('click',e=>{const a=e.target.closest('[data-go]');if(!a)return;e.preventDefault();const name=a.dataset.go;
+document.addEventListener('click',e=>{
+  const mu=e.target.closest('[data-music]');
+  if(mu){if(reduce)return;e.preventDefault();split.dataset.chosen='music';
+    setTimeout(()=>{wipe.style.background='#33000d';wipe.style.clipPath='inset(0)';location.href=mu.href},720);return}
+  const a=e.target.closest('[data-go]');if(!a)return;e.preventDefault();const name=a.dataset.go;
   if(current==='entry'&&a.closest('#split')&&!reduce){
     split.dataset.chosen=name;
-    setTimeout(()=>{wipe.style.background=name==='music'?'#0f1435':'#cce86b';wipe.style.clipPath='inset(0)';pendingCovered=true;go(name)},720);
+    setTimeout(()=>{wipe.style.background='#cce86b';wipe.style.clipPath='inset(0)';pendingCovered=true;go(name)},720);
   }else go(name);
 });
 /* entry hover (pointer + keyboard) */
-$$('.half').forEach(h=>{const k=h.dataset.go;
+$$('.half').forEach(h=>{const k=h.dataset.key;
   h.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')split.dataset.hover=k});
   h.addEventListener('focus',()=>split.dataset.hover=k);
   h.addEventListener('blur',()=>split.removeAttribute('data-hover'));
@@ -810,12 +863,12 @@ split.addEventListener('pointerleave',()=>{if(!split.dataset.chosen)split.remove
 if(matchMedia('(pointer:fine)').matches&&!reduce){
   const c=$('#cursor');document.documentElement.classList.add('has-cursor');
   let x=innerWidth/2,y=innerHeight/2,cx=x,cy=y;
-  addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY;const tg=e.target;c.classList.toggle('is-big',!!tg.closest('[data-cursor],a,button'));c.classList.toggle('is-light',!!(tg.closest('.music,.foot,.t-ink,.mnav,.dr-prompt,.btn--solid,.work-over')||(tg.closest('.half--music')&&split.dataset.hover==='music')))},{passive:true});
+  addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY;const tg=e.target;c.classList.toggle('is-big',!!tg.closest('[data-cursor],a,button'));const inM=!!(tg.closest('.half--music')&&split.dataset.hover==='music');c.classList.toggle('is-gold',inM);c.classList.toggle('is-light',!inM&&!!tg.closest('.foot,.t-ink,.mnav,.btn--solid'))},{passive:true});
   document.addEventListener('pointerleave',()=>c.style.opacity='0');document.addEventListener('pointerenter',()=>c.style.opacity='');
   (function loop(){cx+=(x-cx)*.22;cy+=(y-cy)*.22;c.style.transform=`translate3d(${cx}px,${cy}px,0)`;requestAnimationFrame(loop)})();
 }
 
-setView(routeOf());
+buildMarquee();setView(routeOf());
 </script>
 </body>
 </html>
