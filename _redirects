@@ -1,0 +1,14 @@
+# Netlify / Cloudflare Pages compatible explicit legacy aliases
+/index.html / 301
+/creative/index.html /creative/ 301
+/promptlar/index.html /promptlar/ 301
+/music/index.html /music/ 301
+/creative/isler/index.html /creative/isler/ 301
+/creative/creative-space/index.html /creative/creative-space/ 301
+/creative/hizmetler/index.html /creative/hizmetler/ 301
+/promptlar/cikgel-app-prompt/index.html /promptlar/cikgel-app-prompt/ 301
+/promptlar/noma-websitesi-prompt/index.html /promptlar/noma-websitesi-prompt/ 301
+/promptlar/tomati-websitesi-prompt/index.html /promptlar/tomati-websitesi-prompt/ 301
+/music/prova-studyosu/index.html /music/prova-studyosu/ 301
+/music/muzik-produksiyonu/index.html /music/muzik-produksiyonu/ 301
+/music/kayit-studyosu/index.html /music/kayit-studyosu/ 301
