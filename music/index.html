@@ -117,8 +117,20 @@ section{scroll-margin-top:80px}
 
 /* image */
 .m-fig{margin:0;padding-inline:var(--m)}
-.m-fig img{width:100%;aspect-ratio:16/7;object-fit:cover;object-position:50% 52%}
+.m-fig-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gut)}
+.m-fig-grid img{width:100%;height:auto;object-fit:cover;display:block}
+.m-fig-grid img:first-child{grid-column:span 8;aspect-ratio:16/10}
+.m-fig-grid img:last-child{grid-column:span 4;aspect-ratio:4/5}
 .m-fig figcaption{display:flex;justify-content:space-between;gap:20px;margin-top:12px}
+
+/* enstrüman kolajı */
+.m-collage{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gut);
+  margin-bottom:clamp(40px,5vw,72px)}
+.m-collage img{width:100%;height:auto;object-fit:cover;display:block}
+.m-collage img:nth-child(1){grid-column:span 7;aspect-ratio:4/3}
+.m-collage img:nth-child(2){grid-column:span 5;aspect-ratio:3/4;align-self:end}
+.m-collage img:nth-child(3),.m-collage img:nth-child(4),.m-collage img:nth-child(5){grid-column:span 4;aspect-ratio:1}
+.m-collage img:nth-child(6),.m-collage img:nth-child(7){grid-column:span 6;aspect-ratio:3/2}
 
 /* equipment */
 .m-eq-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:14px;align-items:end;margin-bottom:clamp(32px,4vw,56px)}
@@ -163,8 +175,13 @@ section{scroll-margin-top:80px}
   .m-intro .m-h2,.m-intro p{grid-column:1/-1}
   .m-eq-head .m-h2,.m-eq-head p{grid-column:1/-1}
   .m-eq{column-count:1}
-  .m-fig img{aspect-ratio:4/3}
+  .m-fig-grid{grid-template-columns:1fr}
+  .m-fig-grid img:first-child{grid-column:1;aspect-ratio:4/3}
+  .m-fig-grid img:last-child{grid-column:1;aspect-ratio:4/5}
   .m-fig figcaption{flex-direction:column;gap:4px}
+  .m-collage{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .m-collage img:nth-child(n){grid-column:span 1;aspect-ratio:1}
+  .m-collage img:nth-child(1){grid-column:span 2;aspect-ratio:4/3}
   .m-ct-lines,.m-ct-side{grid-column:1/-1}
   .m-foot-grid{grid-template-columns:1fr 1fr}
   .m-ct-lines a{font-size:19px}
@@ -234,15 +251,28 @@ section{scroll-margin-top:80px}
   </section>
 
   <figure class="m-fig">
-    <img src="../assets/studio.jpg" width="1672" height="941" loading="lazy"
-         alt="PAS Music stüdyosu: siyah çıtalı duvarlar, duvara asılı ziller, dikey ışık şeritleri ve ahşap zemin">
-    <figcaption class="meta"><span>PAS Music · Asmalımescit</span><span>Sofyalı Sokak No:5 Daire 2</span></figcaption>
+    <div class="m-fig-grid">
+      <img src="../assets/foto/m-prova.jpg" width="1500" height="937" loading="lazy"
+           alt="PAS Music prova stüdyosu: akustik panelli duvarlar, davul seti, gitarlar ve amfiler">
+      <img src="../assets/foto/m-kontrol.jpg" width="760" height="950" loading="lazy"
+           alt="PAS Music kontrol odası: stüdyo monitörleri, bilgisayar ve prova odasına bakan cam">
+    </div>
+    <figcaption class="meta"><span>Prova odası ve kontrol odası</span><span>Sofyalı Sokak No:5 Daire 2, Asmalımescit</span></figcaption>
   </figure>
 
   <section class="m-sec" id="ekipmanlar" style="padding-bottom:clamp(36px,4vw,64px)" aria-labelledby="h-eq">
     <div class="m-eq-head">
       <h2 class="m-h2" id="h-eq">Stüdyo Ekipmanları</h2>
       <p>Stüdyomuzda kullanılan ekipmanlar.</p>
+    </div>
+    <div class="m-collage">
+      <img src="../assets/foto/e1.jpg" width="1000" height="750" loading="lazy" alt="Yamaha Stage Custom davul seti ve ziller">
+      <img src="../assets/foto/e2.jpg" width="760" height="1013" loading="lazy" alt="Sehpada duran iki Stratocaster elektro gitar">
+      <img src="../assets/foto/e3.jpg" width="760" height="760" loading="lazy" alt="Blackstar HT Club 40 gitar amfisi">
+      <img src="../assets/foto/e4.jpg" width="760" height="760" loading="lazy" alt="Ezel Custom davul kasnakları">
+      <img src="../assets/foto/e5.jpg" width="760" height="760" loading="lazy" alt="Fender Stratocaster ve Fender '59 Bassman amfisi">
+      <img src="../assets/foto/e6.jpg" width="1000" height="666" loading="lazy" alt="Leon Cymbals ride zilleri">
+      <img src="../assets/foto/e7.jpg" width="1000" height="666" loading="lazy" alt="Davul seti ve zil kurulumu">
     </div>
     <div class="m-eq">
         <div><h3>DAVUL</h3><ul><li>Yamaha Stage Custom 22</li><li>Ezel Custom 18" Jazz Kit</li><li>Ezel Custom 22 Kit</li></ul></div>
