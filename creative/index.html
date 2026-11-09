@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-752SVCWQJD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-752SVCWQJD');
-</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PAS Creative Studio — Tasarım ve Prodüksiyon | Beyoğlu</title>
@@ -544,10 +535,145 @@ section{scroll-margin-top:var(--head)}
   .h-line > span{transform:none}
   .hero-fig .frame,.cs-fig{clip-path:none}
 }
+
+/* ============ CREATIVE SPACE PAKETLERİ / REZERVASYON ============ */
+.svc-head{align-items:start;row-gap:14px}
+.svc-cols{grid-column:4/13;display:grid;gap:clamp(44px,5vw,78px)}
+.svc-cols .svc-list{grid-column:auto}
+.svc-gt{font-size:13px;line-height:1.4;letter-spacing:.09em;text-transform:uppercase;font-weight:500;color:var(--muted);margin-bottom:10px}
+
+.pk-sec{background:#e6e6e6}
+.pk-head{align-items:end;row-gap:16px}
+.pk-head .meta{grid-column:1/4;color:var(--ink);font-size:15px;font-weight:500;align-self:start;padding-top:.6em}
+.pk-head .h2{grid-column:4/13}
+.pk-head .lead{grid-column:4/11;margin-top:20px}
+.pk-facts{grid-column:4/13;margin-top:clamp(30px,3.4vw,52px);border-top:1px solid var(--ink);
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gut)}
+.pk-facts div{padding-top:12px}
+.pk-facts dt{font-size:13px;color:var(--muted)}
+.pk-facts dd{margin-top:4px;font-weight:500;font-size:15px;line-height:1.35}
+
+.pk-tabs{display:flex;gap:8px;margin-top:clamp(44px,5.4vw,82px);overflow-x:auto;scrollbar-width:none;
+  margin-inline:calc(var(--m)*-1);padding-inline:var(--m);padding-bottom:4px}
+.pk-tabs::-webkit-scrollbar{display:none}
+.pk-tab{flex:0 0 auto;min-height:48px;padding:0 20px;border:1px solid var(--ink);font-size:15px;font-weight:500;
+  white-space:nowrap;transition:background .3s var(--ease-out),color .3s var(--ease-out)}
+.pk-tab:hover{background:var(--lime)}
+.pk-tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.pk-tab[aria-selected="true"]:hover{background:var(--ink)}
+
+.pk-panel{margin-top:clamp(30px,3.4vw,52px)}
+.pk-top{row-gap:36px;align-items:start;border-top:1px solid var(--ink);padding-top:clamp(22px,2.4vw,34px)}
+.pk-about{grid-column:1/7}
+.pk-title{font-size:clamp(28px,3.4vw,52px);font-weight:600;font-stretch:84%;letter-spacing:-.022em;line-height:1}
+.pk-tag{margin-top:12px;font-size:clamp(18px,1.6vw,22px);line-height:1.35;letter-spacing:-.01em}
+.pk-desc{margin-top:16px;max-width:34em;color:rgba(15,20,53,.8)}
+.pk-note{margin-top:16px;max-width:34em}
+.pk-inc{grid-column:8/13}
+.pk-inc-list{margin-top:10px;columns:2;column-gap:var(--gut);font-size:15px}
+.pk-inc-list li{break-inside:avoid;padding:7px 0;border-bottom:1px solid var(--rule);line-height:1.3}
+
+.pk-dur-wrap{margin-top:clamp(44px,5vw,78px);row-gap:28px;align-items:end}
+.pk-dur{grid-column:1/8}
+.pk-dur label{display:block;color:var(--ink);font-weight:500;font-size:15px}
+.pk-dur-val{display:block;margin-top:4px;font-size:clamp(26px,2.8vw,40px);font-weight:600;font-stretch:84%;letter-spacing:-.02em;line-height:1.05}
+input[type=range]#pkDur{-webkit-appearance:none;appearance:none;width:100%;margin-top:22px;background:transparent;height:34px}
+input[type=range]#pkDur::-webkit-slider-runnable-track{height:2px;background:var(--ink)}
+input[type=range]#pkDur::-moz-range-track{height:2px;background:var(--ink)}
+input[type=range]#pkDur::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:30px;height:30px;border-radius:50%;
+  background:var(--ink);border:0;margin-top:-14px;cursor:grab;transition:background .25s var(--ease-out),transform .25s var(--ease-out)}
+input[type=range]#pkDur::-moz-range-thumb{width:30px;height:30px;border-radius:50%;background:var(--ink);border:0;cursor:grab}
+input[type=range]#pkDur:hover::-webkit-slider-thumb,input[type=range]#pkDur:focus-visible::-webkit-slider-thumb{background:var(--lime);box-shadow:0 0 0 1px var(--ink) inset;transform:scale(1.08)}
+.pk-dur-ticks{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted);margin-top:2px}
+.pk-dur-ticks span{max-width:11em}
+.pk-dur-ticks span:nth-child(2){text-align:center}
+.pk-dur-ticks span:last-child{text-align:right}
+.pk-dur #pkDurHint{margin-top:12px}
+.pk-base{grid-column:9/13;border-top:1px solid var(--ink);padding-top:12px;display:grid;gap:2px;justify-items:start}
+.pk-base-val{font-size:clamp(28px,3.1vw,46px);font-weight:600;font-stretch:82%;letter-spacing:-.025em;line-height:1}
+
+.pk-add{margin-top:clamp(48px,5.6vw,88px)}
+.pk-add-head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;
+  border-top:1px solid var(--ink);padding-top:14px}
+.pk-add h4,.pk-sum h4,.pk-form-wrap h4{font-size:clamp(20px,1.9vw,27px);font-weight:600;font-stretch:88%;letter-spacing:-.015em}
+.pk-add-grid{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.pk-card{position:relative;display:flex;flex-direction:column;gap:6px;padding:16px;border:1px solid var(--rule);
+  cursor:pointer;transition:border-color .25s var(--ease-out),background .25s var(--ease-out)}
+.pk-card:hover{border-color:var(--ink)}
+.pk-card input{position:absolute;opacity:0;width:1px;height:1px}
+.pk-card-top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.pk-card b{font-size:16px;font-weight:500;line-height:1.25}
+.pk-card .pk-price{font-size:15px;font-weight:500;white-space:nowrap}
+.pk-card p{font-size:13px;line-height:1.4;color:var(--muted)}
+.pk-card:has(input:checked){background:var(--lime);border-color:var(--ink)}
+.pk-card:has(input:focus-visible){outline:2px solid var(--ink);outline-offset:3px}
+.pk-card:has(input:disabled){opacity:.45;cursor:not-allowed}
+.pk-card .pk-mark{position:absolute;right:14px;bottom:14px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:0}
+.pk-card:has(input:checked) .pk-mark{opacity:1}
+
+.pk-sum-wrap{margin-top:clamp(48px,5.6vw,88px);row-gap:44px;align-items:start}
+.pk-sum{grid-column:1/7;border-top:1px solid var(--ink);padding-top:14px}
+.pk-rows{margin-top:16px;display:grid;gap:0}
+.pk-rows div{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.pk-rows dt{color:rgba(15,20,53,.85)}
+.pk-rows dd{font-weight:500;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pk-total{margin-top:18px;display:grid;gap:10px}
+.pk-total div{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.pk-total span{font-size:15px}
+.pk-total strong{font-size:clamp(20px,1.9vw,26px);font-weight:600;font-stretch:86%;letter-spacing:-.02em}
+.pk-total div:first-child strong{font-size:clamp(28px,3.1vw,44px);font-stretch:80%;letter-spacing:-.03em;line-height:1}
+.pk-disc{margin-top:22px;display:grid;gap:7px}
+.pk-disc li{padding-left:1em;position:relative}
+.pk-disc li::before{content:"—";position:absolute;left:0}
+
+.pk-form-wrap{grid-column:8/13;border-top:1px solid var(--ink);padding-top:14px}
+.pk-form{margin-top:18px;display:grid;gap:14px}
+.pk-f{display:grid;gap:5px}
+.pk-f label{font-size:13px;color:var(--muted)}
+.pk-f input,.pk-f textarea{font:inherit;font-size:16px;color:var(--ink);background:transparent;border:0;
+  border-bottom:1px solid var(--rule);padding:9px 0;border-radius:0;-webkit-appearance:none;appearance:none;min-height:44px}
+.pk-f textarea{min-height:76px;resize:vertical;line-height:1.4}
+.pk-f input:focus,.pk-f textarea:focus{outline:0;border-bottom-color:var(--ink)}
+.pk-f input[aria-invalid="true"],.pk-f textarea[aria-invalid="true"]{border-bottom-color:#b00020}
+.pk-f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pk-submit{margin-top:6px;justify-self:start;text-align:left;line-height:1.2;padding-block:12px;height:auto}
+.pk-status{font-size:14px;min-height:1.3em}
+.pk-status[data-ok="1"]{color:#1d5c2f}
+.pk-status[data-ok="0"]{color:#b00020}
+
+.pk-amen{margin-top:clamp(48px,5.6vw,88px);row-gap:14px;border-top:1px solid var(--ink);padding-top:14px}
+.pk-amen .meta{grid-column:1/4;color:var(--ink);font-weight:500;font-size:15px}
+.pk-amen ul{grid-column:4/13;display:flex;flex-wrap:wrap;gap:8px}
+.pk-amen li{font-size:14px;padding:7px 13px;border:1px solid var(--rule)}
+
+@media (max-width:1080px){
+  .pk-about,.pk-inc{grid-column:1/-1}
+  .pk-dur{grid-column:1/9}
+  .pk-base{grid-column:9/13}
+  .pk-sum,.pk-form-wrap{grid-column:1/-1}
+}
+@media (max-width:820px){
+  .svc-cols{grid-column:1/-1}
+  .pk-head .meta,.pk-head .h2,.pk-head .lead,.pk-facts{grid-column:1/-1}
+  .pk-facts{grid-template-columns:1fr;gap:0}
+  .pk-facts div{padding-block:11px;border-bottom:1px solid var(--rule)}
+  .pk-facts div:first-child{padding-top:12px}
+  .pk-inc-list{columns:1}
+  .pk-dur,.pk-base{grid-column:1/-1}
+  .pk-dur-ticks span{font-size:12px;max-width:7em}
+  .pk-amen .meta,.pk-amen ul{grid-column:1/-1}
+  .pk-f2{grid-template-columns:1fr}
+}
+.pk-card.is-on{background:var(--lime);border-color:var(--ink)}
+.pk-card.is-on .pk-mark{opacity:1}
+.pk-card.is-off{opacity:.45;cursor:not-allowed}
+.svc-list a{display:block}
+
 </style>
 <noscript><style>.hero .h-line>span{transform:none}.hero-fig .frame,.cs-fig{clip-path:inset(0)}</style></noscript><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://pascreativestudio.com/#website", "url": "https://pascreativestudio.com/", "name": "PAS", "inLanguage": "tr-TR"}, {"@type": "WebPage", "@id": "https://pascreativestudio.com/creative/#webpage", "url": "https://pascreativestudio.com/creative/", "name": "PAS Creative Studio — Tasarım ve Prodüksiyon | Beyoğlu", "description": "Beyoğlu, İstanbul’da bağımsız yaratıcı stüdyo. Marka kimliği, web tasarımı, sosyal medya, fotoğraf-video ve AI destekli yaratıcı prodüksiyon.", "inLanguage": "tr-TR", "isPartOf": {"@id": "https://pascreativestudio.com/#website"}, "about": {"@id": "https://pascreativestudio.com/creative/#business"}, "breadcrumb": {"@id": "https://pascreativestudio.com/creative/#breadcrumb"}}, {"@type": ["LocalBusiness", "ProfessionalService"], "@id": "https://pascreativestudio.com/creative/#business", "name": "PAS Creative Studio", "alternateName": "PAS Creative", "description": "PAS Creative Studio, Beyoğlu Asmalımescit'te bağımsız yaratıcı stüdyo. Marka kimliği, sosyal medya ve içerik, web tasarımı, fotoğraf ve video prodüksiyon. Creative Space'te kiralanabilir çekim stüdyosu.", "url": "https://pascreativestudio.com/creative/", "email": "merhaba@pascreativestudio.com", "telephone": "+905061106067", "image": "https://pascreativestudio.com/assets/link-preview.jpg", "priceRange": "$$", "currenciesAccepted": "TRY", "address": {"@type": "PostalAddress", "streetAddress": "Sofyalı Sokak No:5 Daire 2", "addressLocality": "Beyoğlu", "addressRegion": "İstanbul", "addressCountry": "TR"}, "areaServed": {"@type": "City", "name": "İstanbul"}, "knowsAbout": ["marka kimliği", "grafik tasarım", "sosyal medya yönetimi", "fotoğraf prodüksiyon", "video prodüksiyon", "web tasarımı", "kiralanabilir fotoğraf stüdyosu", "podcast çekim alanı", "YouTube çekim alanı"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Hizmetler", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Marka Kimliği", "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Creative Direction", "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sosyal Medya & İçerik Sistemleri", "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fotoğraf & Video Prodüksiyon", "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Web Tasarımı", "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kampanya & Dijital İletişim", "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Destekli Yaratıcı Prodüksiyon", "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Basılı & Fiziksel Materyaller", "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stüdyo Kiralama", "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workshop & Eğitim", "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}}]}}, {"@type": "BreadcrumbList", "@id": "https://pascreativestudio.com/creative/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "PAS", "item": "https://pascreativestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "PAS Creative Studio", "item": "https://pascreativestudio.com/creative/"}]}]}</script>
 <script defer src="/assets/tracking-config.js"></script>
 <script defer src="/assets/tracking.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "OfferCatalog", "name": "PAS Creative Space — Kiralama Paketleri", "url": "https://pascreativestudio.com/creative/#paketler", "provider": {"@id": "https://pascreativestudio.com/creative/#business"}, "itemListElement": [{"@type": "Offer", "name": "Başlangıç Paketi", "priceCurrency": "TRY", "availability": "https://schema.org/InStock", "url": "https://pascreativestudio.com/creative/#paketler", "itemOffered": {"@type": "Service", "name": "Başlangıç Paketi", "description": "Reels, sosyal medya, YouTube, kişisel marka ve küçük ölçekli içerik çekimleri için hazırlanmış temel stüdyo paketi.", "serviceType": "Prodüksiyon stüdyosu kiralama", "areaServed": {"@type": "City", "name": "İstanbul"}, "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}, "priceSpecification": [{"@type": "UnitPriceSpecification", "price": 2500, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 2, "unitCode": "HUR"}}, {"@type": "UnitPriceSpecification", "price": 5000, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 4, "unitCode": "HUR"}}, {"@type": "UnitPriceSpecification", "price": 8500, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 8, "unitCode": "HUR"}}]}, {"@type": "Offer", "name": "Fotoğrafçı Paketi", "priceCurrency": "TRY", "availability": "https://schema.org/InStock", "url": "https://pascreativestudio.com/creative/#paketler", "itemOffered": {"@type": "Service", "name": "Fotoğrafçı Paketi", "description": "Portre, moda, lookbook, ürün, katalog ve reklam fotoğrafçılığı için profesyonel flaş ve ışık şekillendirme altyapısı.", "serviceType": "Prodüksiyon stüdyosu kiralama", "areaServed": {"@type": "City", "name": "İstanbul"}, "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}, "priceSpecification": [{"@type": "UnitPriceSpecification", "price": 4000, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 2, "unitCode": "HUR"}}, {"@type": "UnitPriceSpecification", "price": 7500, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 4, "unitCode": "HUR"}}, {"@type": "UnitPriceSpecification", "price": 13000, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 8, "unitCode": "HUR"}}]}, {"@type": "Offer", "name": "Video Prodüksiyon Paketi", "priceCurrency": "TRY", "availability": "https://schema.org/InStock", "url": "https://pascreativestudio.com/creative/#paketler", "itemOffered": {"@type": "Service", "name": "Video Prodüksiyon Paketi", "description": "Reklam, röportaj, ürün filmi, müzik videosu ve dijital kampanyalar için kapsamlı sürekli ışık ve ses altyapısı.", "serviceType": "Prodüksiyon stüdyosu kiralama", "areaServed": {"@type": "City", "name": "İstanbul"}, "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}, "priceSpecification": [{"@type": "UnitPriceSpecification", "price": 4500, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 2, "unitCode": "HUR"}}, {"@type": "UnitPriceSpecification", "price": 8500, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 4, "unitCode": "HUR"}}, {"@type": "UnitPriceSpecification", "price": 15000, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 8, "unitCode": "HUR"}}]}, {"@type": "Offer", "name": "Full Prodüksiyon Paketi", "priceCurrency": "TRY", "availability": "https://schema.org/InStock", "url": "https://pascreativestudio.com/creative/#paketler", "itemOffered": {"@type": "Service", "name": "Full Prodüksiyon Paketi", "description": "Fotoğraf ve video prodüksiyonları için flaş, sürekli ışık, ses, fon ve dijital çalışma ekipmanlarının birlikte kullanıldığı kapsamlı paket.", "serviceType": "Prodüksiyon stüdyosu kiralama", "areaServed": {"@type": "City", "name": "İstanbul"}, "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}, "priceSpecification": [{"@type": "UnitPriceSpecification", "price": 6500, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 2, "unitCode": "HUR"}}, {"@type": "UnitPriceSpecification", "price": 12000, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 4, "unitCode": "HUR"}}, {"@type": "UnitPriceSpecification", "price": 21000, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 8, "unitCode": "HUR"}}]}, {"@type": "Offer", "name": "Workshop & Etkinlik Alanı", "priceCurrency": "TRY", "availability": "https://schema.org/InStock", "url": "https://pascreativestudio.com/creative/#paketler", "itemOffered": {"@type": "Service", "name": "Workshop & Etkinlik Alanı", "description": "Workshop, eğitim, toplantı, film gösterimi ve yaratıcı topluluk etkinlikleri için esnek kullanım alanı.", "serviceType": "Prodüksiyon stüdyosu kiralama", "areaServed": {"@type": "City", "name": "İstanbul"}, "provider": {"@id": "https://pascreativestudio.com/creative/#business"}}, "priceSpecification": [{"@type": "UnitPriceSpecification", "price": 3000, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 2, "unitCode": "HUR"}}, {"@type": "UnitPriceSpecification", "price": 6000, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 4, "unitCode": "HUR"}}, {"@type": "UnitPriceSpecification", "price": 10000, "priceCurrency": "TRY", "valueAddedTaxIncluded": false, "referenceQuantity": {"@type": "QuantitativeValue", "value": 8, "unitCode": "HUR"}}]}]}</script>
 </head>
 <body data-brand="creative">
 <div id="cursor" aria-hidden="true"></div>
@@ -634,22 +760,21 @@ section{scroll-margin-top:var(--head)}
 
     <!-- studio / services -->
     <section class="sec wrap" id="studio" aria-labelledby="t-studio">
-      <div class="g">
+      <div class="g svc-head">
         <div class="svc-aside">
           <h2 class="h2" id="t-studio">Ne yapıyoruz?</h2>
         </div>
-        <ul class="svc-list" id="svcList"><li><span>Marka Kimliği</span></li><li><span>Creative Direction</span></li><li><span>Sosyal Medya &amp; İçerik Sistemleri</span></li><li><span>Fotoğraf &amp; Video Prodüksiyon</span></li><li><span>Web Tasarımı</span></li><li><span>Kampanya &amp; Dijital İletişim</span></li><li><span>AI Destekli Yaratıcı Prodüksiyon</span></li><li><span>Basılı &amp; Fiziksel Materyaller</span></li></ul>
+        <div class="svc-cols">
+          <div>
+            <h3 class="svc-gt">Creative</h3>
+            <ul class="svc-list" id="svcList"><li><span>Marka Kimliği</span></li><li><span>Creative Direction</span></li><li><span>Sosyal Medya &amp; İçerik Sistemleri</span></li><li><span>Fotoğraf &amp; Video Prodüksiyon</span></li><li><span>Web Tasarımı</span></li><li><span>Kampanya &amp; Dijital İletişim</span></li><li><span>AI Destekli Yaratıcı Prodüksiyon</span></li><li><span>Basılı &amp; Fiziksel Materyaller</span></li></ul>
+          </div>
+          <div>
+            <h3 class="svc-gt">Creative Space</h3>
+            <ul class="svc-list" id="spaceList"><li><a href="#paketler" data-scroll><span>Prodüksiyon Stüdyosu Kiralama</span></a></li><li><a href="#paketler" data-scroll><span>Workshop Alanı Kiralama</span></a></li></ul>
+          </div>
+        </div>
       </div>
-    </section>
-
-    <!-- paslastik -->
-    <section class="pas-sec" id="paslastik" aria-labelledby="t-pas">
-      <div class="wrap">
-        <h2 class="pas-title" id="t-pas">PASLAŞTIK</h2>
-        
-      </div>
-      <ul class="sr" id="clientList"><li>Eylül Arnavutköy</li><li>Lumina</li><li>Dodolabs</li><li>Maja Interior</li><li>Arsa</li><li>Casarent</li><li>Community Event Services</li><li>Dodo</li><li>Smyrna</li><li>Değişim Liderleri Derneği</li></ul>
-      <div class="marquee" id="marquee" aria-hidden="true"></div>
     </section>
 
     <!-- creative space -->
@@ -676,6 +801,115 @@ section{scroll-margin-top:var(--head)}
       </div>
       <div class="cs-cta"><a class="btn btn--solid" id="csMail" data-intent="space_inquiry" href="mailto:merhaba@pascreativestudio.com?subject=Creative%20Space">Creative Space hakkında bilgi al</a></div>
     </section>
+
+    <!-- paketler / rezervasyon -->
+    <section class="sec wrap pk-sec" id="paketler" aria-labelledby="t-pk">
+      <div class="g pk-head">
+        <p class="meta">Creative Space · Kiralama</p>
+        <h2 class="h2" id="t-pk">Alanını Seç, Üretmeye Başla.</h2>
+        <p class="lead">Çekiminize veya etkinliğinize uygun paketi oluşturun. Süreyi ve ek hizmetleri belirleyin, fiyatınızı anında görün.</p>
+        <dl class="pk-facts">
+          <div><dt>Konum</dt><dd>Asmalımescit, Beyoğlu / İstanbul</dd></div>
+          <div><dt>Ulaşım</dt><dd>Şişhane Metro İstasyonu'na yaklaşık 1 dakika yürüme mesafesinde</dd></div>
+          <div><dt>Stüdyo alanı</dt><dd>25 m²</dd></div>
+          <div><dt>Tavan yüksekliği</dt><dd>3,5 metre</dd></div>
+        </dl>
+      </div>
+
+      <div class="pk-tabs" role="tablist" aria-label="Paketler" id="pkTabs"></div>
+
+      <div class="pk-panel" id="pkPanel" role="tabpanel" tabindex="0">
+        <div class="g pk-top">
+          <div class="pk-about">
+            <h3 class="pk-title" id="pkTitle"></h3>
+            <p class="pk-tag" id="pkTag"></p>
+            <p class="pk-desc" id="pkDesc"></p>
+            <p class="pk-note meta" id="pkNote" hidden></p>
+          </div>
+          <div class="pk-inc">
+            <span class="meta">Pakete dahil</span>
+            <ul class="pk-inc-list" id="pkInc"></ul>
+          </div>
+        </div>
+
+        <div class="g pk-dur-wrap">
+          <div class="pk-dur">
+            <label for="pkDur">Kiralama süresi</label>
+            <output class="pk-dur-val" id="pkDurVal" for="pkDur"></output>
+            <input type="range" id="pkDur" min="0" max="2" step="1" value="1" aria-describedby="pkDurHint">
+            <div class="pk-dur-ticks" aria-hidden="true"><span>2 Saat</span><span>Yarım Gün — 4 Saat</span><span>Tam Gün — 8 Saat</span></div>
+            <p class="meta" id="pkDurHint">Süreyi değiştirdiğinizde tüm fiyatlar anında güncellenir.</p>
+          </div>
+          <div class="pk-base">
+            <span class="meta">Temel paket fiyatı</span>
+            <strong class="pk-base-val tnum" id="pkBase"></strong>
+            <span class="meta">KDV hariç</span>
+          </div>
+        </div>
+
+        <div class="pk-add">
+          <div class="pk-add-head">
+            <h4>Ek hizmetler</h4>
+            <p class="meta">Yalnızca seçili pakete uygun hizmetler listelenir.</p>
+          </div>
+          <div class="pk-add-grid" id="pkAdd"></div>
+        </div>
+
+        <div class="g pk-sum-wrap">
+          <div class="pk-sum">
+            <h4>Fiyat özeti</h4>
+            <dl class="pk-rows" id="pkRows"></dl>
+            <div class="pk-total">
+              <div><span>Toplam — KDV hariç</span><strong class="tnum" id="pkTotal"></strong></div>
+              <div><span>Rezervasyon ön ödemesi (%30)</span><strong class="tnum" id="pkDep"></strong></div>
+              <div><span>Kalan tutar</span><strong class="tnum" id="pkRem"></strong></div>
+            </div>
+            <ul class="pk-disc meta">
+              <li>Fiyatlara KDV dahil değildir. KDV, ödeme aşamasında geçerli oran üzerinden ayrıca hesaplanır.</li>
+              <li>Rezervasyon için toplam bedelin %30'u ön ödeme olarak alınır ve son ödemeden düşülür.</li>
+              <li>Özel teklif gerektiren hizmetler hesaplanan toplam tutara dahil değildir.</li>
+            </ul>
+          </div>
+
+          <div class="pk-form-wrap">
+            <h4 id="t-pkform">Rezervasyon Talebi Oluştur</h4>
+            <form class="pk-form" id="pkForm" novalidate aria-labelledby="t-pkform">
+              <div class="pk-f"><label for="pkName">Ad Soyad</label><input id="pkName" name="name" type="text" autocomplete="name" required></div>
+              <div class="pk-f2">
+                <div class="pk-f"><label for="pkMail">E-posta</label><input id="pkMail" name="email" type="email" autocomplete="email" required></div>
+                <div class="pk-f"><label for="pkPhone">Telefon</label><input id="pkPhone" name="phone" type="tel" autocomplete="tel"></div>
+              </div>
+              <div class="pk-f2">
+                <div class="pk-f"><label for="pkDate">Tercih Edilen Tarih</label><input id="pkDate" name="date" type="date" required></div>
+                <div class="pk-f"><label for="pkTime">Başlangıç Saati</label><input id="pkTime" name="time" type="time"></div>
+              </div>
+              <div class="pk-f"><label for="pkPeople">Katılımcı veya Ekip Sayısı</label><input id="pkPeople" name="people" type="number" min="1" step="1" inputmode="numeric"></div>
+              <div class="pk-f"><label for="pkBrief">Proje / Etkinlik Açıklaması</label><textarea id="pkBrief" name="brief" rows="3"></textarea></div>
+              <div class="pk-f"><label for="pkMore">Ek Notlar</label><textarea id="pkMore" name="notes" rows="2"></textarea></div>
+              <button class="btn btn--solid pk-submit" type="submit" data-intent="space_inquiry">Müsaitlik ve Rezervasyon Talebi Gönder</button>
+              <p class="meta">Seçtiğiniz paket, süre, ekipman listesi, ek hizmetler ve tahmini tutar talebe otomatik eklenir. Rezervasyon, PAS Creative Studio tarafından müsaitlik onayı verildikten sonra kesinleşir; site üzerinden ödeme alınmaz.</p>
+              <p class="pk-status" id="pkStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+
+        <div class="g pk-amen">
+          <span class="meta">Her kiralamada</span>
+          <ul id="pkAmen"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- paslastik -->
+    <section class="pas-sec" id="paslastik" aria-labelledby="t-pas">
+      <div class="wrap">
+        <h2 class="pas-title" id="t-pas">PASLAŞTIK</h2>
+        
+      </div>
+      <ul class="sr" id="clientList"><li>Eylül Arnavutköy</li><li>Lumina</li><li>Dodolabs</li><li>Maja Interior</li><li>Arsa</li><li>Casarent</li><li>Community Event Services</li><li>Dodo</li><li>Smyrna</li><li>Değişim Liderleri Derneği</li></ul>
+      <div class="marquee" id="marquee" aria-hidden="true"></div>
+    </section>
+
 
     <!-- about -->
     <section class="sec wrap" id="hakkimizda" aria-labelledby="t-ab">
@@ -895,6 +1129,254 @@ if(matchMedia('(pointer:fine)').matches&&!reduce){
 }
 
 buildMarquee();setView(routeOf());
+</script>
+<script>
+/* ---------- CREATIVE SPACE PAKETLERİ: fiyat ve içerik yalnızca bu blokta düzenlenir ---------- */
+(function(){
+  var MAIL = "merhaba@pascreativestudio.com";
+  var DUR = [2,4,8];
+  var DUR_LABEL = {2:"2 Saat",4:"Yarım Gün — 4 Saat",8:"Tam Gün — 8 Saat"};
+  var AMENITIES = ["Hazırlanma odası","Kıyafet askılığı ve askılık eşek","Buharlı ütü","Wi-Fi","Kahve ve su","Temel ekipman teslimi ve kullanım bilgilendirmesi"];
+
+  var PACKAGES = [
+    {id:"starter",tab:"Başlangıç",title:"Başlangıç Paketi",tag:"İçerik üretmek için ihtiyacınız olan her şey.",
+     desc:"Reels, sosyal medya, YouTube, kişisel marka ve küçük ölçekli içerik çekimleri için hazırlanmış temel stüdyo paketi.",
+     prices:{2:2500,4:5000,8:8500},
+     inc:["25 m² stüdyo alanı","3,5 metre tavan yüksekliği","Beyaz ve siyah fon seçenekleri","Kamera tripodu","Amaran 120c","Amaran Ace 25c","Hollyland Lark Max 2","Hazırlanma odası","Askılık eşek ve kıyafet askılığı","Buharlı ütü","Wi-Fi ve kahve"],
+     addons:["sonyCamera","extraLens","lightingAssistant","photographer","videographer","editing","retouch"]},
+    {id:"photo",tab:"Fotoğrafçı",title:"Fotoğrafçı Paketi",tag:"Profesyonel ışık, özgür çekim.",
+     desc:"Portre, moda, lookbook, ürün, katalog ve reklam fotoğrafçılığı için profesyonel flaş ve ışık şekillendirme altyapısı.",
+     prices:{2:4000,4:7500,8:13000},
+     inc:["Godox QT600III-M HSS 600W — 1 adet","Godox QT400III-M HSS 400W — 2 adet","Godox XPro II-S Sony uyumlu tetikleyici","Amaran 120c","Amaran Ace 25c","Octa Dome 90 ve 120","Light Box 30x120 ve 60x90","Lantern ve mevcut reflektörler","Mevcut tüm ışık ayakları","Beyaz ve siyah fon sistemi","Hollyland Lark Max 2","iPad Air M4","iMac M6","Hazırlanma odası","Askılık eşek ve buharlı ütü","Wi-Fi ve kahve"],
+     addons:["sonyCamera","extraLens","lightingAssistant","photographer","retouch","editing"]},
+    {id:"video",tab:"Video",title:"Video Prodüksiyon Paketi",tag:"Fikirden sete, profesyonel prodüksiyon.",
+     desc:"Reklam, röportaj, ürün filmi, müzik videosu ve dijital kampanyalar için kapsamlı sürekli ışık ve ses altyapısı.",
+     prices:{2:4500,4:8500,8:15000},
+     inc:["Amaran 660c RGB","Amaran 360c RGB","Amaran 120c","Amaran Ace 25c","Octa Dome 90 ve 120","Light Box 30x120 ve 60x90","Lantern ve mevcut ışık şekillendiriciler","Mevcut tüm ışık ayakları","Beyaz ve siyah fon sistemi","Hollyland Lark Max 2","iPad Air M4","iMac M6","Hazırlanma odası","Askılık eşek ve buharlı ütü","Wi-Fi ve kahve"],
+     addons:["sonyCamera","extraLens","lightingAssistant","videographer","editing","colorGrading"]},
+    {id:"full",tab:"Full Paket",title:"Full Prodüksiyon Paketi",tag:"Tek stüdyo, tüm prodüksiyon altyapısı.",
+     desc:"Fotoğraf ve video prodüksiyonları için mevcut flaş, sürekli ışık, ses, fon ve dijital çalışma ekipmanlarının birlikte kullanıldığı kapsamlı paket.",
+     prices:{2:6500,4:12000,8:21000},
+     inc:["Fotoğrafçı paketindeki tüm ekipmanlar","Video prodüksiyon paketindeki tüm ekipmanlar","Godox QT600III-M ve QT400III-M flaşlar","Amaran 660c, 360c, 120c ve Ace 25c","Mevcut tüm ışık şekillendiriciler","Mevcut tüm ışık ayakları","Beyaz ve siyah fonlar","Hollyland Lark Max 2","iPad Air M4 ve iMac M6","Hazırlanma odası","Askılık eşek ve buharlı ütü","Wi-Fi ve kahve"],
+     note:"Sony A7 V ve lensler ayrı opsiyon olarak sunulur. Teknik personel ve çekim hizmetleri pakete dahil değildir.",
+     addons:["sonyCamera","extraLens","lightingAssistant","photographer","videographer","editing","retouch","colorGrading"]},
+    {id:"workshop",tab:"Workshop",title:"Workshop & Etkinlik Alanı",tag:"Bir araya gelmek, öğrenmek ve üretmek için.",
+     desc:"Tarihi Beyoğlu mimarisinde workshop, eğitim, toplantı, film gösterimi ve yaratıcı topluluk etkinlikleri için esnek kullanım alanı.",
+     prices:{2:3000,4:6000,8:10000},
+     inc:["Masa düzeninde 20 kişiye kadar kapasite","Sandalye düzeninde 30 kişiye kadar kapasite","Esnek masa ve sandalye yerleşimi","ViewSonic PX704HD Full HD projeksiyon","Ses sistemi","Sunum bilgisayarı","Wi-Fi","Kahve ve su","Temel etkinlik öncesi yerleşim desteği"],
+     addons:["eventAssistant","eventPhotography","eventVideo","editing"]}
+  ];
+
+  var ADDONS = {
+    sonyCamera:{name:"Sony A7 V + 35 mm Lens",desc:"Stüdyo içi kullanım. Ön onay ve teslim kontrolü gerektirir.",price:5000,type:"fixed"},
+    extraLens:{name:"24–70 mm Lens",desc:"Sony A7 V ile birlikte ek lens seçeneği.",price:1500,type:"fixed",requires:["sonyCamera"]},
+    lightingAssistant:{name:"Işık Kurulum Asistanı",desc:"Çekim öncesi ışık kurulumu ve set desteği.",prices:{2:900,4:1500,8:3000},type:"tier"},
+    photographer:{name:"Profesyonel Fotoğrafçı",desc:"Brief ve çekim kapsamına göre fiyatlandırılır.",type:"quote"},
+    videographer:{name:"Profesyonel Videographer",desc:"Çekim planına göre özel teklif hazırlanır.",type:"quote"},
+    editing:{name:"Video Kurgu",desc:"Video süresi ve teslim kapsamına göre fiyatlandırılır.",type:"quote"},
+    retouch:{name:"Fotoğraf Retouch",desc:"Görsel adedi ve işlem kapsamına göre fiyatlandırılır.",type:"quote"},
+    colorGrading:{name:"Renk Düzenleme",desc:"Projenin süresine ve teslim formatına göre fiyatlandırılır.",type:"quote"},
+    eventAssistant:{name:"Etkinlik Asistanı",desc:"Etkinlik kapsamına göre fiyatlandırılır.",type:"quote"},
+    eventPhotography:{name:"Etkinlik Fotoğraf Çekimi",desc:"Etkinlik kapsamına göre fiyatlandırılır.",type:"quote"},
+    eventVideo:{name:"Etkinlik Video Çekimi",desc:"Etkinlik kapsamına göre fiyatlandırılır.",type:"quote"}
+  };
+  /* ---------- içerik bloğu sonu ---------- */
+
+  var sec = document.getElementById("paketler");
+  if (!sec) return;
+  var $ = function(id){ return document.getElementById(id); };
+  var nf = new Intl.NumberFormat("tr-TR");
+  var money = function(n){ return nf.format(n) + " ₺"; };
+
+  var active = PACKAGES[0];
+  var durIdx = 1;
+  var picked = {};
+
+  /* tabs */
+  var tabs = $("pkTabs");
+  PACKAGES.forEach(function(p,i){
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "pk-tab"; b.textContent = p.tab;
+    b.setAttribute("role","tab"); b.id = "pkTab-" + p.id;
+    b.setAttribute("aria-selected", i === 0 ? "true" : "false");
+    b.setAttribute("aria-controls","pkPanel");
+    b.tabIndex = i === 0 ? 0 : -1;
+    b.addEventListener("click", function(){ select(i); });
+    b.addEventListener("keydown", function(e){
+      var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      var n = (i + d + PACKAGES.length) % PACKAGES.length;
+      select(n); tabs.children[n].focus();
+    });
+    tabs.appendChild(b);
+  });
+  $("pkPanel").setAttribute("aria-labelledby","pkTab-" + active.id);
+
+  function select(i){
+    active = PACKAGES[i];
+    Array.prototype.forEach.call(tabs.children, function(b,n){
+      b.setAttribute("aria-selected", n === i ? "true" : "false");
+      b.tabIndex = n === i ? 0 : -1;
+    });
+    $("pkPanel").setAttribute("aria-labelledby","pkTab-" + active.id);
+    Object.keys(picked).forEach(function(k){ if (active.addons.indexOf(k) < 0) delete picked[k]; });
+    renderPackage(); renderAddons(); renderTotals();
+  }
+
+  function renderPackage(){
+    $("pkTitle").textContent = active.title;
+    $("pkTag").textContent = active.tag;
+    $("pkDesc").textContent = active.desc;
+    var note = $("pkNote");
+    if (active.note){ note.textContent = active.note; note.hidden = false; } else { note.hidden = true; note.textContent = ""; }
+    $("pkInc").innerHTML = active.inc.map(function(x){ return "<li>" + x + "</li>"; }).join("");
+  }
+
+  function addonPrice(key){
+    var a = ADDONS[key];
+    if (a.type === "fixed") return a.price;
+    if (a.type === "tier") return a.prices[DUR[durIdx]];
+    return null;
+  }
+
+  function renderAddons(){
+    var wrap = $("pkAdd");
+    wrap.innerHTML = "";
+    active.addons.forEach(function(key){
+      var a = ADDONS[key];
+      var label = document.createElement("label");
+      label.className = "pk-card";
+      label.dataset.key = key;
+      var p = addonPrice(key);
+      label.innerHTML =
+        '<input type="checkbox">' +
+        '<span class="pk-card-top"><b></b><span class="pk-price"></span></span>' +
+        '<p></p><span class="pk-mark">Seçili</span>';
+      label.querySelector("b").textContent = a.name;
+      label.querySelector(".pk-price").textContent = p === null ? "Teklif Al" : money(p);
+      label.querySelector("p").textContent = a.desc;
+      var box = label.querySelector("input");
+      box.checked = !!picked[key];
+      box.addEventListener("change", function(){
+        if (box.checked) picked[key] = true; else delete picked[key];
+        if (key === "sonyCamera" && !box.checked) delete picked.extraLens;
+        renderAddons(); renderTotals();
+      });
+      wrap.appendChild(label);
+    });
+    /* bağımlılık: ek lens yalnızca kamera seçiliyken */
+    Array.prototype.forEach.call(wrap.children, function(label){
+      var key = label.dataset.key, a = ADDONS[key], box = label.querySelector("input");
+      var blocked = !!(a.requires && a.requires.some(function(r){ return !picked[r]; }));
+      box.disabled = blocked;
+      if (blocked && box.checked){ box.checked = false; delete picked[key]; }
+      label.classList.toggle("is-off", blocked);
+      label.classList.toggle("is-on", box.checked);
+      if (blocked) label.title = "Önce Sony A7 V seçilmelidir.";
+      else label.removeAttribute("title");
+    });
+  }
+
+  function state(){
+    var hours = DUR[durIdx];
+    var base = active.prices[hours];
+    var fixed = [], quotes = [];
+    active.addons.forEach(function(key){
+      if (!picked[key]) return;
+      var p = addonPrice(key);
+      if (p === null) quotes.push({ name: ADDONS[key].name });
+      else fixed.push({ name: ADDONS[key].name, price: p });
+    });
+    var total = base + fixed.reduce(function(s,x){ return s + x.price; }, 0);
+    return { hours: hours, base: base, fixed: fixed, quotes: quotes, total: total,
+             deposit: Math.round(total * 0.30), remaining: total - Math.round(total * 0.30) };
+  }
+
+  function renderTotals(){
+    var s = state();
+    $("pkDurVal").textContent = DUR_LABEL[s.hours];
+    $("pkDur").setAttribute("aria-valuetext", DUR_LABEL[s.hours]);
+    $("pkBase").textContent = money(s.base);
+
+    var rows = [["Seçilen paket", active.title], ["Kiralama süresi", DUR_LABEL[s.hours]], ["Temel paket fiyatı", money(s.base)]];
+    s.fixed.forEach(function(x){ rows.push([x.name, money(x.price)]); });
+    s.quotes.forEach(function(x){ rows.push([x.name, "Teklif Al"]); });
+    if (!s.fixed.length && !s.quotes.length) rows.push(["Seçilen ek hizmetler", "Yok"]);
+    $("pkRows").innerHTML = rows.map(function(r){
+      return "<div><dt>" + r[0] + "</dt><dd>" + r[1] + "</dd></div>";
+    }).join("");
+
+    $("pkTotal").textContent = money(s.total);
+    $("pkDep").textContent = money(s.deposit);
+    $("pkRem").textContent = money(s.remaining);
+  }
+
+  $("pkDur").addEventListener("input", function(){
+    durIdx = parseInt(this.value, 10) || 0;
+    renderAddons(); renderTotals();
+  });
+
+  $("pkAmen").innerHTML = AMENITIES.map(function(x){ return "<li>" + x + "</li>"; }).join("");
+
+  /* form -> e-posta */
+  var form = $("pkForm"), status = $("pkStatus");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var need = [["pkName","Ad Soyad"],["pkMail","E-posta"],["pkDate","Tercih Edilen Tarih"]];
+    var missing = [], first = null;
+    need.forEach(function(f){
+      var el = $(f[0]), bad = !el.value.trim() || (el.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()));
+      el.setAttribute("aria-invalid", bad ? "true" : "false");
+      if (bad){ missing.push(f[1]); if (!first) first = el; }
+    });
+    if (missing.length){
+      status.dataset.ok = "0";
+      status.textContent = "Lütfen şu alanları doldurun: " + missing.join(", ") + ".";
+      if (first) first.focus();
+      return;
+    }
+    var s = state();
+    var v = function(id){ return ($(id).value || "").trim(); };
+    var L = [];
+    L.push("Ad Soyad: " + v("pkName"));
+    L.push("E-posta: " + v("pkMail"));
+    if (v("pkPhone")) L.push("Telefon: " + v("pkPhone"));
+    L.push("Tercih edilen tarih: " + v("pkDate"));
+    if (v("pkTime")) L.push("Başlangıç saati: " + v("pkTime"));
+    if (v("pkPeople")) L.push("Katılımcı / ekip sayısı: " + v("pkPeople"));
+    L.push("");
+    L.push("SEÇİLEN PAKET: " + active.title);
+    L.push("Kiralama süresi: " + DUR_LABEL[s.hours]);
+    L.push("Temel paket fiyatı: " + money(s.base));
+    L.push("");
+    L.push("EK HİZMETLER");
+    if (!s.fixed.length && !s.quotes.length) L.push("- Yok");
+    s.fixed.forEach(function(x){ L.push("- " + x.name + ": " + money(x.price)); });
+    s.quotes.forEach(function(x){ L.push("- " + x.name + ": teklif talebi"); });
+    L.push("");
+    L.push("Toplam (KDV hariç): " + money(s.total));
+    L.push("Rezervasyon ön ödemesi (%30): " + money(s.deposit));
+    L.push("Kalan tutar: " + money(s.remaining));
+    L.push("Not: Fiyatlara KDV dahil değildir. Özel teklif gerektiren hizmetler toplama dahil edilmemiştir.");
+    L.push("");
+    L.push("PAKETE DAHİL EKİPMAN");
+    active.inc.forEach(function(x){ L.push("- " + x); });
+    if (v("pkBrief")){ L.push(""); L.push("PROJE / ETKİNLİK AÇIKLAMASI"); L.push(v("pkBrief")); }
+    if (v("pkMore")){ L.push(""); L.push("EK NOTLAR"); L.push(v("pkMore")); }
+    L.push("");
+    L.push("Bu talep pascreativestudio.com üzerinden oluşturuldu.");
+
+    var subject = "Rezervasyon talebi — " + active.title + " · " + DUR_LABEL[s.hours] + " · " + v("pkDate");
+    var href = "mailto:" + MAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(L.join("\n"));
+    status.dataset.ok = "1";
+    status.textContent = "Talebiniz e-posta uygulamanızda hazırlanıyor. Açılmazsa " + MAIL + " adresine yazabilirsiniz.";
+    window.location.href = href;
+    if (window.PASMeasurement && window.PASMeasurement.leadSuccess) window.PASMeasurement.leadSuccess("space_inquiry");
+  });
+
+  renderPackage(); renderAddons(); renderTotals();
+})();
 </script>
 </body>
 </html>
